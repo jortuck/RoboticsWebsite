@@ -1,6 +1,10 @@
+<script lang="ts" setup>
+useSeoMeta({
+  title:"Husky Robotics",
+})
+
+</script>
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
   </div>
 </template>
