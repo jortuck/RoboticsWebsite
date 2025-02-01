@@ -2,9 +2,12 @@
 useSeoMeta({
   title:"Husky Robotics",
 })
-
 </script>
 <template>
-  <div>
-  </div>
+	<Navbar />
+	<div class="flex flex-col items-center justify-center">
+		<main class="container">
+			<NuxtPage />
+		</main>
+	</div>
 </template>

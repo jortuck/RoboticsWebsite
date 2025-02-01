@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "./font.css";
+@import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+@import "@fortawesome/fontawesome-free/css/solid.min.css";
+@import "@fortawesome/fontawesome-free/css/brands.min.css";
+@font-face {
+    font-family: Roboto;
+}
+body {
+    font-family: Roboto, sans-serif;
+}
+html{
+    background-color: #DCDCDC;
+}
