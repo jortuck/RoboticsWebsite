@@ -60,7 +60,7 @@ const desktopLink =
 				<button
 					role="button"
 					@click="menuBarOpen = !menuBarOpen"
-					class="w-14 rounded-md border-2 border-black py-1 text-2xl font-extrabold transition-colors duration-200 ease-in-out active:bg-black active:text-white"
+					class="w-10 rounded-md border-2 border-black py-0.5 text-lg font-extrabold transition-colors duration-100 ease-in-out active:bg-black active:text-white"
 				>
 					<i
 						class="fa-solid fa-bars"
