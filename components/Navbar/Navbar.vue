@@ -6,6 +6,8 @@ const mobileLink =
 	"block py-1 border-2 rounded-md hover:bg-black hover:text-white transition-colors duration-200 ease-in-out w-3/5 text-center border-black";
 const desktopLink =
 	"px-2 py-0.5 border-2 rounded-md hover:bg-black hover:text-white transition-colors duration-200 ease-in-out border-black";
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 </script>
 <template>
 	<div class="sticky top-0 z-50 will-change-transform">
@@ -44,6 +46,14 @@ const desktopLink =
 					>
 						Sponsors
 					</NuxtLink>
+					<a
+						href="#"
+						:class="desktopLink"
+						@click="toggleDark()"
+					>
+						<span v-show="isDark"><i class="fa-solid fa-sun"></i></span>
+						<span v-show="!isDark"><i class="fa-solid fa-moon"></i></span>
+					</a>
 				</div>
 			</div>
 		</nav>
@@ -101,6 +111,14 @@ const desktopLink =
 			>
 				Sponsors
 			</NuxtLink>
+			<a
+				href="#"
+				:class="mobileLink"
+				@click="toggleDark()"
+			>
+				<span v-show="isDark"><i class="fa-solid fa-sun"></i></span>
+				<span v-show="!isDark"><i class="fa-solid fa-moon"></i></span>
+			</a>
 		</div>
 	</div>
 </template>

@@ -3,12 +3,23 @@
 @import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 @import "@fortawesome/fontawesome-free/css/solid.min.css";
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
     font-family: Roboto;
 }
 body {
     font-family: Roboto, sans-serif;
 }
+@theme:{
+    --color-base-100: #DCDCDC;
+}
+:root {
+    @variant dark {
+        --color-base-100: #000000;
+    }
+}
 html{
-    background-color: #DCDCDC;
+    background-color: var(--color-base-100);
 }
