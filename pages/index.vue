@@ -5,8 +5,8 @@ useSeoMeta({
 })
 </script>
 <template>
-  <div class="container w-full text-center mt-30">
-    <h1 class="font-extrabold text-8xl  from-primary to-secondary text-transparent bg-gradient-to-b bg-clip-text">
+  <div class="container w-full text-center md:mt-30 mt-10">
+    <h1 class="font-extrabold text-6xl md:text-8xl  from-primary to-secondary text-transparent bg-gradient-to-b bg-clip-text">
       HUSKY ROBOTICS
     </h1>
   </div>
