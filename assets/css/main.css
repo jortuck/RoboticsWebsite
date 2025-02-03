@@ -12,14 +12,24 @@
 body {
     font-family: Roboto, sans-serif;
 }
-@theme:{
-    --color-base-100: #DCDCDC;
+@theme {
+    --color-base-100: #ffffff;
+    --color-base-200: #f2f2f2;
+    --color-base-300: #e5e6e6;
+    --color-primary: #4b2e83;
+    --color-secondary: #32006e;
+    --color-base-content: #1f2937;
 }
 :root {
     @variant dark {
-        --color-base-100: #000000;
+        --color-base-100: #1d232a;
+        --color-base-200: #191e24;
+        --color-base-300: #15191e;
+        --color-base-content: #e2e4e9;
+        --color-primary: #b7a57a;
+        --color-secondary: #85754d;
     }
 }
 html{
-    background-color: var(--color-base-100);
+    background-color: var(--color-base-300);
 }
