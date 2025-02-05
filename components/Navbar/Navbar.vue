@@ -3,9 +3,9 @@ import { ref } from "vue";
 
 let menuBarOpen = ref(false);
 const mobileLink =
-	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content uppercase font-bold";
+	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content uppercase";
 const desktopLink =
-	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content uppercase font-bold";
+	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content uppercase";
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 </script>
@@ -16,7 +16,7 @@ const toggleDark = useToggle(isDark);
 				<NuxtLink
 					href="/"
 					class="flex flex-row items-center space-x-5"
-				>
+					>rem
 					<img
 						src="~/assets/images/logo.png"
 						class="max-h-12"
