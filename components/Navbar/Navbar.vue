@@ -73,6 +73,7 @@ onMounted(() => {
 						href="#"
 						:class="desktopLink"
 						@click="toggleDark()"
+						role="button"
 					>
 						<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
 						<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
@@ -150,6 +151,7 @@ onMounted(() => {
 				href="#"
 				:class="mobileLink"
 				@click="toggleDark()"
+				role="button"
 			>
 				<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
 				<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>

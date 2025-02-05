@@ -4,6 +4,7 @@ useSeoMeta({
 });
 </script>
 <template>
+	<Html lang="en" />
 	<Navbar />
 	<div class="flex flex-col items-center justify-center">
 		<main class="container">
