@@ -74,8 +74,8 @@ onMounted(() => {
 						:class="desktopLink"
 						@click="toggleDark()"
 					>
-						<span v-show="isDark"><i class="fa-solid fa-sun"></i></span>
-						<span v-show="!isDark"><i class="fa-solid fa-moon"></i></span>
+						<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
+						<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
 					</a>
 				</div>
 			</div>
@@ -106,7 +106,7 @@ onMounted(() => {
 						v-show="!menuBarOpen"
 					></i>
 					<i
-						class="fa-solid fa-x"
+						class="fa-regular fa-x"
 						v-show="menuBarOpen"
 					></i>
 				</button>
@@ -151,8 +151,8 @@ onMounted(() => {
 				:class="mobileLink"
 				@click="toggleDark()"
 			>
-				<span v-show="isDark"><i class="fa-solid fa-sun"></i></span>
-				<span v-show="!isDark"><i class="fa-solid fa-moon"></i></span>
+				<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
+				<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
 			</a>
 		</div>
 	</div>

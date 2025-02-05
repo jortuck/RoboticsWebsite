@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
-@import "@fortawesome/fontawesome-free/css/solid.min.css";
+@import "@fortawesome/fontawesome-free/css/regular.css";
+@import "@fortawesome/fontawesome-free/css/solid.css";
+
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -13,6 +15,10 @@ body {
     --color-base-200: #f2f2f2;
     --color-base-300: #e5e6e6;
     --color-base-content: #1f2937;
+    --color-primary-100: #b460eb;
+    --color-primary-200: #a949e9;
+    --color-primary-300: #9e33e6;
+    --color-primary-400: #931ce3;
     --color-primary: #8419cc;
     --color-primary-600: #7616b6;
     --color-primary-700: #67149f;
