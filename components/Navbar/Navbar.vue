@@ -16,7 +16,7 @@ const toggleDark = useToggle(isDark);
 				<NuxtLink
 					href="/"
 					class="flex flex-row items-center space-x-5"
-					>rem
+				>
 					<img
 						src="~/assets/images/logo.png"
 						class="max-h-12"
