@@ -2,13 +2,12 @@
 @import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 @import "@fortawesome/fontawesome-free/css/regular.css";
 @import "@fortawesome/fontawesome-free/css/solid.css";
-
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    font-family: Audiowide, sans-serif;
+    font-family: Nunito, sans-serif;
 }
 @theme {
     --color-base-100: #ffffff;

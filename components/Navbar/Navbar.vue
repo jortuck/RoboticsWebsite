@@ -3,9 +3,9 @@ import { ref } from "vue";
 
 let menuBarOpen = ref(false);
 const mobileLink =
-	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content uppercase";
+	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content font-bold";
 const desktopLink =
-	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content uppercase";
+	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content font-bold";
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 let scroll = ref(0);
