@@ -8,10 +8,20 @@ const desktopLink =
 	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content uppercase";
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+let scroll = ref(0);
+onMounted(() => {
+	let { x, y } = useWindowScroll();
+	watch(y, (value) => {
+		scroll.value = value;
+	});
+});
 </script>
 <template>
 	<div class="sticky top-0 z-50 will-change-transform">
-		<nav class="hidden items-center justify-center bg-base-300 py-3 lg:flex">
+		<nav
+			class="hidden items-center justify-center bg-base-300 py-3 lg:flex"
+			:class="{ scrolled: scroll > 0 }"
+		>
 			<div class="container flex flex-row justify-between">
 				<NuxtLink
 					href="/"
@@ -23,7 +33,7 @@ const toggleDark = useToggle(isDark);
 						alt="Husky Robotics Logo"
 					/>
 					<p
-						class="border-b-2 border-b-primary text-lg font-extrabold text-base-content uppercase dark:text-white"
+						class="border-b-2 border-b-primary text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
 					>
 						Husky Robotics
 					</p>
@@ -147,3 +157,9 @@ const toggleDark = useToggle(isDark);
 		</div>
 	</div>
 </template>
+<style scoped>
+@reference "~/assets/css/main.css";
+.scrolled {
+	@apply border-b-2 border-b-base-content bg-base-300/90 backdrop-blur-2xl;
+}
+</style>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 @import "@fortawesome/fontawesome-free/css/solid.min.css";
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
@@ -15,10 +14,14 @@ body {
     --color-base-300: #e5e6e6;
     --color-base-content: #1f2937;
     --color-primary: #8419cc;
-    --color-primarysh: rgba(230, 180, 0,50%);
+    --color-primary-600: #7616b6;
+    --color-primary-700: #67149f;
+    --color-primary-800: #581188;
+    --color-primarysh: rgba(132, 25, 204,50%);
     --color-secondary: #8419cc;
     --color-alt: #e6b400;
     --font-roboto: 'Roboto';
+    --font-nunito: 'Nunito';
 }
 /*
 Savin em for later (just in case)
@@ -32,7 +35,7 @@ Savin em for later (just in case)
         --color-base-200: #191e24;
         --color-base-300: #15191e;
         --color-base-content: #e2e4e9;
-        --color-primarysh: rgba(132, 25, 204,60%);
+        --color-primarysh: rgba(132, 25, 204,50%);
 
     }
 }
