@@ -55,7 +55,7 @@
 						class="inline max-h-12"
 					/>
 				</p>
-				<p class="text-xs text-gray-400">© 2025 Husky Robotics</p>
+				<p class="text-xs text-base-content">© 2025 Husky Robotics</p>
 			</div>
 		</div>
 	</footer>
@@ -63,7 +63,7 @@
 <style scoped>
 @reference "~/assets/css/main.css";
 .coolDrop:hover {
-	@apply text-primary;
+	@apply text-base-content/70 transition-colors duration-300 ease-in-out;
 }
 </style>
 <script setup lang="ts"></script>
