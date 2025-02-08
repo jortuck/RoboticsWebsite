@@ -7,7 +7,7 @@
 				<div>
 					<h1 class="font-bold">Contact Us:</h1>
 					<NuxtLink
-						href="mailto:uwrobots@uw.edu"
+						to="mailto:uwrobots@uw.edu"
 						class="hover:underline"
 						>uwrobots@uw.edu</NuxtLink
 					>
@@ -15,7 +15,6 @@
 			</div>
 			<p class="space-x-4 text-base-content">
 				<NuxtLink
-					href="#"
 					class="coolDrop"
 					target="_blank"
 					to="https://www.instagram.com/uwrobots/"
@@ -24,7 +23,6 @@
 					<i class="fa-brands fa-2x fa-instagram"></i>
 				</NuxtLink>
 				<NuxtLink
-					href="#"
 					class="coolDrop"
 					target="_blank"
 					to="https://www.facebook.com/uwrobots/"
@@ -34,7 +32,7 @@
 				</NuxtLink>
 
 				<NuxtLink
-					href="https://www.linkedin.com/company/husky-robotics/"
+					to="https://www.linkedin.com/company/husky-robotics/"
 					class="coolDrop"
 					target="_blank"
 					aria-label="@husky-robotics on LinkedIn."
@@ -43,7 +41,6 @@
 				</NuxtLink>
 
 				<NuxtLink
-					href="#"
 					class="coolDrop"
 					target="_blank"
 					to="https://www.youtube.com/channel/UC274hSR7LTSRfsH4riugKBw"
@@ -53,7 +50,6 @@
 				</NuxtLink>
 
 				<NuxtLink
-					href="#"
 					class="coolDrop"
 					target="_blank"
 					to="https://github.com/huskyroboticsteam"
@@ -65,7 +61,7 @@
 			<div class="space-y-2">
 				<p class="text-center text-3xl font-extrabold text-white md:text-right">
 					<img
-						src="~/assets/images/logo_sm.png"
+						src="~/assets/images/logo_square_sm.png"
 						class="inline max-h-12"
 						alt="Husky Robotics Logo"
 					/>

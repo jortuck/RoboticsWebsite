@@ -28,7 +28,7 @@ onMounted(() => {
 					class="flex flex-row items-center space-x-5"
 				>
 					<img
-						src="~/assets/images/logo_sm.png"
+						src="~/assets/images/logo_square_sm.png"
 						class="max-h-12"
 						alt="Husky Robotics Logo"
 					/>
@@ -88,7 +88,7 @@ onMounted(() => {
 			<div class="container flex flex-row items-center justify-between">
 				<div class="flex flex-row items-center space-x-5">
 					<img
-						src="~/assets/images/logo_sm.png"
+						src="~/assets/images/logo_square_sm.png"
 						class="max-h-12"
 						alt="Husky Robotics Logo"
 					/>
