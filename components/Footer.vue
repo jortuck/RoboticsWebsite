@@ -60,13 +60,10 @@
 		</div>
 	</footer>
 </template>
-<style>
+<style scoped>
 @reference "~/assets/css/main.css";
 .coolDrop:hover {
-	@apply transition-all duration-300 ease-in-out hover:text-primary-400;
-	text-shadow:
-		2px 2px 0 var(--color-alt),
-		0 0 80px var(--color-primarysh);
+	@apply text-primary;
 }
 </style>
 <script setup lang="ts"></script>
