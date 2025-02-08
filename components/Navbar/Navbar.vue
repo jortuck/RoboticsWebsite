@@ -67,7 +67,7 @@ onMounted(() => {
 						to="#"
 						:class="desktopLink"
 					>
-						Sponsors
+						<i class="fa-regular fa-heart"></i> Sponsors
 					</NuxtLink>
 					<a
 						href="#"
