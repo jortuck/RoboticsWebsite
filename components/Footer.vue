@@ -17,19 +17,27 @@
 				<NuxtLink
 					href="#"
 					class="coolDrop"
+					target="_blank"
+					to="https://www.instagram.com/uwrobots/"
+					aria-label="@uwrobots on Instagram."
 				>
 					<i class="fa-brands fa-2x fa-instagram"></i>
 				</NuxtLink>
 				<NuxtLink
 					href="#"
 					class="coolDrop"
+					target="_blank"
+					to="https://www.facebook.com/uwrobots/"
+					aria-label="@uwrobots on Facebook."
 				>
 					<i class="fa-brands fa-2x fa-facebook"></i>
 				</NuxtLink>
 
 				<NuxtLink
-					href="#"
+					href="https://www.linkedin.com/company/husky-robotics/"
 					class="coolDrop"
+					target="_blank"
+					aria-label="@husky-robotics on LinkedIn."
 				>
 					<i class="fa-brands fa-2x fa-linkedin"></i>
 				</NuxtLink>
@@ -37,6 +45,9 @@
 				<NuxtLink
 					href="#"
 					class="coolDrop"
+					target="_blank"
+					to="https://www.youtube.com/channel/UC274hSR7LTSRfsH4riugKBw"
+					aria-label="Husky Robotics on YouTube."
 				>
 					<i class="fa-brands fa-2x fa-youtube"></i>
 				</NuxtLink>
@@ -44,6 +55,9 @@
 				<NuxtLink
 					href="#"
 					class="coolDrop"
+					target="_blank"
+					to="https://github.com/huskyroboticsteam"
+					aria-label="@huskyroboticsteam on GitHub."
 				>
 					<i class="fa-brands fa-2x fa-github"></i>
 				</NuxtLink>
@@ -51,8 +65,9 @@
 			<div class="space-y-2">
 				<p class="text-center text-3xl font-extrabold text-white md:text-right">
 					<img
-						src="~/assets/images/logo.png"
+						src="~/assets/images/logo_sm.png"
 						class="inline max-h-12"
+						alt="Husky Robotics Logo"
 					/>
 				</p>
 				<p class="text-xs text-base-content">© 2025 Husky Robotics</p>
