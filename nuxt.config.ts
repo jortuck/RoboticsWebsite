@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 	css: ["~/assets/css/main.css"],
 	app: {
 		head: {
-			link: [{ rel: "icon", href: "./favicon.png", type: "image/png" }]
+			link: [{ rel: "icon", href: "./favicon.ico", type: "image/ico" }]
 		}
 	}
 });
