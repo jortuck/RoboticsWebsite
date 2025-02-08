@@ -74,6 +74,7 @@ onMounted(() => {
 						:class="desktopLink"
 						@click="toggleDark()"
 						role="button"
+						aria-label="Toggle Dark Theme"
 					>
 						<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
 						<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
