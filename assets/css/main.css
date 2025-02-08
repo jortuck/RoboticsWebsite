@@ -10,9 +10,9 @@ body {
     font-family: Nunito, sans-serif;
 }
 @theme {
-    --color-base-100: #f2f3f4;
-    --color-base-200: #EDEEEE;
-    --color-base-300: #C5C9CE;
+    --color-base-100: #F8F3FB;
+    --color-base-200: #F1E8F8;
+    --color-base-300: #e6d6f2;
     --color-base-content: #1f2937;
     --color-primary-50: #e6d6f2;
     --color-primary-100: #b460eb;
