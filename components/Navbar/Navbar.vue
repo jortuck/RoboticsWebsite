@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-
+import { useNuxt } from "@nuxt/kit";
+import.meta.dev;
 let menuBarOpen = ref(false);
 const mobileLink =
 	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content font-bold";
@@ -15,8 +16,15 @@ onMounted(() => {
 		scroll.value = value;
 	});
 });
+const dev = import.meta.dev;
 </script>
 <template>
+	<p
+		v-if="!dev"
+		class="w-full bg-amber-300 py-2 text-center"
+	>
+		Website under construction. Expect missing content & bugs!
+	</p>
 	<div class="sticky top-0 z-50 will-change-transform">
 		<nav
 			class="hidden items-center justify-center bg-base-100 py-3 lg:flex"
