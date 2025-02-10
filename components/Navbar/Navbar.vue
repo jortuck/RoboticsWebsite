@@ -21,7 +21,7 @@ const dev = import.meta.dev;
 <template>
 	<p
 		v-if="!dev"
-		class="w-full bg-amber-300 py-2 text-center"
+		class="w-full bg-amber-300 p-2 text-center"
 	>
 		Website under construction. Expect missing content & bugs!
 	</p>
