@@ -41,7 +41,7 @@ const dev = import.meta.dev;
 						alt="Husky Robotics Logo"
 					/>
 					<p
-						class="border-b-2 border-b-primary text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
+						class="border-b-2 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
 					>
 						Husky Robotics
 					</p>
@@ -102,7 +102,7 @@ const dev = import.meta.dev;
 					/>
 				</div>
 				<p
-					class="border-b-2 border-b-primary text-lg font-extrabold text-base-content uppercase dark:text-white"
+					class="border-b-2 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase dark:text-white"
 				>
 					Husky Robotics
 				</p>

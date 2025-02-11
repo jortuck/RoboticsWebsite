@@ -7,7 +7,7 @@ useSeoMeta({
 </script>
 <template>
 	<div class="container my-40 w-full space-y-20 text-center">
-		<h1 class="coolDrop text-6xl font-extrabold text-primary select-none md:text-8xl">
+		<h1 class="coolDrop font-logo text-6xl font-extrabold text-primary select-none md:text-8xl">
 			HUSKY ROBOTICS
 		</h1>
 	</div>

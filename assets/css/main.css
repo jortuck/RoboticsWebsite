@@ -5,7 +5,12 @@
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
-
+@font-face {
+    font-family: 'Airbus Special';
+    font-style: normal;
+    font-weight: normal;
+    src: url('aispec.woff') format('woff');
+}
 body {
     font-family: Nunito, sans-serif;
 }
@@ -28,6 +33,8 @@ body {
     --color-alt: #b7a04e;
     --font-roboto: 'Roboto';
     --font-nunito: 'Nunito';
+    --font-aribus: 'Airbus Special';
+    --font-logo: 'Nunito'
 }
 /*
 Savin em for later (just in case)
