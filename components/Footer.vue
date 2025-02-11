@@ -3,7 +3,7 @@
 		<div
 			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
 		>
-			<div class="space-y-3 text-center text-base-content md:text-left">
+			<div class="text-center text-base-content md:text-left">
 				<div>
 					<h1 class="font-bold">Contact Us:</h1>
 					<NuxtLink
