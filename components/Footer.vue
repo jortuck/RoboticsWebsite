@@ -3,7 +3,7 @@
 		<div
 			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
 		>
-			<div class="text-center text-base-content md:text-left">
+			<div class="flex-1 text-center text-base-content md:text-left">
 				<div>
 					<h1 class="font-bold">Contact Us:</h1>
 					<NuxtLink
@@ -13,7 +13,7 @@
 					>
 				</div>
 			</div>
-			<p class="space-x-4 text-base-content">
+			<p class="flex-none space-x-4 text-base-content">
 				<NuxtLink
 					class="coolDrop"
 					target="_blank"
@@ -58,7 +58,7 @@
 					<i class="fa-brands fa-2x fa-github"></i>
 				</NuxtLink>
 			</p>
-			<div class="space-y-2">
+			<div class="flex-1 space-y-2">
 				<p class="text-center text-3xl font-extrabold text-white md:text-right">
 					<img
 						src="~/assets/images/logo_square_sm.png"
@@ -66,7 +66,10 @@
 						alt="Husky Robotics Logo"
 					/>
 				</p>
-				<p class="text-xs text-base-content">© 2025 Husky Robotics</p>
+				<p class="text-center text-xs text-base-content md:text-right">© 2025 Husky Robotics</p>
+				<p class="text-center text-xs text-base-content md:text-right">
+					Husky Robotics is a Registered Student Organization (RSO) at the University of Washington
+				</p>
 			</div>
 		</div>
 	</footer>

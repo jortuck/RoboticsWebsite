@@ -12,9 +12,13 @@ useSeoMeta({
 		</h1>
 	</div>
 	<div class="box w-full bg-base-300 bg-center">
-		<div class="container mx-auto flex flex-col items-center justify-center space-y-6 py-20">
-			<h2 class="coolDrop text-center text-6xl font-bold text-primary">The Mission</h2>
-			<p class="block text-center text-xl text-base-content">
+		<div
+			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20"
+		>
+			<h2 class="coolDrop text-center text-4xl font-extrabold text-primary md:text-6xl">
+				The Mission
+			</h2>
+			<p class="block text-center text-lg text-base-content md:text-2xl">
 				Our mission at Husky Robotics’ is to provide UW students with an environment where they can
 				learn practical, hands-on engineering skills as part of a large interdisciplinary team.
 				Unfettered by the time limits of the quarter system, our members build on their skills for
