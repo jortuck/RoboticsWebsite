@@ -6,10 +6,23 @@ useSeoMeta({
 });
 </script>
 <template>
-	<div class="container my-40 w-full space-y-20 text-center">
+	<div class="container mx-auto my-40 w-full space-y-20 text-center">
 		<h1 class="coolDrop font-logo text-6xl font-extrabold text-primary select-none md:text-8xl">
 			HUSKY ROBOTICS
 		</h1>
+	</div>
+	<div class="box w-full bg-base-300 bg-center">
+		<div class="container mx-auto flex flex-col items-center justify-center space-y-6 py-20">
+			<h2 class="coolDrop text-center text-6xl font-bold text-primary">The Mission</h2>
+			<p class="block text-center text-xl text-base-content">
+				Our mission at Husky Robotics’ is to provide UW students with an environment where they can
+				learn practical, hands-on engineering skills as part of a large interdisciplinary team.
+				Unfettered by the time limits of the quarter system, our members build on their skills for
+				the entire year, working in a project-oriented team where they can see how their work
+				becomes part of the complete system. This fosters better communication skills, and a fuller
+				understanding of modern engineering.
+			</p>
+		</div>
 	</div>
 </template>
 <style scoped>
@@ -21,5 +34,11 @@ useSeoMeta({
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position-x: 45%;
+}
+.box {
+	--mask: linear-gradient(0, #0000 20px, #000 0) 0 10px,
+		radial-gradient(10px, #000 calc(100% - 1px), #0000) 50%/18.5px 20px repeat space;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
 }
 </style>
