@@ -14,9 +14,7 @@ useSeoMeta({
 </template>
 <style scoped>
 .coolDrop {
-	text-shadow:
-		4px 4px 0 var(--color-alt),
-		0 0 80px var(--color-primarysh);
+	text-shadow: 4px 4px 0 var(--color-alt);
 }
 .bg-image {
 	background-image: url(/assets/images/robot.png);
