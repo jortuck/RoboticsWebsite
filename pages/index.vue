@@ -13,11 +13,11 @@ useSeoMeta({
 	</div>
 	<div class="w-full bg-base-300 bg-center shadow-md">
 		<div
-			class="container mx-auto flex basis-0 flex-row items-center justify-center space-x-6 px-2 py-14 md:px-0 md:py-20"
+			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
 		>
-			<div class="w-0 flex-1 space-y-6">
-				<h2 class="text-left text-4xl font-extrabold text-primary md:text-6xl">The Mission</h2>
-				<p class="block text-left text-lg text-base-content md:text-2xl">
+			<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
+				<h2 class="text-4xl font-extrabold text-primary md:text-5xl xl:text-6xl">The Mission</h2>
+				<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
 					Our mission at Husky Robotics’ is to provide UW students with an environment where they
 					can learn practical, hands-on engineering skills as part of a large interdisciplinary
 					team. Unfettered by the time limits of the quarter system, our members build on their
@@ -28,7 +28,8 @@ useSeoMeta({
 			</div>
 			<img
 				src="~/assets/images/orpheus_1.png"
-				class="w-0 flex-1 rounded-xl shadow-md"
+				alt="Image of the robot orpheus."
+				class="flex-1 rounded-xl shadow-md lg:w-0"
 			/>
 		</div>
 	</div>
@@ -44,8 +45,7 @@ useSeoMeta({
 	background-position-x: 45%;
 }
 .box {
-	--mask:
-		linear-gradient(0, #0000 20px, #000 0) 0 10px,
+	--mask: linear-gradient(0, #0000 20px, #000 0) 0 10px,
 		radial-gradient(10px, #000 calc(100% - 1px), #0000) 50%/18.5px 20px repeat space;
 	-webkit-mask: var(--mask);
 	mask: var(--mask);
