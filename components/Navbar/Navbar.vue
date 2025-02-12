@@ -3,10 +3,6 @@ import { ref } from "vue";
 import { useNuxt } from "@nuxt/kit";
 import.meta.dev;
 let menuBarOpen = ref(false);
-const mobileLink =
-	"block py-1 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out w-3/5 text-center border-base-content font-bold";
-const desktopLink =
-	"px-2 py-0.5 border-2 text-base-content rounded-md hover:bg-base-content hover:text-base-100 transition-colors duration-200 ease-in-out border-base-content font-bold";
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 let scroll = ref(0);
@@ -18,6 +14,19 @@ onMounted(() => {
 });
 const toggleMenu = useToggle(menuBarOpen);
 const dev = import.meta.dev;
+
+type Link = {
+	text: string;
+	url: string;
+};
+
+const links: Link[] = [
+	{ text: "Home", url: "/" },
+	{ text: "Events", url: "/events" },
+	{ text: "Robots", url: "/robots" },
+	{ text: "Team", url: "/team" },
+	{ text: "Sponsors", url: "/sponsors" }
+];
 </script>
 <template>
 	<p
@@ -49,37 +58,14 @@ const dev = import.meta.dev;
 				</NuxtLink>
 				<div class="flex flex-row items-center space-x-4 lg:space-x-8">
 					<NuxtLink
-						to="/"
-						:class="desktopLink"
+						v-for="link in links"
+						:to="link.url"
+						class="desktopLink"
 					>
-						Home
-					</NuxtLink>
-					<NuxtLink
-						to="#"
-						:class="desktopLink"
-					>
-						Events
-					</NuxtLink>
-					<NuxtLink
-						to="#"
-						:class="desktopLink"
-					>
-						Robots
-					</NuxtLink>
-					<NuxtLink
-						to="#"
-						:class="desktopLink"
-					>
-						Team
-					</NuxtLink>
-					<NuxtLink
-						to="#"
-						:class="desktopLink"
-					>
-						<i class="fa-regular fa-heart"></i> Sponsors
+						{{ link.text }}
 					</NuxtLink>
 					<button
-						:class="desktopLink"
+						class="desktopLink hover:cursor-pointer"
 						@click="toggleDark()"
 						role="button"
 						aria-label="Toggle Dark Theme"
@@ -127,42 +113,15 @@ const dev = import.meta.dev;
 			:class="{ 'opacity-0': !menuBarOpen }"
 		>
 			<NuxtLink
-				to="/"
+				v-for="link in links"
+				:to="link.url"
 				@click="toggleMenu()"
-				:class="mobileLink"
+				class="mobileLink"
 			>
-				Home
-			</NuxtLink>
-			<NuxtLink
-				to="#"
-				@click="toggleMenu()"
-				:class="mobileLink"
-			>
-				Events
-			</NuxtLink>
-			<NuxtLink
-				to="#"
-				@click="toggleMenu()"
-				:class="mobileLink"
-			>
-				Robots
-			</NuxtLink>
-			<NuxtLink
-				to="#"
-				@click="toggleMenu()"
-				:class="mobileLink"
-			>
-				Team
-			</NuxtLink>
-			<NuxtLink
-				to="#"
-				@click="toggleMenu()"
-				:class="mobileLink"
-			>
-				Sponsors
+				{{ link.text }}
 			</NuxtLink>
 			<button
-				:class="mobileLink"
+				class="mobileLink"
 				@click="toggleDark()"
 				role="button"
 			>
@@ -176,5 +135,15 @@ const dev = import.meta.dev;
 @reference "~/assets/css/main.css";
 .scrolled {
 	@apply border-b-2 border-b-base-content bg-base-100/90 backdrop-blur-2xl;
+}
+.mobileLink {
+	@apply block w-3/5 rounded-md border-2 border-base-content py-1 text-center font-bold text-base-content;
+	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
+}
+.desktopLink {
+	@apply rounded-md border-2 border-base-content px-2 py-0.5 font-bold text-base-content transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
+}
+.desktopLink.router-link-active {
+	@apply bg-base-content text-base-100;
 }
 </style>
