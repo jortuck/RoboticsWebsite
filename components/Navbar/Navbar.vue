@@ -143,7 +143,8 @@ const links: Link[] = [
 .desktopLink {
 	@apply rounded-md border-2 border-base-content px-2 py-0.5 font-bold text-base-content transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
 }
-.desktopLink.router-link-active {
+.desktopLink.router-link-active,
+.mobileLink.router-link-active {
 	@apply bg-base-content text-base-100;
 }
 </style>
