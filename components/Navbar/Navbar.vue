@@ -16,6 +16,7 @@ onMounted(() => {
 		scroll.value = value;
 	});
 });
+const toggleMenu = useToggle(menuBarOpen);
 const dev = import.meta.dev;
 </script>
 <template>
@@ -77,8 +78,7 @@ const dev = import.meta.dev;
 					>
 						<i class="fa-regular fa-heart"></i> Sponsors
 					</NuxtLink>
-					<a
-						href="#"
+					<button
 						:class="desktopLink"
 						@click="toggleDark()"
 						role="button"
@@ -86,7 +86,7 @@ const dev = import.meta.dev;
 					>
 						<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
 						<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
-					</a>
+					</button>
 				</div>
 			</div>
 		</nav>
@@ -108,7 +108,7 @@ const dev = import.meta.dev;
 				</p>
 				<button
 					role="button"
-					@click="menuBarOpen = !menuBarOpen"
+					@click="toggleMenu()"
 					class="w-10 rounded-md border-2 border-base-content py-0.5 text-lg font-extrabold text-base-content transition-colors duration-100 ease-in-out active:bg-base-content active:text-base-300"
 				>
 					<i
@@ -128,43 +128,47 @@ const dev = import.meta.dev;
 		>
 			<NuxtLink
 				to="/"
+				@click="toggleMenu()"
 				:class="mobileLink"
 			>
 				Home
 			</NuxtLink>
 			<NuxtLink
 				to="#"
+				@click="toggleMenu()"
 				:class="mobileLink"
 			>
 				Events
 			</NuxtLink>
 			<NuxtLink
 				to="#"
+				@click="toggleMenu()"
 				:class="mobileLink"
 			>
 				Robots
 			</NuxtLink>
 			<NuxtLink
 				to="#"
+				@click="toggleMenu()"
 				:class="mobileLink"
 			>
 				Team
 			</NuxtLink>
 			<NuxtLink
 				to="#"
+				@click="toggleMenu()"
 				:class="mobileLink"
 			>
 				Sponsors
 			</NuxtLink>
-			<a
-				href="#"
+			<button
 				:class="mobileLink"
 				@click="toggleDark()"
 				role="button"
 			>
 				<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
 				<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
-			</a>
+			</button>
 		</div>
 	</div>
 </template>
