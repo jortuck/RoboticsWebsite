@@ -29,7 +29,7 @@ useSeoMeta({
 			<img
 				src="~/assets/images/orpheus_1.png"
 				alt="Image of the robot orpheus."
-				class="flex-1 rounded-xl shadow-md lg:w-0"
+				class="rounded-xl shadow-md lg:w-0 lg:flex-1"
 			/>
 		</div>
 	</div>
