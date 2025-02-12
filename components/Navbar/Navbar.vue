@@ -136,12 +136,16 @@ const links: Link[] = [
 .scrolled {
 	@apply border-b-2 border-b-base-content bg-base-100/90 backdrop-blur-2xl;
 }
-.mobileLink {
-	@apply block w-3/5 rounded-md border-2 border-base-content py-1 text-center font-bold text-base-content;
+.mobileLink,
+.desktopLink {
+	@apply rounded-md border-2 border-base-content font-bold text-base-content;
 	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
 }
+.mobileLink {
+	@apply block w-3/5 py-1 text-center;
+}
 .desktopLink {
-	@apply rounded-md border-2 border-base-content px-2 py-0.5 font-bold text-base-content transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
+	@apply px-2 py-0.5;
 }
 .desktopLink.router-link-active,
 .mobileLink.router-link-active {
