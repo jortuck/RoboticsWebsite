@@ -29,13 +29,12 @@ body {
     --color-primary-600: #7616b6;
     --color-primary-700: #67149f;
     --color-primary-800: #581188;
-    --color-primarysh: rgba(132, 25, 204,50%);
     --color-secondary: #8419cc;
     --color-alt: #b7a04e;
     --font-roboto: 'Roboto';
     --font-nunito: 'Nunito';
     --font-airbus: 'Airbus Special';
-    --font-logo: 'Airbus Special'
+    --font-logo: var(--font-airbus)
 }
 /*
 Savin em for later (just in case)
@@ -50,7 +49,6 @@ Savin em for later (just in case)
         --color-base-300: #15191e;
         --color-base-content: #e2e4e9;
         --color-alt: #FBE288FF;
-        --color-primarysh: rgba(132, 25, 204,50%);
     }
 }
 html{
