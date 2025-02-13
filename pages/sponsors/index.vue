@@ -36,14 +36,12 @@ const sponsors: Sponsor[] = [
 </script>
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20 text-center">
-		<h1
-			class="coolDrop font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
-		>
+		<h1 class="font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl">
 			Thank you to our 2024-2025 sponsors!
 		</h1>
 	</div>
-	<div class="flex flex-col items-center justify-center">
-		<div class="container mx-2 grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
+	<div class="mx-2 flex flex-col items-center justify-center md:mx-0">
+		<div class="container grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
 			<NuxtLink
 				v-for="sponsor in sponsors"
 				target="_blank"
