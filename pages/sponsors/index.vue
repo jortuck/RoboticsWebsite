@@ -1,3 +1,33 @@
+<script setup lang="ts">
+type Sponsor = {
+	name: string;
+	logo: string;
+	url: string;
+};
+
+const sponsors: Sponsor[] = [
+	{ name: "Mituoyo", logo: "mituoyo.png", url: "https://www.mitutoyo.com/" },
+	{ name: "Harmonic Drive", logo: "hd.gif", url: "https://www.harmonicdrive.net/" },
+	{ name: "Cubemars", logo: "cubemars.png", url: "https://www.cubemars.com/" },
+	{ name: "Husky Union Building", logo: "hub.png", url: "https://hub.washington.edu/" },
+	{ name: "Texas Instruments", logo: "ti.png", url: "https://www.ti.com/" },
+	{ name: "OnShape", logo: "onshape.png", url: "https://www.onshape.com/" },
+	{
+		name: "University of Washington Department of Mechanical Engineering ",
+		logo: "me.gif",
+		url: "https://me.washington.edu/"
+	},
+	{
+		name: "Paul G. Allen School of Computer Science & Engineering",
+		logo: "cs.png",
+		url: "https://cs.washington.edu/"
+	},
+	{ name: "Altium", logo: "altium.png", url: "https://www.altium.com/" },
+	{ name: "Protocase", logo: "protocase.png", url: "https://www.protocase.com/" },
+	{ name: "Solidworks", logo: "solidworks.png", url: "https://www.solidworks.com/" },
+	{ name: "GMA Garnet", logo: "garnet.png", url: "https://gmagarnet.com/en/americas" }
+];
+</script>
 <template>
 	<div class="container mx-auto my-32 w-full space-y-20 text-center">
 		<h1
@@ -8,42 +38,19 @@
 	</div>
 	<div class="flex flex-row justify-center">
 		<div class="container mx-2 grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/mituoyo.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/hd.gif" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/cubemars.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/hub.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/ti.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/onshape.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/me.gif" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/cs.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/altium.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/protocase.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/solidworks.png" />
-			</div>
-			<div class="sponsor">
-				<img src="~/assets/images/sponsors/garnet.png" />
-			</div>
+			<NuxtLink
+				v-for="sponsor in sponsors"
+				target="_blank"
+				:to="sponsor.url"
+				class="sponsor block"
+			>
+				<NuxtImg
+					:alt="sponsor.name"
+					:src="`/images/sponsors/${sponsor.logo}`"
+					:placeholder="[50, 50, 50, 50]"
+					format="webp"
+				/>
+			</NuxtLink>
 		</div>
 	</div>
 </template>
@@ -56,4 +63,3 @@
 	@apply h-full object-contain;
 }
 </style>
-<script setup lang="ts"></script>
