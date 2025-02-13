@@ -36,7 +36,9 @@ const sponsors: Sponsor[] = [
 </script>
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20 text-center">
-		<h1 class="font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl">
+		<h1
+			class="coolDropSmall font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
+		>
 			Thank you to our 2024-2025 sponsors!
 		</h1>
 	</div>

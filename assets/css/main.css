@@ -50,7 +50,6 @@ Savin em for later (just in case)
         --color-base-content: #e2e4e9;
         --color-alt: #FBE288FF;
         --color-primarysh: rgba(132, 25, 204,50%);
-
     }
 }
 html{
@@ -58,4 +57,7 @@ html{
 }
 .coolDrop {
     text-shadow: 4px 4px 0 var(--color-alt);
+}
+.coolDropSmall {
+    text-shadow: 2px 2px 0 var(--color-alt);
 }
