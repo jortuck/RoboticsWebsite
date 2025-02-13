@@ -60,5 +60,5 @@ html{
     text-shadow: 4px 4px 0 var(--color-primary-50);
 }
 .coolDropSmall {
-    text-shadow: 3px 3px 0 var(--color-alt);
+    text-shadow: 3px 3px 0 var(--color-primary-50);
 }
