@@ -1,4 +1,10 @@
 <script setup lang="ts">
+useSeoMeta({
+	title: "Sponsors | Husky Robotics",
+	description:
+		"Husky Robotics handles all its own fundraising; if you like what we are doing, and want to support our goal of helping UW students become better engineers, scientists, and leaders, become a sponsor today!"
+});
+
 type Sponsor = {
 	name: string;
 	logo: string;

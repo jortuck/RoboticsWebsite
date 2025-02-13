@@ -108,27 +108,29 @@ const links: Link[] = [
 				</button>
 			</div>
 		</nav>
-		<div
-			class="absolute flex w-full flex-col items-center space-y-5 border-b-2 border-base-300 bg-base-200 py-5 transition-all duration-200 ease-in-out lg:hidden"
-			:class="{ 'opacity-0': !menuBarOpen }"
-		>
-			<NuxtLink
-				v-for="link in links"
-				:to="link.url"
-				@click="toggleMenu()"
-				class="mobileLink"
+		<Transition>
+			<div
+				v-if="menuBarOpen"
+				class="absolute flex w-full flex-col items-center space-y-5 border-b-2 border-base-300 bg-base-200 py-5 transition-all duration-200 ease-in-out lg:hidden"
 			>
-				{{ link.text }}
-			</NuxtLink>
-			<button
-				class="mobileLink"
-				@click="toggleDark()"
-				role="button"
-			>
-				<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
-				<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
-			</button>
-		</div>
+				<NuxtLink
+					v-for="link in links"
+					:to="link.url"
+					@click="toggleMenu()"
+					class="mobileLink"
+				>
+					{{ link.text }}
+				</NuxtLink>
+				<button
+					class="mobileLink"
+					@click="toggleDark()"
+					role="button"
+				>
+					<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
+					<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
+				</button>
+			</div>
+		</Transition>
 	</div>
 </template>
 <style scoped>
@@ -150,5 +152,14 @@ const links: Link[] = [
 .desktopLink.router-link-active,
 .mobileLink.router-link-active {
 	@apply bg-base-content text-base-100;
+}
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
 }
 </style>
