@@ -31,7 +31,7 @@ const sponsors: Sponsor[] = [
 	{ name: "Altium", logo: "altium.png", url: "https://www.altium.com/" },
 	{ name: "Protocase", logo: "protocase.png", url: "https://www.protocase.com/" },
 	{ name: "Solidworks", logo: "solidworks.png", url: "https://www.solidworks.com/" },
-	{ name: "GMA Garnet", logo: "garnet.png", url: "https://gmagarnet.com/en/americas" }
+	{ name: "GMA Garnet", logo: "gma.svg", url: "https://gmagarnet.com/en/americas" }
 ];
 </script>
 <template>
@@ -42,7 +42,7 @@ const sponsors: Sponsor[] = [
 			Thank you to our 2024-2025 sponsors!
 		</h1>
 	</div>
-	<div class="flex flex-row justify-center">
+	<div class="flex flex-col items-center justify-center">
 		<div class="container mx-2 grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
 			<NuxtLink
 				v-for="sponsor in sponsors"
@@ -59,11 +59,18 @@ const sponsors: Sponsor[] = [
 			</NuxtLink>
 		</div>
 	</div>
+	<div class="container mx-auto my-16">
+		<p class="text-center text-xl text-base-content">
+			Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
+			support our goal of helping UW students become better engineers, scientists, and leaders,
+			become a sponsor today!
+		</p>
+	</div>
 </template>
 <style scoped>
 @reference "~/assets/css/main.css";
 .sponsor {
-	@apply flex h-36 flex-col items-center justify-center rounded-md bg-white p-5 shadow-lg;
+	@apply flex h-36 flex-col items-center justify-center rounded-md p-5 transition-shadow duration-200 ease-in-out dark:bg-white;
 }
 .sponsor > img {
 	@apply h-full object-contain;
