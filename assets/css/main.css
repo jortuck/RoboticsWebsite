@@ -24,7 +24,8 @@ body {
     --color-primary-200: #b460eb;
     --color-primary-300:  #a949e9;
     --color-primary-400: #9e33e6;
-    --color-primary: #931ce3;
+    --color-primary:var(--color-primary-400);
+    /*--color-primary: #931ce3;*/
     --color-primary-600: #7616b6;
     --color-primary-700: #67149f;
     --color-primary-800: #581188;
@@ -56,7 +57,7 @@ html{
     background-color: var(--color-base-100);
 }
 .coolDrop {
-    text-shadow: 4px 4px 0 var(--color-alt);
+    text-shadow: 4px 4px 0 var(--color-primary-50);
 }
 .coolDropSmall {
     text-shadow: 3px 3px 0 var(--color-alt);
