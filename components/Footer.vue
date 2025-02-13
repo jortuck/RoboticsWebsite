@@ -15,7 +15,6 @@
 			</div>
 			<p class="flex-none space-x-4 text-base-content">
 				<NuxtLink
-					class="coolDrop"
 					target="_blank"
 					to="https://www.instagram.com/uwrobots/"
 					aria-label="@uwrobots on Instagram."
@@ -23,7 +22,6 @@
 					<i class="fa-brands fa-2x fa-instagram"></i>
 				</NuxtLink>
 				<NuxtLink
-					class="coolDrop"
 					target="_blank"
 					to="https://www.facebook.com/uwrobots/"
 					aria-label="@uwrobots on Facebook."
@@ -33,7 +31,6 @@
 
 				<NuxtLink
 					to="https://www.linkedin.com/company/husky-robotics/"
-					class="coolDrop"
 					target="_blank"
 					aria-label="@husky-robotics on LinkedIn."
 				>
@@ -41,7 +38,6 @@
 				</NuxtLink>
 
 				<NuxtLink
-					class="coolDrop"
 					target="_blank"
 					to="https://www.youtube.com/channel/UC274hSR7LTSRfsH4riugKBw"
 					aria-label="Husky Robotics on YouTube."
@@ -50,7 +46,6 @@
 				</NuxtLink>
 
 				<NuxtLink
-					class="coolDrop"
 					target="_blank"
 					to="https://github.com/huskyroboticsteam"
 					aria-label="@huskyroboticsteam on GitHub."

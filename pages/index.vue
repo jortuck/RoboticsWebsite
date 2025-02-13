@@ -35,9 +35,6 @@ useSeoMeta({
 	</div>
 </template>
 <style scoped>
-.coolDrop {
-	text-shadow: 4px 4px 0 var(--color-alt);
-}
 .bg-image {
 	background-image: url(/assets/images/robot.png);
 	background-size: contain;
@@ -45,7 +42,8 @@ useSeoMeta({
 	background-position-x: 45%;
 }
 .box {
-	--mask: linear-gradient(0, #0000 20px, #000 0) 0 10px,
+	--mask:
+		linear-gradient(0, #0000 20px, #000 0) 0 10px,
 		radial-gradient(10px, #000 calc(100% - 1px), #0000) 50%/18.5px 20px repeat space;
 	-webkit-mask: var(--mask);
 	mask: var(--mask);

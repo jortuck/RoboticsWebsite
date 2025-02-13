@@ -56,3 +56,6 @@ Savin em for later (just in case)
 html{
     background-color: var(--color-base-100);
 }
+.coolDrop {
+    text-shadow: 4px 4px 0 var(--color-alt);
+}
