@@ -31,7 +31,7 @@ const sponsors: Sponsor[] = [
 	{ name: "Altium", logo: "altium.png", url: "https://www.altium.com/" },
 	{ name: "Protocase", logo: "protocase.png", url: "https://www.protocase.com/" },
 	{ name: "Solidworks", logo: "solidworks.png", url: "https://www.solidworks.com/" },
-	{ name: "GMA Garnet", logo: "gma.svg", url: "https://gmagarnet.com/en/americas" }
+	{ name: "GMA Garnet", logo: "gma.png", url: "https://gmagarnet.com/en/americas" }
 ];
 </script>
 <template>
@@ -70,7 +70,7 @@ const sponsors: Sponsor[] = [
 <style scoped>
 @reference "~/assets/css/main.css";
 .sponsor {
-	@apply flex h-36 flex-col items-center justify-center rounded-md p-5 transition-shadow duration-200 ease-in-out dark:bg-white;
+	@apply flex h-36 flex-col items-center justify-center rounded-md p-5 transition-shadow duration-200 ease-in-out dark:bg-purple-50;
 }
 .sponsor > img {
 	@apply h-full object-contain;
