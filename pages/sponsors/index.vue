@@ -35,36 +35,38 @@ const sponsors: Sponsor[] = [
 ];
 </script>
 <template>
-	<div class="container mx-auto my-24 w-full space-y-20 text-center">
-		<h1
-			class="coolDropSmall font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
-		>
-			Thank you to our 2024-2025 sponsors!
-		</h1>
-	</div>
-	<div class="mx-2 flex flex-col items-center justify-center md:mx-0">
-		<div class="container grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
-			<NuxtLink
-				v-for="sponsor in sponsors"
-				target="_blank"
-				:to="sponsor.url"
-				class="sponsor block"
+	<div class="mx-4 md:mx-0">
+		<div class="container mx-auto my-24 w-full space-y-20 text-center">
+			<h1
+				class="coolDropSmall font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
 			>
-				<NuxtImg
-					:alt="sponsor.name"
-					:src="`/images/sponsors/${sponsor.logo}`"
-					:placeholder="[50, 50, 50, 50]"
-					format="webp"
-				/>
-			</NuxtLink>
+				Thank you to our 2024-2025 sponsors!
+			</h1>
 		</div>
-	</div>
-	<div class="container mx-auto my-16">
-		<p class="text-center text-xl text-base-content">
-			Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
-			support our goal of helping UW students become better engineers, scientists, and leaders,
-			become a sponsor today!
-		</p>
+		<div class="flex flex-col items-center justify-center">
+			<div class="container grid grid-cols-2 gap-4 self-center md:grid-cols-3 lg:grid-cols-4">
+				<NuxtLink
+					v-for="sponsor in sponsors"
+					target="_blank"
+					:to="sponsor.url"
+					class="sponsor block"
+				>
+					<NuxtImg
+						:alt="sponsor.name"
+						:src="`/images/sponsors/${sponsor.logo}`"
+						:placeholder="[50, 50, 50, 50]"
+						format="webp"
+					/>
+				</NuxtLink>
+			</div>
+		</div>
+		<div class="container mx-auto my-16">
+			<p class="text-center text-xl text-base-content">
+				Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
+				support our goal of helping UW students become better engineers, scientists, and leaders,
+				become a sponsor today!
+			</p>
+		</div>
 	</div>
 </template>
 <style scoped>
