@@ -12,7 +12,7 @@
     src: url('aispec.woff') format('woff');
 }
 body {
-    font-family: Nunito, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 @theme {
     --color-base-100: #F8F3FB;
@@ -34,7 +34,7 @@ body {
     --font-roboto: 'Roboto';
     --font-nunito: 'Nunito';
     --font-airbus: 'Airbus Special';
-    --font-logo: 'Nunito'
+    --font-logo: 'Airbus Special'
 }
 /*
 Savin em for later (just in case)

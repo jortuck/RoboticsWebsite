@@ -51,7 +51,7 @@ const links: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 					<p
-						class="border-b-2 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
+						class="translate-y-1 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
 					>
 						Husky Robotics
 					</p>
@@ -88,7 +88,7 @@ const links: Link[] = [
 					/>
 				</div>
 				<p
-					class="border-b-2 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase dark:text-white"
+					class="translate-y-1 font-logo text-lg font-extrabold text-base-content uppercase dark:text-white"
 				>
 					Husky Robotics
 				</p>
@@ -155,7 +155,7 @@ const links: Link[] = [
 }
 .v-enter-active,
 .v-leave-active {
-	transition: opacity 0.5s ease;
+	transition: opacity 0.25s ease;
 }
 
 .v-enter-from,
