@@ -60,12 +60,18 @@ const sponsors: Sponsor[] = [
 				</NuxtLink>
 			</div>
 		</div>
-		<div class="container mx-auto my-16">
+		<div class="container mx-auto my-16 space-y-8 text-center">
 			<p class="text-center text-xl text-base-content">
 				Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
 				support our goal of helping UW students become better engineers, scientists, and leaders,
 				become a sponsor today!
 			</p>
+			<NuxtLink
+				class="rounded-md border-2 p-3 font-bold text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100 dark:text-alt hover:dark:bg-alt"
+				href="/infoPacket.pdf"
+				target="_blank"
+				>View Information Packet</NuxtLink
+			>
 		</div>
 	</div>
 </template>

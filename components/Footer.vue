@@ -71,8 +71,8 @@
 </template>
 <style scoped>
 @reference "~/assets/css/main.css";
-.coolDrop:hover {
-	@apply text-base-content/70 transition-colors duration-300 ease-in-out;
+a:hover {
+	@apply text-primary transition-colors duration-300 ease-in-out dark:text-alt;
 }
 </style>
 <script setup lang="ts"></script>
