@@ -15,5 +15,11 @@ export default defineNuxtConfig({
 		head: {
 			link: [{ rel: "icon", href: "./favicon.ico", type: "image/ico" }]
 		}
+	},
+	nitro: {
+		prerender: {
+			crawlLinks: true,
+			failOnError: false
+		}
 	}
 });
