@@ -29,7 +29,7 @@ const links: Link[] = [
 ];
 </script>
 <template>
-	<Html :class="{ 'overflow-hidden': menuBarOpen }" />
+	<Html :class="{ 'overflow-hidden lg:overflow-auto': menuBarOpen }" />
 
 	<div class="sticky top-0 z-50 will-change-transform">
 		<p
@@ -114,7 +114,7 @@ const links: Link[] = [
 			<div
 				v-if="menuBarOpen"
 				@click.self="toggleMenu()"
-				class="absolute flex h-screen w-full flex-col items-center justify-center space-y-5 border-base-300 bg-base-200/50 py-5 backdrop-blur-2xl lg:hidden"
+				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-base-300 bg-base-200/50 px-5 py-5 backdrop-blur-2xl lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
@@ -147,7 +147,7 @@ const links: Link[] = [
 	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
 }
 .mobileLink {
-	@apply block w-3/5 py-1 text-center;
+	@apply block w-full py-2 text-center;
 }
 .desktopLink {
 	@apply px-2 py-0.5;
