@@ -33,7 +33,7 @@ const links: Link[] = [
 
 	<div class="sticky top-0 z-50 will-change-transform">
 		<p
-			v-if="dev"
+			v-if="!dev"
 			class="w-full bg-amber-300 p-2 text-center"
 		>
 			Website under construction. Expect missing content & bugs!
