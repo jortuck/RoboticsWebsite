@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useNuxt } from "@nuxt/kit";
-import.meta.dev;
 let menuBarOpen = ref(false);
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -13,7 +12,6 @@ onMounted(() => {
 	});
 });
 const toggleMenu = useToggle(menuBarOpen);
-const dev = import.meta.dev;
 
 type Link = {
 	text: string;
@@ -32,12 +30,6 @@ const links: Link[] = [
 	<Html :class="{ 'overflow-hidden lg:overflow-auto': menuBarOpen }" />
 
 	<div class="sticky top-0 z-50 will-change-transform">
-		<p
-			v-if="!dev"
-			class="w-full bg-amber-300 p-2 text-center"
-		>
-			Website under construction. Expect missing content & bugs!
-		</p>
 		<nav
 			class="hidden items-center justify-center bg-base-100 py-3 lg:flex"
 			:class="{ scrolled: scroll > 0 }"

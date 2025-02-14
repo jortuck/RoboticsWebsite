@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const dev = import.meta.dev;
+
 type SocialLink = {
 	name: string;
 	icon: string;
@@ -73,6 +75,12 @@ const links: SocialLink[] = [
 			</div>
 		</div>
 	</footer>
+	<p
+		v-if="!dev"
+		class="w-full bg-amber-300 p-2 text-center"
+	>
+		Website under construction. Expect missing content & bugs!
+	</p>
 </template>
 <style scoped>
 @reference "~/assets/css/main.css";
