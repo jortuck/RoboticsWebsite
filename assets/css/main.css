@@ -9,7 +9,7 @@
     font-family: 'Airbus Special';
     font-style: normal;
     font-weight: normal;
-    src: url('aispec.woff') format('woff');
+    src: url(aispec.woff) format('woff');
 }
 body {
     font-family: Roboto, sans-serif;

@@ -30,7 +30,7 @@ const links: Link[] = [
 </script>
 <template>
 	<p
-		v-if="!dev"
+		v-if="dev"
 		class="w-full bg-amber-300 p-2 text-center"
 	>
 		Website under construction. Expect missing content & bugs!
