@@ -111,7 +111,7 @@ const links: Link[] = [
 		<Transition>
 			<div
 				v-if="menuBarOpen"
-				class="absolute flex w-full flex-col items-center space-y-5 border-b-2 border-base-300 bg-base-200 py-5 transition-all duration-200 ease-in-out lg:hidden"
+				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-b-2 border-base-300 bg-base-200/50 py-5 backdrop-blur-2xl transition-all duration-200 ease-in-out lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
