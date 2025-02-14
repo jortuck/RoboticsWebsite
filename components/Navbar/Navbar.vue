@@ -29,13 +29,15 @@ const links: Link[] = [
 ];
 </script>
 <template>
-	<p
-		v-if="dev"
-		class="w-full bg-amber-300 p-2 text-center"
-	>
-		Website under construction. Expect missing content & bugs!
-	</p>
+	<Html :class="{ 'overflow-hidden': menuBarOpen }" />
+
 	<div class="sticky top-0 z-50 will-change-transform">
+		<p
+			v-if="dev"
+			class="w-full bg-amber-300 p-2 text-center"
+		>
+			Website under construction. Expect missing content & bugs!
+		</p>
 		<nav
 			class="hidden items-center justify-center bg-base-100 py-3 lg:flex"
 			:class="{ scrolled: scroll > 0 }"
@@ -111,7 +113,8 @@ const links: Link[] = [
 		<Transition>
 			<div
 				v-if="menuBarOpen"
-				class="absolute flex h-screen w-full flex-col items-center justify-center space-y-5 border-b-2 border-base-300 bg-base-200/50 py-5 backdrop-blur-2xl transition-all duration-200 ease-in-out lg:hidden"
+				@click.self="toggleMenu()"
+				class="absolute flex h-screen w-full flex-col items-center justify-center space-y-5 border-base-300 bg-base-200/50 py-5 backdrop-blur-2xl lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
