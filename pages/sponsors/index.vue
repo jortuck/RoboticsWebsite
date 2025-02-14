@@ -67,7 +67,7 @@ const sponsors: Sponsor[] = [
 				become a sponsor today!
 			</p>
 			<NuxtLink
-				class="rounded-md border-2 p-3 font-bold text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100 dark:text-alt hover:dark:bg-alt"
+				class="rounded-md border-2 border-primary p-3 font-bold text-primary shadow-md transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100 dark:border-alt dark:text-alt hover:dark:bg-alt"
 				href="/infoPacket.pdf"
 				target="_blank"
 				>View Information Packet</NuxtLink
