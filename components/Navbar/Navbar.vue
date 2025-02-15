@@ -131,7 +131,7 @@ const links: Link[] = [
 <style scoped>
 @reference "~/assets/css/main.css";
 .scrolled {
-	@apply border-b-2 border-b-base-content bg-base-100/90 backdrop-blur-2xl;
+	@apply border-b-2 border-b-base-300 bg-base-100/90 backdrop-blur-2xl;
 }
 .mobileLink,
 .desktopLink {
