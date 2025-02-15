@@ -20,15 +20,15 @@ body {
     --color-base-300: #e6d6f2;
     --color-base-content: #1f2937;
     --color-primary-50: #e6d6f2;
-    --color-primary-100: #be77ee;
-    --color-primary-200: #b460eb;
-    --color-primary-300:  #a949e9;
-    --color-primary-400: #9e33e6;
-    --color-primary:var(--color-primary-400);
-    /*--color-primary: #931ce3;*/
-    --color-primary-600: #7616b6;
-    --color-primary-700: #67149f;
-    --color-primary-800: #581188;
+    --color-primary-100: #c98ef1;
+    --color-primary-200: #be77ee;
+    --color-primary-300:  #b460eb;
+    --color-primary-400:  #a949e9;
+    --color-primary:#9e33e6;
+    --color-primary-600: #931ce3;
+    --color-primary-700: #7616b6;
+    --color-primary-800: #67149f;
+    --color-primary-900: #581188;
     --color-secondary: #8419cc;
     --color-alt: #b7a04e;
     --font-roboto: 'Roboto';
@@ -44,11 +44,12 @@ Savin em for later (just in case)
 */
 :root {
     @variant dark {
+        --color-primary-50: transparent;
         --color-base-100: #1d232a;
         --color-base-200: #191e24;
         --color-base-300: #15191e;
         --color-base-content: #e2e4e9;
-        --color-alt: #FBE288FF;
+        --color-primary: #FBE288FF;
     }
 }
 html{

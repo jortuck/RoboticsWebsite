@@ -85,6 +85,6 @@ const links: SocialLink[] = [
 <style scoped>
 @reference "~/assets/css/main.css";
 a:hover {
-	@apply text-primary transition-colors duration-300 ease-in-out dark:text-alt;
+	@apply text-primary transition-colors duration-300 ease-in-out dark:text-primary;
 }
 </style>
