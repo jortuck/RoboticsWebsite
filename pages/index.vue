@@ -11,7 +11,7 @@ useSeoMeta({
 			HUSKY ROBOTICS
 		</h1>
 	</div>
-	<div class="w-full bg-base-300 bg-center shadow-md">
+	<div class="w-full bg-base-100 bg-center shadow-md">
 		<div
 			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
 		>

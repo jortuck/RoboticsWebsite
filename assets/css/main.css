@@ -15,9 +15,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 @theme {
-    --color-base-100: #F8F3FB;
+    --color-base-300: #F8F3FB;
     --color-base-200: #F1E8F8;
-    --color-base-300: #e6d6f2;
+    --color-base-100: #e6d6f2;
     --color-base-content: #1f2937;
     --color-primary-50: #e6d6f2;
     --color-primary-100: #c98ef1;
@@ -53,7 +53,7 @@ Savin em for later (just in case)
     }
 }
 html{
-    background-color: var(--color-base-100);
+    background-color: var(--color-base-300);
 }
 .coolDrop {
     text-shadow: 4px 4px 0 var(--color-primary-50);

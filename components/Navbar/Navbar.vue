@@ -31,7 +31,7 @@ const links: Link[] = [
 
 	<div class="sticky top-0 z-50 will-change-transform">
 		<nav
-			class="hidden items-center justify-center bg-base-100 py-3 lg:flex"
+			class="hidden items-center justify-center bg-base-300 py-3 lg:flex"
 			:class="{ scrolled: scroll > 0 }"
 		>
 			<div class="container flex flex-row justify-between">
@@ -71,7 +71,7 @@ const links: Link[] = [
 			</div>
 		</nav>
 		<nav
-			class="relative flex items-center justify-center border-b-2 border-base-300 bg-base-100 px-4 py-3 lg:hidden"
+			class="relative flex items-center justify-center border-b-2 border-base-100 bg-base-300 px-4 py-3 lg:hidden"
 		>
 			<div class="container flex flex-row items-center justify-between">
 				<div class="flex flex-row items-center space-x-5">
@@ -106,7 +106,7 @@ const links: Link[] = [
 			<div
 				v-if="menuBarOpen"
 				@click.self="toggleMenu()"
-				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-base-300 bg-base-200/70 px-5 py-5 backdrop-blur-2xl lg:hidden"
+				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-base-100 bg-base-200/70 px-5 py-5 backdrop-blur-2xl lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
@@ -131,12 +131,12 @@ const links: Link[] = [
 <style scoped>
 @reference "~/assets/css/main.css";
 .scrolled {
-	@apply border-b-2 border-b-base-300 bg-base-100/90 backdrop-blur-2xl;
+	@apply border-b-2 border-b-base-100 bg-base-300/90 backdrop-blur-2xl;
 }
 .mobileLink,
 .desktopLink {
 	@apply rounded-md border-2 border-base-content font-bold text-base-content;
-	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-100;
+	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-300;
 }
 .mobileLink {
 	@apply block w-full py-2 text-center;
