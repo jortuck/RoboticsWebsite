@@ -36,18 +36,3 @@ useSeoMeta({
 		</div>
 	</div>
 </template>
-<style scoped>
-.bg-image {
-	background-image: url(/assets/images/robot.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position-x: 45%;
-}
-.box {
-	--mask:
-		linear-gradient(0, #0000 20px, #000 0) 0 10px,
-		radial-gradient(10px, #000 calc(100% - 1px), #0000) 50%/18.5px 20px repeat space;
-	-webkit-mask: var(--mask);
-	mask: var(--mask);
-}
-</style>
