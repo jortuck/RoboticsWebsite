@@ -3,7 +3,7 @@
 		<h1
 			class="coolDropSmall font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
 		>
-			Team Will Go Here
+			Team
 		</h1>
 	</div>
 </template>
