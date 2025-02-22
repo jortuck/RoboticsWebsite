@@ -6,26 +6,20 @@ useSeoMeta({
 });
 </script>
 <template>
-	<div class="relative bg-base-100 bg-[url('~/assets/images/orpheus_1.png')] bg-cover bg-center">
-		<div class="h-full w-full bg-base-300/25 backdrop-blur-xs">
-			<div class="container mx-auto w-full space-y-20 py-40">
-				<h1
-					class="coolDrop text-center font-logo text-5xl font-extrabold text-primary select-none md:text-8xl"
-				>
-					HUSKY ROBOTICS
-				</h1>
-			</div>
-		</div>
+	<div class="container mx-auto my-40 w-full space-y-20 text-center">
+		<h1 class="coolDrop font-logo text-5xl font-extrabold text-primary select-none md:text-8xl">
+			HUSKY ROBOTICS
+		</h1>
 	</div>
 	<div class="w-full bg-base-300 bg-center shadow-md">
 		<div
 			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
 		>
 			<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
-				<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
+				<h2 class="text-4xl font-extrabold text-base-content md:text-5xl xl:text-6xl">
 					The Mission
 				</h2>
-				<p class="block text-base-content md:text-lg xl:text-xl">
+				<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
 					Our mission at Husky Robotics’ is to provide UW students with an environment where they
 					can learn practical, hands-on engineering skills as part of a large interdisciplinary
 					team. Unfettered by the time limits of the quarter system, our members build on their
@@ -34,11 +28,11 @@ useSeoMeta({
 					and a fuller understanding of modern engineering.
 				</p>
 			</div>
-			<!--			<img-->
-			<!--				src="~/assets/images/orpheus_1.png"-->
-			<!--				alt="Image of the robot orpheus."-->
-			<!--				class="rounded-xl shadow-md lg:w-0 lg:flex-1"-->
-			<!--			/>-->
+			<img
+				src="~/assets/images/orpheus_1.png"
+				alt="Image of the robot orpheus."
+				class="rounded-xl shadow-md lg:w-0 lg:flex-1"
+			/>
 		</div>
 	</div>
 </template>
