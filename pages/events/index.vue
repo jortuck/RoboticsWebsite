@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+useSeoMeta({
+	title: "Events | Husky Robotics"
+});
+</script>
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20 text-center">
 		<h1

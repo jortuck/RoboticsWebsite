@@ -7,4 +7,8 @@
 		</h1>
 	</div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+	title: "Team | Husky Robotics"
+});
+</script>

@@ -16,10 +16,10 @@ useSeoMeta({
 			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
 		>
 			<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
-				<h2 class="text-4xl font-extrabold text-base-content md:text-5xl xl:text-6xl">
+				<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
 					The Mission
 				</h2>
-				<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
+				<p class="block text-base-content md:text-lg xl:text-xl">
 					Our mission at Husky Robotics’ is to provide UW students with an environment where they
 					can learn practical, hands-on engineering skills as part of a large interdisciplinary
 					team. Unfettered by the time limits of the quarter system, our members build on their
