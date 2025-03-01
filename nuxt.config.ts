@@ -5,10 +5,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["@vueuse/nuxt", "@nuxt/image"],
 	vite: {
-		plugins: [tailwindcss()],
-		build: {
-			cssMinify: false
-		}
+		plugins: [tailwindcss()]
 	},
 	css: ["~/assets/css/main.css"],
 	app: {
