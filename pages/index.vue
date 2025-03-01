@@ -42,20 +42,63 @@ useSeoMeta({
 				News & Updates
 			</h2>
 			<div class="flex flex-row gap-x-3">
-				<div class="w-full space-y-2 rounded-md bg-base-100 p-4 text-base-content">
-					<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-					<h4>2/28/2025</h4>
-					<NuxtImg
-						class="rounded-md"
-						src="/images/news/IMG_7833.jpg"
-					/>
+				<div
+					class="w-full space-y-4 rounded-md border-1 border-base-200 bg-base-100 p-4 text-base-content"
+				>
+					<div class="flex flex-row items-center justify-center">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+							<h4>2/28/2025</h4>
+							<p class="flex-1">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+					</div>
+					<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+						<div class="w-full backdrop-blur-xl">
+							<NuxtImg
+								class="mx-auto h-70 w-fit"
+								src="/images/news/IMG_7833.jpg"
+							/>
+						</div>
+					</div>
 				</div>
 				<div class="flex w-full flex-grow flex-col gap-3">
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
-						<h3 class="text-2xl font-bold">2nd Most Recent Event</h3>
+						<div class="flex flex-row items-center justify-center">
+							<div>
+								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+								<h4>2/28/2025</h4>
+								<p class="flex-1">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+							<NuxtImg
+								class="h-40 rounded-md"
+								src="/images/news/IMG_7833.jpg"
+							/>
+						</div>
 					</div>
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
-						<h3 class="text-2xl font-bold">3rd Most Recent Event</h3>
+						<div class="flex flex-row items-center justify-center">
+							<div>
+								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+								<h4>2/28/2025</h4>
+								<p class="flex-1">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
+							</div>
+							<NuxtImg
+								class="h-40 rounded-md"
+								src="/images/news/IMG_7833.jpg"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
