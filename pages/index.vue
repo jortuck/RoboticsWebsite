@@ -70,7 +70,7 @@ useSeoMeta({
 				<div class="flex w-full flex-grow flex-col gap-3">
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
 						<div class="flex flex-col items-center justify-center md:flex-row">
-							<div>
+							<div class="space-y-2">
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 								<h4>2/28/2025</h4>
 								<p class="flex-1">
@@ -87,7 +87,7 @@ useSeoMeta({
 					</div>
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
 						<div class="flex flex-col items-center justify-center md:flex-row">
-							<div>
+							<div class="space-y-2">
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 								<h4>2/28/2025</h4>
 								<p class="flex-1">
