@@ -15,9 +15,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 @theme {
-    --color-base-300: #F8F3FB;
-    --color-base-200: #F1E8F8;
-    --color-base-100: #e6d6f2;
+    --color-base-200: oklch(98% 0 0);
+    --color-base-100: oklch(95% 0 0);
+    --color-base-300: oklch(100% 0 0);
     --color-base-content: #1f2937;
     --color-primary-50: #e6d6f2;
     --color-primary-100: #c98ef1;

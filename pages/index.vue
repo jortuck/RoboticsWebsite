@@ -6,33 +6,60 @@ useSeoMeta({
 });
 </script>
 <template>
-	<div class="container mx-auto my-40 w-full space-y-20 text-center">
-		<h1 class="coolDrop font-logo text-5xl font-extrabold text-primary select-none md:text-8xl">
-			HUSKY ROBOTICS
-		</h1>
-	</div>
-	<div class="w-full bg-base-100 bg-center shadow-md">
-		<div
-			class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
-		>
-			<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
-				<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
-					The Mission
-				</h2>
-				<p class="block text-base-content md:text-lg xl:text-xl">
-					Our mission at Husky Robotics’ is to provide UW students with an environment where they
-					can learn practical, hands-on engineering skills as part of a large interdisciplinary
-					team. Unfettered by the time limits of the quarter system, our members build on their
-					skills for the entire year, working in a project-oriented team where they can see how
-					their work becomes part of the complete system. This fosters better communication skills,
-					and a fuller understanding of modern engineering.
-				</p>
-			</div>
-			<img
-				src="~/assets/images/orpheus_1.png"
-				alt="Image of the robot orpheus."
-				class="rounded-xl shadow-md lg:w-0 lg:flex-1"
-			/>
+	<div class="space-y-32">
+		<div class="container mx-auto my-40 w-full space-y-20 text-center">
+			<h1 class="coolDrop font-logo text-5xl font-extrabold text-primary select-none md:text-8xl">
+				HUSKY ROBOTICS
+			</h1>
 		</div>
+		<div class="w-full bg-base-100 bg-center shadow-md">
+			<div
+				class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
+			>
+				<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
+					<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
+						The Mission
+					</h2>
+					<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
+						Our mission at <span class="font-logo uppercase">Husky Robotics</span> is to provide UW
+						students with an environment where they can learn practical, hands-on engineering skills
+						as part of a large interdisciplinary team. Unfettered by the time limits of the quarter
+						system, our members build on their skills for the entire year, working in a
+						project-oriented team where they can see how their work becomes part of the complete
+						system. This fosters better communication skills, and a fuller understanding of modern
+						engineering.
+					</p>
+				</div>
+				<img
+					src="~/assets/images/orpheus_1.png"
+					alt="Image of the robot orpheus."
+					class="rounded-xl shadow-md lg:w-0 lg:flex-1"
+				/>
+			</div>
+		</div>
+		<section class="container mx-auto space-y-8">
+			<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
+				News & Updates
+			</h2>
+			<div class="flex flex-row gap-x-3">
+				<div class="w-full space-y-2 rounded-md bg-base-100 p-4 text-base-content">
+					<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+					<h4>2/28/2025</h4>
+					<NuxtImg
+						class="rounded-md"
+						src="/images/news/IMG_7833.jpg"
+					/>
+				</div>
+				<div class="flex w-full flex-grow flex-col gap-3">
+					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
+						<h3 class="text-2xl font-bold">2nd Most Recent Event</h3>
+					</div>
+					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
+						<h3 class="text-2xl font-bold">3rd Most Recent Event</h3>
+					</div>
+				</div>
+			</div>
+			<a> View All News </a>
+		</section>
 	</div>
 </template>
