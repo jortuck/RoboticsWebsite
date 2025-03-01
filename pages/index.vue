@@ -38,14 +38,16 @@ useSeoMeta({
 			</div>
 		</div>
 		<section class="container mx-auto space-y-8">
-			<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
+			<h2
+				class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
+			>
 				News & Updates
 			</h2>
-			<div class="flex flex-row gap-x-3">
+			<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-3">
 				<div
 					class="w-full space-y-4 rounded-md border-1 border-base-200 bg-base-100 p-4 text-base-content"
 				>
-					<div class="flex flex-row items-center justify-center">
+					<div class="flex flex-col items-center justify-center md:flex-row">
 						<div class="space-y-2">
 							<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 							<h4>2/28/2025</h4>
@@ -59,7 +61,7 @@ useSeoMeta({
 					<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
-								class="mx-auto h-70 w-fit"
+								class="mx-auto max-h-70 w-fit"
 								src="/images/news/IMG_7833.jpg"
 							/>
 						</div>
@@ -67,7 +69,7 @@ useSeoMeta({
 				</div>
 				<div class="flex w-full flex-grow flex-col gap-3">
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
-						<div class="flex flex-row items-center justify-center">
+						<div class="flex flex-col items-center justify-center md:flex-row">
 							<div>
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 								<h4>2/28/2025</h4>
@@ -84,7 +86,7 @@ useSeoMeta({
 						</div>
 					</div>
 					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
-						<div class="flex flex-row items-center justify-center">
+						<div class="flex flex-col items-center justify-center md:flex-row">
 							<div>
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 								<h4>2/28/2025</h4>
