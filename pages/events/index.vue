@@ -30,7 +30,7 @@ useSeoMeta({
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
 								src="./images/events/smash.png"
-								class="mx-auto"
+								class="mx-auto h-96"
 							/>
 						</div>
 					</div>
@@ -51,7 +51,7 @@ useSeoMeta({
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
 								src="./images/events/smash.png"
-								class="mx-auto"
+								class="mx-auto h-96"
 							/>
 						</div>
 					</div>
