@@ -44,9 +44,7 @@ useSeoMeta({
 				News & Updates
 			</h2>
 			<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-3">
-				<div
-					class="w-full space-y-4 rounded-md border-1 border-base-200 bg-base-100 p-4 text-base-content"
-				>
+				<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
 					<div class="flex flex-col items-center justify-center md:flex-row">
 						<div class="space-y-2">
 							<h3 class="text-2xl font-bold">New SAR Video Released</h3>
@@ -68,15 +66,18 @@ useSeoMeta({
 					</div>
 				</div>
 				<div class="flex w-full flex-grow flex-col gap-3">
-					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
-						<div class="flex flex-col items-center justify-center md:flex-row">
+					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+						<div class="flex flex-col items-center justify-center space-x-4 md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
 								<h4>2/28/2025</h4>
 								<p class="flex-1">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</p>
 							</div>
 							<NuxtImg
@@ -85,7 +86,7 @@ useSeoMeta({
 							/>
 						</div>
 					</div>
-					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content">
+					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
 						<div class="flex flex-col items-center justify-center md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
