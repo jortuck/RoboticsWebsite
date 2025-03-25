@@ -41,7 +41,7 @@ useSeoMeta({
 			<h2
 				class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
 			>
-				News & Updates
+				Recent Updates
 			</h2>
 			<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-3">
 				<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">

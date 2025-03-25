@@ -6,14 +6,16 @@ useSeoMeta({
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20">
 		<h1
-			class="coolDropSmall font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
+			class="coolDropSmall text-center font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
 		>
-			Events
+			News & Events
 		</h1>
-		<section class="space-y-4">
+		<section class="mx-2 space-y-4 lg:mx-0">
 			<h2 class="text-4xl text-base-content">2024</h2>
 			<hr class="rounded-full border-2 border-primary" />
-			<div class="flex flex-row items-center justify-center space-x-4">
+			<div
+				class="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4"
+			>
 				<div class="space-y-4 rounded-md bg-base-100 p-4">
 					<div class="space-y-4">
 						<h2 class="text-3xl font-bold text-base-content">
