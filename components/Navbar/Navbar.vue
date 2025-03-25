@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useNuxt } from "@nuxt/kit";
 let menuBarOpen = ref(false);
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
