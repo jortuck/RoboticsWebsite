@@ -19,16 +19,17 @@ body {
     --color-base-100: oklch(95% 0 0);
     --color-base-300: oklch(100% 0 0);
     --color-base-content: #1f2937;
-    --color-primary-50: #e6d6f2;
-    --color-primary-100: #c98ef1;
-    --color-primary-200: #be77ee;
-    --color-primary-300:  #b460eb;
-    --color-primary-400:  #a949e9;
-    --color-primary:#9e33e6;
-    --color-primary-600: #931ce3;
-    --color-primary-700: #7616b6;
-    --color-primary-800: #67149f;
-    --color-primary-900: #581188;
+    --color-primary-50: #f3e8fa;
+    --color-primary-100: #e3caf2;
+    --color-primary-200: #d2aeea;
+    --color-primary-300: #c08ee1;
+    --color-primary-400: #ad70d9;
+    --color-primary: #9c5ad0;
+    --color-primary-600: #884ac2;
+    --color-primary-700: #723f9a;
+    --color-primary-800: #5a317c;
+    --color-primary-900: #42245e;
+    --color-primary-content: #ffffff;
     --color-secondary: #8419cc;
     --color-alt: #b7a04e;
     --font-roboto: 'Roboto';
@@ -36,28 +37,31 @@ body {
     --font-airbus: 'Airbus Special';
     --font-logo: var(--font-airbus)
 }
-/*
-Savin em for later (just in case)
---color-primary: #8419cc;
---color-secondary: #8419cc;
---color-alt: #e6b400;
-*/
 :root {
     @variant dark {
-        --color-primary-50: var(--color-base-300);
         --color-base-100: #1d232a;
         --color-base-200: #191e24;
         --color-base-300: #15191e;
         --color-base-content: #e2e4e9;
+        --color-primary-50: #fef9e0;
+        --color-primary-100: #fef4cc;
+        --color-primary-200: #fdeeb8;
+        --color-primary-300: #fce9a3;
+        --color-primary-400: #fbe58f;
         --color-primary: #FBE288FF;
+        --color-primary-600: #e0ca7a;
+        --color-primary-700: #c6b26c;
+        --color-primary-800: #ac9a5e;
+        --color-primary-900: #928250;
+        --color-primary-content: #1f2937;
     }
 }
 html{
     background-color: var(--color-base-300);
 }
 .coolDrop {
-    text-shadow: 4px 4px 0 var(--color-primary-50);
+    /*text-shadow: 4px 4px 0 var(--color-primary-50);*/
 }
 .coolDropSmall {
-    text-shadow: 3px 3px 0 var(--color-primary-50);
+    /*text-shadow: 3px 3px 0 var(--color-primary-50);*/
 }

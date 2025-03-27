@@ -66,12 +66,14 @@ const sponsors: Sponsor[] = [
 				support our goal of helping UW students become better engineers, scientists, and leaders,
 				become a sponsor today!
 			</p>
-			<NuxtLink
-				class="rounded-md border-2 border-primary p-3 font-bold text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100"
-				href="/infoPacket.pdf"
-				target="_blank"
-				>View Information Packet</NuxtLink
-			>
+			<NuxtLink class="w-fit text-lg group" 	target="_blank" 	href="/infoPacket.pdf">
+					<span class=" bg-base-100 p-3 text-base-content lg:max-w-1/3 rounded-l-md">
+					 View Information Packet
+					</span>
+				<span class=" group-hover:bg-primary-200 bg-primary text-primary-content p-3  rounded-r-md  transition-colors duration-200 ease-in-out">
+						<i class="fa-solid fa-file"></i>
+					</span>
+			</NuxtLink>
 		</div>
 	</div>
 </template>

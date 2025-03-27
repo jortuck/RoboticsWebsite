@@ -119,11 +119,11 @@ useSeoMeta({
 						</div>
 					</div>
 				</div>
-				<NuxtLink class="w-fit text-lg last:hover:bg-red-300" href="/news-and-events">
-					<span class=" bg-base-100 p-3 text-base-content lg:max-w-1/3 rounded-l-md">
+				<NuxtLink class="w-fit text-lg group" href="/news-and-events">
+					<span class=" bg-base-100 p-3 text-base-content rounded-l-md">
 						View All News & Events
 					</span>
-					<span class=" bg-primary text-white p-3 dark:text-black rounded-r-md">
+					<span class=" group-hover:bg-primary-200 bg-primary text-primary-content p-3  rounded-r-md  transition-colors duration-200 ease-in-out">
 						<i class="fa-solid fa-arrow-right"></i>
 					</span>
 				</NuxtLink>
