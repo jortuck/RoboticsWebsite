@@ -44,12 +44,21 @@ useSeoMeta({
 				>
 					Recent News & Events
 				</h2>
-				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
-					<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
-						<div class="flex flex-col items-center justify-center md:flex-row">
+				<hr class="rounded-full border-2 border-primary" />
+				<div class="flex flex-col lg:flex-row gap-y-3 lg:gap-x-3">
+					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
+						<div class="overflow-hidden  bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+							<div class="w-full backdrop-blur-xl">
+								<NuxtImg
+									class="mx-auto max-h-60 w-fit"
+									src="/images/news/IMG_7833.jpg"
+								/>
+							</div>
+						</div>
+						<div class="flex flex-col items-center justify-center md:flex-row m-4">
 							<div class="space-y-2">
-								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-								<h4>2/28/2025</h4>
+								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
 								<p class="flex-1">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -57,76 +66,67 @@ useSeoMeta({
 								</p>
 							</div>
 						</div>
-						<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+					</div>
+					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
+						<div class="overflow-hidden  bg-[url('/images/events/smash.png')] bg-center">
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									class="mx-auto max-h-80 w-fit"
-									src="/images/news/IMG_7833.jpg"
+									class="mx-auto max-h-60 w-fit"
+									src="/images/events/smash.png"
 								/>
+							</div>
+						</div>
+						<div class="flex flex-col items-center justify-center md:flex-row m-4">
+							<div class="space-y-2">
+								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+								<p class="flex-1">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="flex w-full flex-grow flex-col gap-3">
-						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl space-y-4 lg:space-y-0">
-							<div class="flex flex-col items-center justify-center space-x-4 md:flex-row">
-								<div class="space-y-2">
-									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-									<h4>2/28/2025</h4>
-									<p class="flex-1">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-										exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-										dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-										labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-										ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									</p>
-								</div>
+					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
+						<div class="overflow-hidden  bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									class="h-40 rounded-md hidden lg:block"
+									class="mx-auto max-h-60 w-fit"
 									src="/images/news/IMG_7833.jpg"
 								/>
-							</div>
-							<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center lg:hidden">
-								<div class="w-full backdrop-blur-xl">
-									<NuxtImg
-										class="mx-auto max-h-70 w-fit "
-										src="/images/news/IMG_7833.jpg"
-									/>
-								</div>
 							</div>
 						</div>
-						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl lg:space-y-0 space-y-4">
-							<div class="flex flex-col items-center justify-center md:flex-row">
-								<div class="space-y-2">
-									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-									<h4>2/28/2025</h4>
-									<p class="flex-1">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-										exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									</p>
-								</div>
-								<NuxtImg
-									class="h-40 rounded-md hidden lg:block"
-									src="/images/news/IMG_7833.jpg"
-								/>
-							</div>
-							<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center lg:hidden">
-								<div class="w-full backdrop-blur-xl">
-									<NuxtImg
-										class="mx-auto max-h-70 w-fit"
-										src="/images/news/IMG_7833.jpg"
-									/>
-								</div>
+						<div class="flex flex-col items-center justify-center md:flex-row m-4">
+							<div class="space-y-2">
+								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+								<p class="flex-1">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<NuxtLink
-					class="rounded-md border-2 border-primary p-3 font-bold text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100"
-					href="/news-and-events"
-				>View All News & Events</NuxtLink
-				>
+				<NuxtLink class="w-fit text-lg last:hover:bg-red-300" href="/news-and-events">
+					<span class=" bg-base-100 p-3 text-base-content lg:max-w-1/3 rounded-l-md">
+						View All News & Events
+					</span>
+					<span class=" bg-primary text-white p-3 dark:text-black rounded-r-md">
+						<i class="fa-solid fa-arrow-right"></i>
+					</span>
+				</NuxtLink>
 			</div>
 		</section>
 	</div>
