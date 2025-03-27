@@ -21,7 +21,7 @@ useSeoMeta({
 						The Mission
 					</h2>
 					<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
-						Our mission at <span class="font-logo uppercase">Husky Robotics</span> is to provide UW
+						Our mission at <span class="font-bold uppercase">Husky Robotics</span> is to provide UW
 						students with an environment where they can learn practical, hands-on engineering skills
 						as part of a large interdisciplinary team. Unfettered by the time limits of the quarter
 						system, our members build on their skills for the entire year, working in a
@@ -42,7 +42,7 @@ useSeoMeta({
 				<h2
 					class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
 				>
-					Recent Updates
+					Recent News & Events
 				</h2>
 				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
 					<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
@@ -60,14 +60,14 @@ useSeoMeta({
 						<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									class="mx-auto max-h-70 w-fit"
+									class="mx-auto max-h-80 w-fit"
 									src="/images/news/IMG_7833.jpg"
 								/>
 							</div>
 						</div>
 					</div>
 					<div class="flex w-full flex-grow flex-col gap-3">
-						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl space-y-4 lg:space-y-0">
 							<div class="flex flex-col items-center justify-center space-x-4 md:flex-row">
 								<div class="space-y-2">
 									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
@@ -82,12 +82,20 @@ useSeoMeta({
 									</p>
 								</div>
 								<NuxtImg
-									class="h-40 rounded-md"
+									class="h-40 rounded-md hidden lg:block"
 									src="/images/news/IMG_7833.jpg"
 								/>
 							</div>
+							<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center lg:hidden">
+								<div class="w-full backdrop-blur-xl">
+									<NuxtImg
+										class="mx-auto max-h-70 w-fit "
+										src="/images/news/IMG_7833.jpg"
+									/>
+								</div>
+							</div>
 						</div>
-						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl lg:space-y-0 space-y-4">
 							<div class="flex flex-col items-center justify-center md:flex-row">
 								<div class="space-y-2">
 									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
@@ -99,14 +107,26 @@ useSeoMeta({
 									</p>
 								</div>
 								<NuxtImg
-									class="h-40 rounded-md"
+									class="h-40 rounded-md hidden lg:block"
 									src="/images/news/IMG_7833.jpg"
 								/>
+							</div>
+							<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center lg:hidden">
+								<div class="w-full backdrop-blur-xl">
+									<NuxtImg
+										class="mx-auto max-h-70 w-fit"
+										src="/images/news/IMG_7833.jpg"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<a> View All News </a>
+				<NuxtLink
+					class="rounded-md border-2 border-primary p-3 font-bold text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-base-100"
+					href="/news-and-events"
+				>View All News & Events</NuxtLink
+				>
 			</div>
 		</section>
 	</div>

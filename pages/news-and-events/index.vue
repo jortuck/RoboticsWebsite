@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useSeoMeta({
-	title: "Events | Husky Robotics"
+	title: "News & Events | Husky Robotics"
 });
 </script>
 <template>

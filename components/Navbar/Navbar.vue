@@ -19,7 +19,7 @@ type Link = {
 
 const links: Link[] = [
 	{ text: "Home", url: "/" },
-	{ text: "Events", url: "/events" },
+	{ text: "Events", url: "/news-and-events" },
 	{ text: "Robots", url: "/robots" },
 	{ text: "Team", url: "/team" },
 	{ text: "Sponsors", url: "/sponsors" }
