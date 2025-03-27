@@ -37,56 +37,15 @@ useSeoMeta({
 				/>
 			</div>
 		</div>
-		<section class="container mx-auto space-y-8">
-			<h2
-				class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
-			>
-				Recent Updates
-			</h2>
-			<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-3">
-				<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
-					<div class="flex flex-col items-center justify-center md:flex-row">
-						<div class="space-y-2">
-							<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-							<h4>2/28/2025</h4>
-							<p class="flex-1">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							</p>
-						</div>
-					</div>
-					<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
-						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
-								class="mx-auto max-h-70 w-fit"
-								src="/images/news/IMG_7833.jpg"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="flex w-full flex-grow flex-col gap-3">
-					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
-						<div class="flex flex-col items-center justify-center space-x-4 md:flex-row">
-							<div class="space-y-2">
-								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
-								<h4>2/28/2025</h4>
-								<p class="flex-1">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-							<NuxtImg
-								class="h-40 rounded-md"
-								src="/images/news/IMG_7833.jpg"
-							/>
-						</div>
-					</div>
-					<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+		<section class="lg:container mx-auto ">
+			<div class=" mx-2 lg:mx-0 space-y-8">
+				<h2
+					class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
+				>
+					Recent Updates
+				</h2>
+				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
+					<div class="w-full space-y-4 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
 						<div class="flex flex-col items-center justify-center md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold">New SAR Video Released</h3>
@@ -97,15 +56,58 @@ useSeoMeta({
 									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</p>
 							</div>
-							<NuxtImg
-								class="h-40 rounded-md"
-								src="/images/news/IMG_7833.jpg"
-							/>
+						</div>
+						<div class="overflow-hidden rounded-md bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+							<div class="w-full backdrop-blur-xl">
+								<NuxtImg
+									class="mx-auto max-h-70 w-fit"
+									src="/images/news/IMG_7833.jpg"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="flex w-full flex-grow flex-col gap-3">
+						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+							<div class="flex flex-col items-center justify-center space-x-4 md:flex-row">
+								<div class="space-y-2">
+									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+									<h4>2/28/2025</h4>
+									<p class="flex-1">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+										dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
+								<NuxtImg
+									class="h-40 rounded-md"
+									src="/images/news/IMG_7833.jpg"
+								/>
+							</div>
+						</div>
+						<div class="flex-1 rounded-md bg-base-100 p-4 text-base-content shadow-xl">
+							<div class="flex flex-col items-center justify-center md:flex-row">
+								<div class="space-y-2">
+									<h3 class="text-2xl font-bold">New SAR Video Released</h3>
+									<h4>2/28/2025</h4>
+									<p class="flex-1">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
+								<NuxtImg
+									class="h-40 rounded-md"
+									src="/images/news/IMG_7833.jpg"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
+				<a> View All News </a>
 			</div>
-			<a> View All News </a>
 		</section>
 	</div>
 </template>
