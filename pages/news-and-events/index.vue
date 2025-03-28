@@ -27,11 +27,11 @@ useSeoMeta({
 						</p>
 					</div>
 					<div
-						class="w-full overflow-hidden rounded-md bg-[url(./images/events/smash.png)] bg-center"
+						class="w-full overflow-hidden rounded-md bg-[url(/images/events/smash.png)] bg-center"
 					>
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
-								src="./images/events/smash.png"
+								src="/images/events/smash.png"
 								class="mx-auto h-96"
 							/>
 						</div>
@@ -48,11 +48,11 @@ useSeoMeta({
 						</p>
 					</div>
 					<div
-						class="w-full overflow-hidden rounded-md bg-[url(./images/events/smash.png)] bg-center"
+						class="w-full overflow-hidden rounded-md bg-[url(/images/events/smash.png)] bg-center"
 					>
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
-								src="./images/events/smash.png"
+								src="/images/events/smash.png"
 								class="mx-auto h-96"
 							/>
 						</div>

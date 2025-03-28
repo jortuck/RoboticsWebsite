@@ -84,6 +84,7 @@
 								>
 									<div class="backdrop-blur-xl">
 										<img
+											:alt="`Picture of ${lead.name}`"
 											:src="lead.image"
 											class="mx-auto h-50"
 										/>
@@ -121,5 +122,4 @@ const setExpanded = (subsystem: string): void => {
 	}
 	expanded.value = subsystem;
 };
-// const subsystems = await queryCollection("subsystems").all();
 </script>
