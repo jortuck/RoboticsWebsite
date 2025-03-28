@@ -37,17 +37,19 @@ useSeoMeta({
 				/>
 			</div>
 		</div>
-		<section class="lg:container mx-auto ">
-			<div class=" mx-2 lg:mx-0 space-y-8">
+		<section class="mx-auto lg:container">
+			<div class="mx-2 space-y-8 lg:mx-0">
 				<h2
 					class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
 				>
 					Recent News & Events
 				</h2>
 				<hr class="rounded-full border-2 border-primary" />
-				<div class="flex flex-col lg:flex-row gap-y-3 lg:gap-x-3">
-					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
-						<div class="overflow-hidden  bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
+					<div
+						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
+					>
+						<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
 									class="mx-auto max-h-60 w-fit"
@@ -55,7 +57,7 @@ useSeoMeta({
 								/>
 							</div>
 						</div>
-						<div class="flex flex-col items-center justify-center md:flex-row m-4">
+						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
 								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
@@ -67,8 +69,10 @@ useSeoMeta({
 							</div>
 						</div>
 					</div>
-					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
-						<div class="overflow-hidden  bg-[url('/images/events/smash.png')] bg-center">
+					<div
+						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
+					>
+						<div class="overflow-hidden bg-[url('/images/events/smash.png')] bg-center">
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
 									class="mx-auto max-h-60 w-fit"
@@ -76,26 +80,28 @@ useSeoMeta({
 								/>
 							</div>
 						</div>
-						<div class="flex flex-col items-center justify-center md:flex-row m-4">
+						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
 								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
 								<p class="flex-1">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+									amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									laboris nisi ut aliquip ex ea commodo consequat.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="w-full space-y-4 rounded-md bg-base-100 text-base-content shadow-sm overflow-hidden lg:max-w-1/3">
-						<div class="overflow-hidden  bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+					<div
+						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
+					>
+						<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
 									class="mx-auto max-h-60 w-fit"
@@ -103,27 +109,32 @@ useSeoMeta({
 								/>
 							</div>
 						</div>
-						<div class="flex flex-col items-center justify-center md:flex-row m-4">
+						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
 							<div class="space-y-2">
 								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
 								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
 								<p class="flex-1">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+									ullamco laboris nisi ut aliquip ex ea commodo consequat.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<NuxtLink class="w-fit text-lg group" href="/news-and-events">
-					<span class=" bg-base-100 p-3 text-base-content rounded-l-md">
+				<NuxtLink
+					class="group w-fit text-lg"
+					href="/news-and-events"
+				>
+					<span class="rounded-l-md bg-base-100 p-3 text-base-content">
 						View All News & Events
 					</span>
-					<span class=" group-hover:bg-primary-200 bg-primary text-primary-content p-3  rounded-r-md  transition-colors duration-200 ease-in-out">
+					<span
+						class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
+					>
 						<i class="fa-solid fa-arrow-right"></i>
 					</span>
 				</NuxtLink>

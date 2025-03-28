@@ -18,5 +18,9 @@ export default defineNuxtConfig({
 			crawlLinks: true,
 			failOnError: false
 		}
+	},
+	image: {
+		provider: "ipxStatic",
+		dir: "public"
 	}
 });

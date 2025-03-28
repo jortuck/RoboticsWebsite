@@ -78,7 +78,7 @@
 								:style="`background: url(${lead.image});`"
 							>
 								<div class="backdrop-blur-xl">
-									<NuxtImg
+									<img
 										:src="lead.image"
 										class="mx-auto h-50"
 									/>
@@ -104,9 +104,9 @@
 useSeoMeta({
 	title: "Team | Husky Robotics"
 });
-
 let expanded: Ref<string> = ref("");
 const { data: subsystems } = await useAsyncData("subsystems", () => {
 	return queryCollection("subsystems").all();
 });
+// const subsystems = await queryCollection("subsystems").all();
 </script>
