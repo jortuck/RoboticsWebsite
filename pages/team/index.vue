@@ -1,11 +1,11 @@
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20">
 		<h1
-			class="coolDropSmall text-center font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
+			class="coolDropSmall mx-2 text-center font-logo text-4xl font-extrabold text-primary uppercase select-none md:text-6xl"
 		>
 			MEET THE HUSKY ROBOTICS TEAM
 		</h1>
-		<p class="text-center text-lg text-base-content">
+		<p class="mx-4 text-center text-lg text-base-content">
 			Husky Robotics provides UW students the opportunity to develop skills as part of a large
 			interdisciplinary science and engineering project. We turn our member's passion for robotics,
 			space, science and engineering into real-world experience, offering a unique chance to have
@@ -13,7 +13,7 @@
 			Husky robotics join a subsystem (a specialized team). We run workshops and certifications to
 			train new members in a variety of relevant skills.
 		</p>
-		<div class="mx-2 space-y-4 lg:mx-0">
+		<div class="mx-4 space-y-4 lg:mx-0">
 			<h2 class="text-4xl text-base-content">Leadership</h2>
 			<hr class="rounded-full border-2 border-primary" />
 
@@ -23,10 +23,10 @@
 					class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
 				>
 					<h3 class="text-lg font-bold text-primary md:text-xl">Operations Director</h3>
-					<div class="w-full overflow-hidden bg-[url(./images/team/prithvi.jpg)] bg-center">
+					<div class="w-full overflow-hidden bg-[url(/images/team/prithvi.jpg)] bg-center">
 						<div class="w-full backdrop-blur-xl">
 							<NuxtImg
-								src="./images/team/prithvi.jpg"
+								src="/images/team/prithvi.jpg"
 								class="mx-auto h-70 lg:h-90"
 							/>
 						</div>
@@ -70,9 +70,9 @@
 					<div class="flex flex-col space-y-4 space-x-10 md:flex-row md:space-y-0">
 						<div
 							v-for="lead in subsystem.leads"
-							class="flex w-full max-w-1/4 flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
+							class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content md:max-w-1/4"
 						>
-							<h3 class="text-lg font-bold text-primary">{{ lead.position }}</h3>
+							<h3 class="text-center text-lg font-bold text-primary">{{ lead.position }}</h3>
 							<div
 								class="w-full overflow-hidden bg-center"
 								:style="`background: url(${lead.image});`"
