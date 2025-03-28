@@ -49,6 +49,7 @@
 				<div
 					class="overflow-hidden rounded-md bg-base-100"
 					v-for="subsystem in subsystems"
+					:id="subsystem.name.replace(/ /g, '_')"
 				>
 					<h2
 						class="group p-4 text-lg text-base-content select-none hover:cursor-pointer md:text-xl lg:text-xl"
@@ -76,10 +77,10 @@
 							{{ subsystem.description }}
 						</p>
 						<h3 class="text-xl font-bold">Lead<span v-if="subsystem.leads.length > 1">s</span></h3>
-						<div class="flex flex-col space-y-4 space-x-10 md:flex-row md:space-y-0">
+						<div class="flex flex-col space-y-4 space-x-10 lg:flex-row lg:space-y-0">
 							<div
 								v-for="lead in subsystem.leads"
-								class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content md:max-w-1/4"
+								class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content lg:max-w-1/4"
 							>
 								<h3 class="text-center text-lg font-bold text-primary">{{ lead.position }}</h3>
 								<div
@@ -144,17 +145,19 @@ useSeoMeta({
 	description:
 		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields. All members of Husky robotics join a subsystem (a specialized team). We run workshops and certifications to train new members in a variety of relevant skills."
 });
+let route = useRoute();
 let expanded: Ref<string> = ref("");
 let { data: subsystems } = await useAsyncData("subsystems", () => {
 	return queryCollection("subsystems").all();
 });
-const setExpanded = (subsystem: string): void => {
+async function setExpanded(subsystem: string) {
 	if (expanded.value === subsystem) {
 		expanded.value = "";
 		return;
 	}
 	expanded.value = subsystem;
-};
+	await navigateTo(route.path + "#" + subsystem.replace(/ /g, "_"));
+}
 
 type leader = {
 	name: string;
