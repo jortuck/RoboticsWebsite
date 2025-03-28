@@ -39,60 +39,61 @@
 			<hr class="rounded-full border-2 border-primary" />
 			<div
 				class="overflow-hidden rounded-md bg-base-100"
-				v-for="i in 3"
+				v-for="subsystem in subsystems"
 			>
 				<h2
-					class="group p-4 text-lg text-base-content hover:cursor-pointer md:text-xl lg:text-xl"
+					class="group p-4 text-lg text-base-content select-none hover:cursor-pointer md:text-xl lg:text-xl"
 					role="button"
-					@click="toggleExpanded()"
-					:aria-expanded="expanded"
-					@keydown.enter="toggleExpanded()"
-					@keydown.space.prevent="toggleExpanded()"
+					@click="expanded = subsystem.name"
+					:aria-expanded="expanded == subsystem.name"
+					@keydown.enter="expanded = subsystem.name"
+					@keydown.space.prevent="expanded = subsystem.name"
 					tabindex="0"
 				>
-					Business Subsystem
+					{{ subsystem.name }}
 					<span class="float-right"
 						><i
 							class="fa-solid fa-chevron-down transition-transform duration-200 ease-in-out"
-							:class="expanded ? 'rotate-0' : 'rotate-90'"
+							:class="expanded == subsystem.name ? 'rotate-0' : 'rotate-90'"
 						></i
 					></span>
 				</h2>
 				<div
 					class="space-y-4 bg-base-200 p-4 text-base-content"
-					v-if="expanded"
+					v-if="expanded == subsystem.name"
 				>
 					<h3 class="text-xl font-bold">About</h3>
 					<p>
-						The Business team ensures the continuity of Husky Robotics. In charge of raising funds
-						and managing the budget, business team members need to understand the needs of each
-						subsystem and work with the leads to get all necessary parts ordered and delivered in a
-						timely manner. The business team members also present Husky Robotics to the UW and
-						external organizations, corporations, and media outlets, creating content to promote the
-						team, seek sponsorships and outreach opportunities, and try to assist team members in
-						finding internships. Business team members are encouraged to join other subsystems.
+						{{ subsystem.description }}
 					</p>
-					<h3 class="text-xl font-bold">Lead(s)</h3>
+					<h3 class="text-xl font-bold">Lead<span v-if="subsystem.leads.length > 1">s</span></h3>
 					<div class="flex flex-col space-y-4 space-x-10 md:flex-row md:space-y-0">
 						<div
-							v-for="i in 4"
-							class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
+							v-for="lead in subsystem.leads"
+							class="flex w-full max-w-1/4 flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
 						>
-							<h3 class="text-lg text-primary">Operations Director</h3>
-							<div class="w-full overflow-hidden bg-[url(./images/team/prithvi.jpg)] bg-center">
-								<div class="w-full backdrop-blur-xl">
+							<h3 class="text-lg font-bold text-primary">{{ lead.position }}</h3>
+							<div
+								class="w-full overflow-hidden bg-center"
+								:style="`background: url(${lead.image});`"
+							>
+								<div class="backdrop-blur-xl">
 									<NuxtImg
-										src="./images/team/prithvi.jpg"
+										:src="lead.image"
 										class="mx-auto h-50"
 									/>
 								</div>
 							</div>
-							<h3 class="text-lg">Prithvi Krishnaswamy</h3>
+							<h3 class="text-lg">{{ lead.name }}</h3>
 						</div>
 					</div>
 					<h3 class="text-xl font-bold">Members</h3>
 					<div class="flex flex-wrap gap-2">
-						<span class="block rounded-md bg-base-100 px-2 py-1 text-sm">Lucas Bucci</span>
+						<span
+							class="block rounded-md bg-base-100 px-2 py-1 text-sm"
+							v-for="member in subsystem.members"
+							>{{ member }}</span
+						>
 					</div>
 				</div>
 			</div>
@@ -104,6 +105,8 @@ useSeoMeta({
 	title: "Team | Husky Robotics"
 });
 
-let expanded: Ref<boolean> = ref(false);
-let toggleExpanded = useToggle(expanded);
+let expanded: Ref<string> = ref("");
+const { data: subsystems } = await useAsyncData("subsystems", () => {
+	return queryCollection("subsystems").all();
+});
 </script>
