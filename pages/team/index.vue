@@ -19,7 +19,7 @@
 					Leadership
 				</h2>
 				<hr class="rounded-full border-2 border-primary" />
-				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
+				<div class="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-5">
 					<div
 						v-for="leader in leaders"
 						class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
@@ -31,8 +31,9 @@
 						>
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
+									:alt="`Picture of ${leader.name}`"
 									:src="leader.image"
-									class="mx-auto h-50 md:h-70 lg:h-90"
+									class="mx-auto h-70 md:h-70"
 								/>
 							</div>
 						</div>
@@ -107,12 +108,41 @@
 					</div>
 				</div>
 			</section>
+			<section class="space-y-4">
+				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
+					Team Advisors
+				</h2>
+				<hr class="rounded-full border-2 border-primary" />
+				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
+					<div
+						v-for="advisor in advisors"
+						class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
+					>
+						<h3 class="text-lg font-bold text-primary md:text-xl">{{ advisor.name }}</h3>
+						<div
+							class="w-full overflow-hidden bg-center"
+							:style="`background: url(${advisor.image});`"
+						>
+							<div class="w-full backdrop-blur-xl">
+								<NuxtImg
+									:alt="`Picture of ${advisor.name}`"
+									:src="advisor.image"
+									class="mx-auto h-50 md:h-70 lg:h-90"
+								/>
+							</div>
+						</div>
+						<h3 class="text-center md:text-lg">{{ advisor.position }}</h3>
+					</div>
+				</div>
+			</section>
 		</div>
 	</div>
 </template>
 <script setup lang="ts">
 useSeoMeta({
-	title: "Team | Husky Robotics"
+	title: "Team | Husky Robotics",
+	description:
+		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields. All members of Husky robotics join a subsystem (a specialized team). We run workshops and certifications to train new members in a variety of relevant skills."
 });
 let expanded: Ref<string> = ref("");
 let { data: subsystems } = await useAsyncData("subsystems", () => {
@@ -131,7 +161,12 @@ type leader = {
 	position: string;
 	image: string;
 };
-
+type advisor = {
+	name: string;
+	position: string;
+	image: string;
+	website: string;
+};
 const leaders: leader[] = [
 	{
 		name: "Prithvi Krishnaswamy",
@@ -147,6 +182,21 @@ const leaders: leader[] = [
 		name: "Amelia Zolzer",
 		position: "Systems Lead",
 		image: "/images/team/amelia.jpg"
+	}
+];
+
+const advisors: advisor[] = [
+	{
+		name: "Dr. Sep Makhsous",
+		position: "Assistant Teaching Professor, Department of Electrical and Computer Engineering",
+		image: "/images/team/sep.jpg",
+		website: "https://people.ece.uw.edu/makhsous/"
+	},
+	{
+		name: "Dr. Lucas Meza",
+		position: "Assistant Professor, Department of Mechanical Engineering",
+		image: "/images/team/meza.jpg",
+		website: "https://www.me.washington.edu/facultyfinder/lucas-r-meza"
 	}
 ];
 </script>
