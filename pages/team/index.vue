@@ -21,19 +21,22 @@
 				<hr class="rounded-full border-2 border-primary" />
 				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
 					<div
-						v-for="i in 3"
+						v-for="leader in leaders"
 						class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
 					>
-						<h3 class="text-lg font-bold text-primary md:text-xl">Operations Director</h3>
-						<div class="w-full overflow-hidden bg-[url(/images/team/prithvi.jpg)] bg-center">
+						<h3 class="text-lg font-bold text-primary md:text-xl">{{ leader.position }}</h3>
+						<div
+							class="w-full overflow-hidden bg-center"
+							:style="`background: url(${leader.image});`"
+						>
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									src="/images/team/prithvi.jpg"
+									:src="leader.image"
 									class="mx-auto h-50 md:h-70 lg:h-90"
 								/>
 							</div>
 						</div>
-						<h3 class="text-lg md:text-xl">Prithvi Krishnaswamy</h3>
+						<h3 class="text-lg md:text-xl">{{ leader.name }}</h3>
 					</div>
 				</div>
 			</section>
@@ -122,4 +125,28 @@ const setExpanded = (subsystem: string): void => {
 	}
 	expanded.value = subsystem;
 };
+
+type leader = {
+	name: string;
+	position: string;
+	image: string;
+};
+
+const leaders: leader[] = [
+	{
+		name: "Prithvi Krishnaswamy",
+		position: "Operations Director",
+		image: "/images/team/prithvi.jpg"
+	},
+	{
+		name: "Tom Lewis",
+		position: "Mechanical Lead",
+		image: "/images/team/tom.jpg"
+	},
+	{
+		name: "Amelia Zolzer",
+		position: "Systems Lead",
+		image: "/images/team/amelia.jpg"
+	}
+];
 </script>
