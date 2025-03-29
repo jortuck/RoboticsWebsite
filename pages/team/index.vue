@@ -77,7 +77,7 @@
 							{{ subsystem.description }}
 						</p>
 						<h3 class="text-xl font-bold">Lead<span v-if="subsystem.leads.length > 1">s</span></h3>
-						<div class="flex flex-col space-y-4 space-x-10 lg:flex-row lg:space-y-0">
+						<div class="flex flex-col space-y-4 space-x-5 lg:flex-row lg:space-y-0 xl:space-x-10">
 							<div
 								v-for="lead in subsystem.leads"
 								class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content lg:max-w-1/4"
@@ -156,7 +156,7 @@ async function setExpanded(subsystem: string) {
 		return;
 	}
 	expanded.value = subsystem;
-	await navigateTo(route.path + "#" + subsystem.replace(/ /g, "_"));
+	// await navigateTo(route.path + "#" + subsystem.replace(/ /g, "_"));
 }
 
 type leader = {
