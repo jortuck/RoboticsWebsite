@@ -18,7 +18,8 @@
 				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
 					Leadership
 				</h2>
-				<hr class="rounded-full border-2 border-primary" />
+				<HorizontalBar />
+
 				<div class="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-5">
 					<div
 						v-for="leader in leaders"
@@ -45,7 +46,8 @@
 				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
 					Subsystems
 				</h2>
-				<hr class="rounded-full border-2 border-primary" />
+				<HorizontalBar />
+
 				<div
 					class="overflow-hidden rounded-md bg-base-100"
 					v-for="subsystem in subsystems"
@@ -113,7 +115,8 @@
 				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
 					Team Advisors
 				</h2>
-				<hr class="rounded-full border-2 border-primary" />
+				<HorizontalBar />
+
 				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
 					<div
 						v-for="advisor in advisors"

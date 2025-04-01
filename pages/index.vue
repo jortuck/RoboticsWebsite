@@ -44,7 +44,7 @@ useSeoMeta({
 				>
 					Recent News & Events
 				</h2>
-				<hr class="rounded-full border-2 border-primary" />
+				<HorizontalBar />
 				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
 					<div
 						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
@@ -139,6 +139,14 @@ useSeoMeta({
 					</span>
 				</NuxtLink>
 			</div>
+		</section>
+		<section class="container mx-auto space-y-8">
+			<h2
+				class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
+			>
+				Support Husky Robotics
+			</h2>
+			<HorizontalBar />
 		</section>
 	</div>
 </template>
