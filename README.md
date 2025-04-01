@@ -1,10 +1,21 @@
-# Nuxt Minimal Starter
+# Husky Robotics Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the GitHub repository for the new Husky Robotics Website. It is built using Nuxt, a free and
+open source JavaScript library based on Vue.js, Nitro, and Vite. In addition, it uses Tailwind CSS for
+styling, and Nuxt Content for content management. Here are the links to the relevant documentation:
 
-## Setup
+- [Nuxt](https://nuxt.com/docs/)
+- [TaiwlindCSS](https://tailwindcss.com/docs)
+- [Nuxt Content](https://content.nuxt.com/docs/)
+- [Vue.js](https://vuejs.org/guide/) 
 
-Make sure to install dependencies:
+## Setup (for those who just want to edit content)
+
+_Coming Soon_
+
+## Setup (for those interested in coding)
+
+Make sure to install dependencies using your preferred packaged manager:
 
 ```bash
 # npm
@@ -37,39 +48,3 @@ yarn dev
 # bun
 bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
