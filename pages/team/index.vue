@@ -15,10 +15,7 @@
 		</p>
 		<div class="mx-4 space-y-10 lg:mx-0">
 			<section class="space-y-4">
-				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
-					Leadership
-				</h2>
-				<HorizontalBar />
+				<SectionHeader> Leadership </SectionHeader>
 
 				<div class="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-5">
 					<div
@@ -43,10 +40,7 @@
 				</div>
 			</section>
 			<section class="space-y-4">
-				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
-					Subsystems
-				</h2>
-				<HorizontalBar />
+				<SectionHeader> Subsystems </SectionHeader>
 
 				<div
 					class="overflow-hidden rounded-md bg-base-100"
@@ -112,10 +106,7 @@
 				</div>
 			</section>
 			<section class="space-y-4">
-				<h2 class="text-center text-2xl text-base-content md:text-left md:text-3xl lg:text-4xl">
-					Team Advisors
-				</h2>
-				<HorizontalBar />
+				<SectionHeader> Team Advisors </SectionHeader>
 
 				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
 					<div

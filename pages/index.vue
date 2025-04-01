@@ -6,12 +6,12 @@ useSeoMeta({
 });
 </script>
 <template>
-	<div class="space-y-32">
-		<div class="container mx-auto my-40 w-full space-y-20 text-center">
+	<main class="mb-10 space-y-32">
+		<header class="container mx-auto my-40 w-full space-y-20 text-center">
 			<h1 class="coolDrop font-logo text-5xl font-extrabold text-primary select-none md:text-8xl">
 				HUSKY ROBOTICS
 			</h1>
-		</div>
+		</header>
 		<div class="w-full bg-base-100 bg-center shadow-md">
 			<div
 				class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
@@ -21,13 +21,12 @@ useSeoMeta({
 						The Mission
 					</h2>
 					<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
-						Our mission at <span class="font-bold uppercase">Husky Robotics</span> is to provide UW
-						students with an environment where they can learn practical, hands-on engineering skills
-						as part of a large interdisciplinary team. Unfettered by the time limits of the quarter
-						system, our members build on their skills for the entire year, working in a
-						project-oriented team where they can see how their work becomes part of the complete
-						system. This fosters better communication skills, and a fuller understanding of modern
-						engineering.
+						Our mission at Husky Robotics is to provide UW students with an environment where they
+						can learn practical, hands-on engineering skills as part of a large interdisciplinary
+						team. Unfettered by the time limits of the quarter system, our members build on their
+						skills for the entire year, working in a project-oriented team where they can see how
+						their work becomes part of the complete system. This fosters better communication
+						skills, and a fuller understanding of modern engineering.
 					</p>
 				</div>
 				<img
@@ -37,116 +36,134 @@ useSeoMeta({
 				/>
 			</div>
 		</div>
-		<section class="mx-auto lg:container">
-			<div class="mx-2 space-y-8 lg:mx-0">
-				<h2
-					class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
+		<section class="mx-2 space-y-8 lg:container lg:mx-auto">
+			<SectionHeader> Recent News & Events </SectionHeader>
+			<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
+				<div
+					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
 				>
-					Recent News & Events
-				</h2>
-				<HorizontalBar />
-				<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
-					<div
-						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
-					>
-						<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
-							<div class="w-full backdrop-blur-xl">
-								<NuxtImg
-									class="mx-auto max-h-60 w-fit"
-									src="/images/news/IMG_7833.jpg"
-								/>
-							</div>
-						</div>
-						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
-							<div class="space-y-2">
-								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
-								<p class="flex-1">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
+					<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+						<div class="w-full backdrop-blur-xl">
+							<NuxtImg
+								class="mx-auto max-h-60 w-fit"
+								src="/images/news/IMG_7833.jpg"
+							/>
 						</div>
 					</div>
-					<div
-						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
-					>
-						<div class="overflow-hidden bg-[url('/images/events/smash.png')] bg-center">
-							<div class="w-full backdrop-blur-xl">
-								<NuxtImg
-									class="mx-auto max-h-60 w-fit"
-									src="/images/events/smash.png"
-								/>
-							</div>
-						</div>
-						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
-							<div class="space-y-2">
-								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
-								<p class="flex-1">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-									amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div
-						class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
-					>
-						<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
-							<div class="w-full backdrop-blur-xl">
-								<NuxtImg
-									class="mx-auto max-h-60 w-fit"
-									src="/images/news/IMG_7833.jpg"
-								/>
-							</div>
-						</div>
-						<div class="m-4 flex flex-col items-center justify-center md:flex-row">
-							<div class="space-y-2">
-								<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-								<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
-								<p class="flex-1">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-									dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-									ullamco laboris nisi ut aliquip ex ea commodo consequat.
-								</p>
-							</div>
+					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+							<p class="flex-1">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
 						</div>
 					</div>
 				</div>
-				<NuxtLink
-					class="group w-fit text-lg"
-					href="/news-and-events"
+				<div
+					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
 				>
-					<span class="rounded-l-md bg-base-100 p-3 text-base-content">
-						View All News & Events
-					</span>
+					<div class="overflow-hidden bg-[url('/images/events/smash.png')] bg-center">
+						<div class="w-full backdrop-blur-xl">
+							<NuxtImg
+								class="mx-auto max-h-60 w-fit"
+								src="/images/events/smash.png"
+							/>
+						</div>
+					</div>
+					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+							<p class="flex-1">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+								dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
+				>
+					<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+						<div class="w-full backdrop-blur-xl">
+							<NuxtImg
+								class="mx-auto max-h-60 w-fit"
+								src="/images/news/IMG_7833.jpg"
+							/>
+						</div>
+					</div>
+					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
+							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+							<p class="flex-1">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+								dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<NuxtLink
+				class="group w-fit"
+				href="/news-and-events"
+			>
+				<span class="rounded-l-md bg-base-100 p-3 text-base-content"> View All News & Events </span>
+				<span
+					class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
+				>
+					<i class="fa-solid fa-arrow-right"></i>
+				</span>
+			</NuxtLink>
+		</section>
+		<section class="mx-4 space-y-8 lg:container lg:mx-auto">
+			<SectionHeader> Support Husky Robotics </SectionHeader>
+			<p class="text-center text-lg text-base-content md:text-left md:text-xl">
+				Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
+				support our goal of helping UW students become better engineers, scientists, and leaders,
+				why not donate to us directly using the button below? We have no overhead; all of the funds
+				we raise go directly towards purchasing components and materials to build the rover and to
+				rent the vehicles and rooms we use during the competition.
+			</p>
+			<div class="flex flex-row justify-center space-x-4 md:justify-normal">
+				<NuxtLink
+					class="group w-fit"
+					target="_blank"
+					href="https://venmo.com/u/HuskyRobotics"
+				>
+					<span class="rounded-l-md bg-base-100 p-3 text-base-content"> Venmo </span>
 					<span
 						class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
 					>
-						<i class="fa-solid fa-arrow-right"></i>
+						<i class="fa-solid fa-money-bill-wave"></i>
+					</span>
+				</NuxtLink>
+				<NuxtLink
+					class="group w-fit"
+					href="/sponsors"
+				>
+					<span class="rounded-l-md bg-base-100 p-3 text-base-content"> Become a Sponsor </span>
+					<span
+						class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
+					>
+						<i class="fa-solid fa-briefcase"></i>
 					</span>
 				</NuxtLink>
 			</div>
 		</section>
-		<section class="container mx-auto space-y-8">
-			<h2
-				class="text-center text-3xl font-extrabold text-base-content md:text-left md:text-4xl xl:text-5xl"
-			>
-				Support Husky Robotics
-			</h2>
-			<HorizontalBar />
-		</section>
-	</div>
+	</main>
 </template>
