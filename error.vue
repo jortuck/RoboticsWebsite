@@ -4,6 +4,9 @@ import type { NuxtError } from "#app";
 const props = defineProps({
 	error: Object as () => NuxtError
 });
+useSeoMeta({
+	title: props.error?.statusCode + " | Husky Robotics"
+});
 </script>
 
 <template>
