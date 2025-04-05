@@ -53,6 +53,7 @@ const sponsors: Sponsor[] = [
 				>
 					<NuxtImg
 						:alt="sponsor.name"
+						class="transition-transform duration-200 ease-in-out hover:scale-105"
 						:src="`/images/sponsors/${sponsor.logo}`"
 						:placeholder="[50, 50, 50, 50]"
 						format="webp"
