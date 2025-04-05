@@ -22,6 +22,13 @@ export default defineContentConfig({
 				images: z.array(z.string()).optional(),
 				video: z.string().optional()
 			})
+		}),
+		articles: defineCollection({
+			type: "page",
+			source: "news-and-events/*.md",
+			schema: z.object({
+				date: z.date()
+			})
 		})
 	}
 });

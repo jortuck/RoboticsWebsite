@@ -61,6 +61,8 @@
 useSeoMeta({
 	title: "Robots | Husky Robotics"
 });
+
+// Fetch robots data and order by years.
 let { data: robots } = await useAsyncData("subsystems", () => {
 	return queryCollection("robots").order("years", "DESC").all();
 });
