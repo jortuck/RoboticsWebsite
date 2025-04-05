@@ -2,6 +2,12 @@
 useSeoMeta({
 	title: "News & Events | Husky Robotics"
 });
+const { data: posts } = await useAsyncData("posts", () =>
+	queryCollection("posts")
+		.order("date", "DESC")
+		.select("title", "date", "description", "image", "id")
+		.all()
+);
 </script>
 <template>
 	<div class="container mx-auto my-24 w-full space-y-20">
@@ -11,48 +17,28 @@ useSeoMeta({
 			News & Events
 		</h1>
 		<section class="mx-2 space-y-4 lg:mx-0">
-			<h2 class="text-4xl text-base-content">2024</h2>
-			<hr class="rounded-full border-2 border-primary" />
-			<div
-				class="flex flex-col items-center justify-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4"
-			>
-				<div class="space-y-4 rounded-md bg-base-100 p-4">
+			<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+				<div
+					class="space-y-4 rounded-md bg-base-100 p-4"
+					v-for="post in posts"
+					:key="post.id"
+				>
 					<div class="space-y-4">
 						<h2 class="text-3xl font-bold text-base-content">
-							Super Smash Bros Social/Tournament!
+							{{ post.title }}
 						</h2>
 						<p class="text-base-content">
-							NOVEMBER 15, 7PM, 5th Floor @ The Standard — Free admission for Husky Robotics Members
-							$5 admission fee for non-members — $15 entry for tournament participation — $50 prize
+							{{ post.description }}
 						</p>
 					</div>
 					<div
-						class="w-full overflow-hidden rounded-md bg-[url(/images/events/smash.png)] bg-center"
+						class="w-full overflow-hidden rounded-md bg-center"
+						:style="`background-image: url(/images/posts/${post.image});`"
 					>
 						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
-								src="/images/events/smash.png"
-								class="mx-auto h-96"
-							/>
-						</div>
-					</div>
-				</div>
-				<div class="space-y-4 rounded-md bg-base-100 p-4">
-					<div class="space-y-4">
-						<h2 class="text-3xl font-bold text-base-content">
-							Super Smash Bros Social/Tournament!
-						</h2>
-						<p class="text-base-content">
-							NOVEMBER 15, 7PM, 5th Floor @ The Standard — Free admission for Husky Robotics Members
-							$5 admission fee for non-members — $15 entry for tournament participation — $50 prize
-						</p>
-					</div>
-					<div
-						class="w-full overflow-hidden rounded-md bg-[url(/images/events/smash.png)] bg-center"
-					>
-						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
-								src="/images/events/smash.png"
+							<img
+								:alt="`${post.title}`"
+								:src="`/images/posts/${post.image}`"
 								class="mx-auto h-96"
 							/>
 						</div>

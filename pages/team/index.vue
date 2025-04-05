@@ -81,7 +81,7 @@
 								<h3 class="text-center text-lg font-bold text-primary">{{ lead.position }}</h3>
 								<div
 									class="w-full overflow-hidden bg-center"
-									:style="`background: url(${lead.image});`"
+									:style="`background-image: url(${lead.image});`"
 								>
 									<div class="backdrop-blur-xl">
 										<img

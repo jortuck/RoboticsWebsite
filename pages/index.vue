@@ -4,6 +4,12 @@ useSeoMeta({
 	description:
 		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields."
 });
+const { data: posts } = await useAsyncData("posts", () =>
+	queryCollection("posts")
+		.order("date", "DESC")
+		.select("title", "date", "description", "image", "id")
+		.all()
+);
 </script>
 <template>
 	<main class="mb-10 space-y-32">
@@ -42,79 +48,29 @@ useSeoMeta({
 			<SectionHeader> Recent News & Events </SectionHeader>
 			<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
 				<div
+					v-for="post in posts"
 					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
 				>
-					<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
+					<div
+						class="overflow-hidden bg-center"
+						:style="`background-image: url(/images/posts/${post.image});`"
+					>
 						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
+							<img
+								:alt="`${post.title}`"
+								:src="`/images/posts/${post.image}`"
 								class="mx-auto max-h-60 w-fit"
-								src="/images/news/IMG_7833.jpg"
 							/>
 						</div>
 					</div>
 					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
 						<div class="space-y-2">
-							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
+							<h3 class="text-2xl font-bold text-primary">{{ post.title }}</h3>
+							<h4 class="w-fit rounded-md italic">{{ new Date(post.date).toDateString() }}</h4>
 							<p class="flex-1">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
-				>
-					<div class="overflow-hidden bg-[url('/images/events/smash.png')] bg-center">
-						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
-								class="mx-auto max-h-60 w-fit"
-								src="/images/events/smash.png"
-							/>
-						</div>
-					</div>
-					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
-						<div class="space-y-2">
-							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
-							<p class="flex-1">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-								dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-								consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-								magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
-				>
-					<div class="overflow-hidden bg-[url('/images/news/IMG_7833.jpg')] bg-center">
-						<div class="w-full backdrop-blur-xl">
-							<NuxtImg
-								class="mx-auto max-h-60 w-fit"
-								src="/images/news/IMG_7833.jpg"
-							/>
-						</div>
-					</div>
-					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
-						<div class="space-y-2">
-							<h3 class="text-2xl font-bold text-primary">New SAR Video Released</h3>
-							<h4 class="w-fit rounded-md italic">2/28/2025 - Events</h4>
-							<p class="flex-1">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-								dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</p>
 						</div>
 					</div>

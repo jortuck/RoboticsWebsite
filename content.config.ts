@@ -23,11 +23,12 @@ export default defineContentConfig({
 				video: z.string().optional()
 			})
 		}),
-		articles: defineCollection({
+		posts: defineCollection({
 			type: "page",
-			source: "news-and-events/*.md",
+			source: "news-and-events/**.md",
 			schema: z.object({
-				date: z.date()
+				date: z.string().date(),
+				image: z.string()
 			})
 		})
 	}
