@@ -15,7 +15,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 	<main class="mb-10 space-y-32">
 		<header class="container mx-auto my-40 w-full space-y-20 text-center">
 			<h1
-				class="dark:text-shadow-white/30 font-logo text-5xl text-shadow-lg/30 font-extrabold text-primary select-none md:text-6xl md:text-8xl"
+				class="font-logo text-5xl font-extrabold text-primary select-none text-shadow-lg/30 md:text-6xl md:text-8xl dark:text-shadow-white/30"
 			>
 				HUSKY ROBOTICS
 			</h1>
@@ -68,9 +68,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 							<h3 class="text-2xl font-bold text-primary">{{ post.title }}</h3>
 							<h4 class="w-fit rounded-md italic">{{ new Date(post.date).toDateString() }}</h4>
 							<p class="flex-1">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								{{ post.description }}
 							</p>
 						</div>
 					</div>
