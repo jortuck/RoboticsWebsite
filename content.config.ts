@@ -3,7 +3,7 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 export default defineContentConfig({
 	collections: {
 		subsystems: defineCollection({
-			source: "team/subsystems/**.json",
+			source: "team/subsystems/**.yaml",
 			type: "data",
 			schema: z.object({
 				name: z.string(),
@@ -13,7 +13,7 @@ export default defineContentConfig({
 			})
 		}),
 		robots: defineCollection({
-			source: "robots/**.json",
+			source: "robots/**.yaml",
 			type: "data",
 			schema: z.object({
 				name: z.string(),
