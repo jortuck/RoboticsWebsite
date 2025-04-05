@@ -82,7 +82,7 @@ const links: SocialLink[] = [
 	</footer>
 	<p
 		v-if="!dev"
-		class="w-full bg-amber-300 p-2 text-center"
+		class="w-full bg-amber-300 p-2 text-center text-black"
 	>
 		Website under construction. Expect missing content & bugs!
 	</p>
