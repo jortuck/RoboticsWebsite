@@ -29,7 +29,7 @@
 						>
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									:alt="`Picture of ${leader.name}`"
+									:alt="`${leader.name} headshot`"
 									:src="leader.image"
 									class="mx-auto h-70 md:h-70"
 								/>
@@ -85,7 +85,7 @@
 								>
 									<div class="backdrop-blur-xl">
 										<img
-											:alt="`Picture of ${lead.name}`"
+											:alt="`${lead.name} headshot`"
 											:src="lead.image"
 											class="mx-auto h-50"
 										/>
@@ -120,7 +120,7 @@
 						>
 							<div class="w-full backdrop-blur-xl">
 								<NuxtImg
-									:alt="`Picture of ${advisor.name}`"
+									:alt="`${advisor.name} headshot`"
 									:src="advisor.image"
 									class="mx-auto h-50 md:h-70 lg:h-90"
 								/>
@@ -140,17 +140,19 @@ useSeoMeta({
 		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields. All members of Husky robotics join a subsystem (a specialized team). We run workshops and certifications to train new members in a variety of relevant skills."
 });
 let route = useRoute();
+
 let expanded: Ref<string> = ref("");
+
 let { data: subsystems } = await useAsyncData("subsystems", () => {
 	return queryCollection("subsystems").all();
 });
+
 async function setExpanded(subsystem: string) {
 	if (expanded.value === subsystem) {
 		expanded.value = "";
 		return;
 	}
 	expanded.value = subsystem;
-	// await navigateTo(route.path + "#" + subsystem.replace(/ /g, "_"));
 }
 
 type leader = {
