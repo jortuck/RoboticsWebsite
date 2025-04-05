@@ -8,7 +8,9 @@ useSeoMeta({
 <template>
 	<main class="mb-10 space-y-32">
 		<header class="container mx-auto my-40 w-full space-y-20 text-center">
-			<h1 class="coolDrop font-logo text-5xl font-extrabold text-primary select-none md:text-8xl">
+			<h1
+				class="dark:text-shadow-white/30 font-logo text-5xl text-shadow-lg/30 font-extrabold text-primary select-none md:text-6xl md:text-8xl"
+			>
 				HUSKY ROBOTICS
 			</h1>
 		</header>
