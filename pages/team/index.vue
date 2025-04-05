@@ -20,7 +20,7 @@
 				<div class="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-5">
 					<div
 						v-for="leader in leaders"
-						class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
+						class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content"
 					>
 						<h3 class="text-lg font-bold text-primary md:text-xl">{{ leader.position }}</h3>
 						<div
@@ -43,7 +43,7 @@
 				<SectionHeader> Subsystems </SectionHeader>
 
 				<div
-					class="overflow-hidden rounded-md bg-base-100"
+					class="overflow-hidden rounded-sm bg-base-100"
 					v-for="subsystem in subsystems"
 					:id="subsystem.name.replace(/ /g, '_')"
 				>
@@ -76,7 +76,7 @@
 						<div class="flex flex-col space-y-4 space-x-5 lg:flex-row lg:space-y-0 xl:space-x-10">
 							<div
 								v-for="lead in subsystem.leads"
-								class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content lg:max-w-1/4"
+								class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content lg:max-w-1/4"
 							>
 								<h3 class="text-center text-lg font-bold text-primary">{{ lead.position }}</h3>
 								<div
@@ -97,7 +97,7 @@
 						<h3 class="text-xl font-bold">Members</h3>
 						<div class="flex flex-wrap gap-2">
 							<span
-								class="block rounded-md bg-base-100 px-2 py-1 text-sm"
+								class="block rounded-sm bg-base-100 px-2 py-1 text-sm"
 								v-for="member in subsystem.members"
 								>{{ member }}</span
 							>
@@ -111,7 +111,7 @@
 				<div class="flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-5">
 					<div
 						v-for="advisor in advisors"
-						class="flex w-full flex-col items-center justify-center space-y-4 rounded-md bg-base-100 py-4 text-base-content"
+						class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content"
 					>
 						<h3 class="text-lg font-bold text-primary md:text-xl">{{ advisor.name }}</h3>
 						<div

@@ -88,7 +88,7 @@ const links: Link[] = [
 				<button
 					role="button"
 					@click="toggleMenu()"
-					class="w-10 rounded-md border-2 border-base-content py-0.5 text-lg font-extrabold text-base-content transition-colors duration-100 ease-in-out active:bg-base-content active:text-base-300"
+					class="w-10 rounded-sm border-2 border-base-content py-0.5 text-lg font-extrabold text-base-content transition-colors duration-100 ease-in-out active:bg-base-content active:text-base-300"
 				>
 					<i
 						class="fa-solid fa-bars"
@@ -134,7 +134,7 @@ const links: Link[] = [
 }
 .mobileLink,
 .desktopLink {
-	@apply rounded-md border-2 border-base-content font-bold text-base-content;
+	@apply rounded-sm border-2 border-base-content font-bold text-base-content;
 	@apply transition-colors duration-200 ease-in-out hover:bg-base-content hover:text-base-300;
 }
 .mobileLink {

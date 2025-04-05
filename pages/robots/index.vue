@@ -27,7 +27,7 @@
 				>
 					<div
 						v-for="img in robot.images"
-						class="aspect-3/2 w-full overflow-hidden rounded-md bg-center object-cover object-center shadow-md/40"
+						class="aspect-3/2 w-full overflow-hidden rounded-sm bg-center object-cover object-center shadow-md/40"
 						:style="`background: url(/images/robots/${img});`"
 					>
 						<img
@@ -38,11 +38,11 @@
 					</div>
 				</div>
 				<div
-					class="aspect-video w-full overflow-hidden rounded-md shadow-md/40 lg:w-2/3"
+					class="aspect-video w-full overflow-hidden rounded-sm shadow-md/40 lg:w-2/3"
 					v-if="robot.video"
 				>
 					<iframe
-						class="h-full w-full overflow-hidden rounded-md"
+						class="h-full w-full overflow-hidden rounded-sm"
 						width="560"
 						height="315"
 						:src="`https://www.youtube.com/embed/${robot.video}`"

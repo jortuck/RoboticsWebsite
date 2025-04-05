@@ -49,7 +49,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 			<div class="flex flex-col gap-y-3 lg:flex-row lg:gap-x-3">
 				<div
 					v-for="post in posts"
-					class="w-full space-y-4 overflow-hidden rounded-md bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
+					class="w-full space-y-4 overflow-hidden rounded-sm bg-base-100 text-base-content shadow-sm lg:max-w-1/3"
 				>
 					<div
 						class="overflow-hidden bg-center"
@@ -66,7 +66,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 					<div class="m-4 flex flex-col items-center justify-center md:flex-row">
 						<div class="space-y-2">
 							<h3 class="text-2xl font-bold">{{ post.title }}</h3>
-							<h4 class="w-fit rounded-md italic">{{ new Date(post.date).toDateString() }}</h4>
+							<h4 class="w-fit rounded-sm italic">{{ new Date(post.date).toDateString() }}</h4>
 							<p class="flex-1">
 								{{ post.description }}
 							</p>
@@ -75,7 +75,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 			<NuxtLink
-				class="group w-fit rounded-md border-2 border-primary p-3 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
+				class="group w-fit rounded-sm border-2 border-primary p-3 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 				href="/news-and-events"
 			>
 				View All News & Events

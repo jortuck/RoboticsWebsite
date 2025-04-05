@@ -86,7 +86,7 @@ const sponsors: Sponsor[] = [
 <style scoped>
 @reference "~/assets/css/main.css";
 .sponsor {
-	@apply flex h-36 flex-col items-center justify-center rounded-md p-5 transition-shadow duration-200 ease-in-out dark:bg-purple-50;
+	@apply flex h-36 flex-col items-center justify-center rounded-sm p-5 transition-shadow duration-200 ease-in-out dark:bg-purple-50;
 }
 .sponsor > img {
 	@apply h-full object-contain;
