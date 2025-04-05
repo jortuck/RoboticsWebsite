@@ -68,18 +68,11 @@ const sponsors: Sponsor[] = [
 				become a sponsor today!
 			</p>
 			<NuxtLink
-				class="group w-fit"
-				target="_blank"
+				class="group w-fit rounded-sm border-2 border-primary px-3 py-2 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 				href="/infoPacket.pdf"
 			>
-				<span class="rounded-l-md bg-base-100 p-3 text-base-content lg:max-w-1/3">
-					View Information Packet
-				</span>
-				<span
-					class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
-				>
-					<i class="fa-solid fa-file"></i>
-				</span>
+				View Information Packet
+				<i class="fa-solid fa-file ml-2"></i>
 			</NuxtLink>
 		</div>
 	</div>
