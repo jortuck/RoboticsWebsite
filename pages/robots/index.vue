@@ -62,6 +62,6 @@ useSeoMeta({
 	title: "Robots | Husky Robotics"
 });
 let { data: robots } = await useAsyncData("subsystems", () => {
-	return queryCollection("robots").all();
+	return queryCollection("robots").order("years", "DESC").all();
 });
 </script>
