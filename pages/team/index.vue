@@ -22,7 +22,7 @@
 						v-for="leader in leaders"
 						class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content"
 					>
-						<h3 class="text-lg font-bold text-primary md:text-xl">{{ leader.position }}</h3>
+						<h3 class="text-lg font-bold md:text-xl">{{ leader.position }}</h3>
 						<div
 							class="w-full overflow-hidden bg-center"
 							:style="`background: url(${leader.image});`"
@@ -48,9 +48,10 @@
 					:id="subsystem.name.replace(/ /g, '_')"
 				>
 					<h2
-						class="group p-4 text-lg text-base-content select-none hover:cursor-pointer md:text-xl lg:text-xl"
+						class="group p-4 text-lg text-base-content transition-colors duration-200 ease-in-out select-none hover:cursor-pointer hover:text-primary md:text-xl lg:text-xl"
 						role="button"
 						@click="setExpanded(subsystem.name)"
+						:class="{ 'text-primary': expanded == subsystem.name }"
 						:aria-expanded="expanded == subsystem.name"
 						@keydown.enter="setExpanded(subsystem.name)"
 						@keydown.space.prevent="setExpanded(subsystem.name)"
@@ -78,7 +79,7 @@
 								v-for="lead in subsystem.leads"
 								class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content lg:max-w-1/4"
 							>
-								<h3 class="text-center text-lg font-bold text-primary">{{ lead.position }}</h3>
+								<h3 class="text-center text-lg font-bold">{{ lead.position }}</h3>
 								<div
 									class="w-full overflow-hidden bg-center"
 									:style="`background-image: url(${lead.image});`"
@@ -113,7 +114,7 @@
 						v-for="advisor in advisors"
 						class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content"
 					>
-						<h3 class="text-lg font-bold text-primary md:text-xl">{{ advisor.name }}</h3>
+						<h3 class="text-lg font-bold md:text-xl">{{ advisor.name }}</h3>
 						<div
 							class="w-full overflow-hidden bg-center"
 							:style="`background: url(${advisor.image});`"
