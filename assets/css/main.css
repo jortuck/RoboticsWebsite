@@ -16,8 +16,8 @@ body {
     color: var(--color-base-content);
 }
 @theme {
-    --color-base-200: oklch(98% 0 0);
     --color-base-100: oklch(95% 0 0);
+    --color-base-200: oklch(98% 0 0);
     --color-base-300: oklch(100% 0 0);
     --color-base-content: #1f2937;
     --color-primary-50: #f3e8fa;
@@ -40,9 +40,9 @@ body {
 }
 :root {
     @variant dark {
-        --color-base-100: #1d232a;
-        --color-base-200: #191e24;
-        --color-base-300: #15191e;
+        --color-base-100: oklch(21.15% 0.012 254.09);
+        --color-base-200: oklch(23.26% 0.014 253.1);
+        --color-base-300: oklch(25.33% 0.016 252.42);
         --color-base-content: #e2e4e9;
         --color-primary-50: #fef9e0;
         --color-primary-100: #fef4cc;
