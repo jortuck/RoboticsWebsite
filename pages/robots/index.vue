@@ -27,7 +27,7 @@
 				>
 					<div
 						v-for="img in robot.images"
-						class="shadow-md/40 aspect-3/2 w-full overflow-hidden rounded-md bg-center object-cover object-center"
+						class="aspect-3/2 w-full overflow-hidden rounded-md bg-center object-cover object-center shadow-md/40"
 						:style="`background: url(/images/robots/${img});`"
 					>
 						<img
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div
-					class="shadow-md/40 aspect-video w-full overflow-hidden rounded-md lg:w-2/3"
+					class="aspect-video w-full overflow-hidden rounded-md shadow-md/40 lg:w-2/3"
 					v-if="robot.video"
 				>
 					<iframe
@@ -63,7 +63,7 @@ useSeoMeta({
 });
 
 // Fetch robots data and order by years.
-let { data: robots } = await useAsyncData("subsystems", () => {
+let { data: robots } = await useAsyncData("robots", () => {
 	return queryCollection("robots").order("years", "DESC").all();
 });
 </script>
