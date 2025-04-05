@@ -41,12 +41,17 @@ const links: SocialLink[] = [
 			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
 		>
 			<div class="flex-1 text-center text-base-content md:text-left">
-				<div>
+				<div class="flex flex-col">
 					<h1 class="font-bold">Contact Us:</h1>
 					<NuxtLink
 						to="mailto:uwrobots@uw.edu"
 						class="hover:underline"
 						>uwrobots@uw.edu</NuxtLink
+					><NuxtLink
+						to="https://docs.google.com/forms/d/e/1FAIpQLSdpsg_N7rIb5Dt1WBM7dTqmTAm0YiH3amG4EGvYDC5J7L0P5w/viewform?usp=dialog"
+						class="hover:underline"
+						target="_blank"
+						>Share Website Feedback</NuxtLink
 					>
 				</div>
 			</div>
