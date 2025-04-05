@@ -40,7 +40,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 				<img
 					src="~/assets/images/orpheus_1.png"
 					alt="Image of the robot orpheus."
-					class="rounded-xl shadow-md lg:w-0 lg:flex-1"
+					class="rounded-md shadow-md lg:w-0 lg:flex-1"
 				/>
 			</div>
 		</div>
@@ -75,7 +75,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 			<NuxtLink
-				class="group w-fit rounded-sm border-2 border-primary p-3 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
+				class="group w-fit rounded-sm border-2 border-primary px-3 py-2 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 				href="/news-and-events"
 			>
 				View All News & Events
@@ -86,36 +86,28 @@ const { data: posts } = await useAsyncData("posts", () =>
 		</section>
 		<section class="mx-4 space-y-8 lg:container lg:mx-auto">
 			<SectionHeader> Support Husky Robotics </SectionHeader>
-			<p class="text-center text-lg text-base-content md:text-left md:text-xl">
+			<p class="text-lg text-base-content md:text-xl">
 				Husky Robotics handles all its own fundraising; if you like what we are doing, and want to
 				support our goal of helping UW students become better engineers, scientists, and leaders,
 				why not donate to us directly using the button below? We have no overhead; all of the funds
 				we raise go directly towards purchasing components and materials to build the rover and to
 				rent the vehicles and rooms we use during the competition.
 			</p>
-			<div class="flex flex-row justify-center space-x-4 md:justify-normal">
+			<div class="flex flex-row space-x-4">
 				<NuxtLink
-					class="group w-fit"
-					target="_blank"
+					class="group w-fit rounded-sm border-2 border-primary px-3 py-2 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 					href="https://venmo.com/u/HuskyRobotics"
+					target="_blank"
 				>
-					<span class="rounded-l-md bg-base-100 p-3 text-base-content"> Venmo </span>
-					<span
-						class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
-					>
-						<i class="fa-solid fa-money-bill-wave"></i>
-					</span>
+					Venmo
+					<i class="fa-solid fa-money-bill-wave ml-1"></i>
 				</NuxtLink>
 				<NuxtLink
-					class="group w-fit"
+					class="group w-fit rounded-sm border-2 border-primary px-3 py-2 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 					href="/sponsors"
 				>
-					<span class="rounded-l-md bg-base-100 p-3 text-base-content"> Become a Sponsor </span>
-					<span
-						class="rounded-r-md bg-primary p-3 text-primary-content transition-colors duration-200 ease-in-out group-hover:bg-primary-200"
-					>
-						<i class="fa-solid fa-briefcase"></i>
-					</span>
+					Become a Sponsor
+					<i class="fa-solid fa-briefcase ml-1"></i>
 				</NuxtLink>
 			</div>
 		</section>
