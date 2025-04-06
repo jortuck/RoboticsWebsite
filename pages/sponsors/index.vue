@@ -70,6 +70,7 @@ const sponsors: Sponsor[] = [
 			<NuxtLink
 				class="group w-fit rounded-sm border-2 border-primary px-3 py-2 text-primary transition-colors duration-200 ease-in-out hover:border-transparent hover:bg-primary hover:text-primary-content"
 				href="/infoPacket.pdf"
+				target="_blank"
 			>
 				View Information Packet
 				<i class="fa-solid fa-file ml-2"></i>
