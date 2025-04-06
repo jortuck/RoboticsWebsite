@@ -64,11 +64,11 @@ const { data: posts } = await useAsyncData("posts", () =>
 						class="overflow-hidden bg-center"
 						:style="`background-image: url(/images/posts/${post.image});`"
 					>
-						<div class="w-full backdrop-blur-xl">
+						<div class="h-48 w-full object-contain backdrop-blur-xl md:h-60">
 							<img
 								:alt="`${post.title}`"
 								:src="`/images/posts/${post.image}`"
-								class="mx-auto max-h-60 w-fit object-contain"
+								class="mx-auto h-full object-contain object-center"
 							/>
 						</div>
 					</div>

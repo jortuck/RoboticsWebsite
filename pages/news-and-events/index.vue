@@ -35,11 +35,11 @@ const { data: posts } = await useAsyncData("posts", () =>
 						class="w-full overflow-hidden rounded-sm bg-center"
 						:style="`background-image: url(/images/posts/${post.image});`"
 					>
-						<div class="w-full backdrop-blur-xl">
+						<div class="h-80 w-full backdrop-blur-xl md:h-96">
 							<img
 								:alt="`${post.title}`"
 								:src="`/images/posts/${post.image}`"
-								class="mx-auto h-96"
+								class="mx-auto h-full object-contain object-center"
 							/>
 						</div>
 					</div>
