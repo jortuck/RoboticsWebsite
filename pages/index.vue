@@ -15,7 +15,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 	<main class="mb-10 space-y-32">
 		<header class="container mx-auto my-40 w-full space-y-20 text-center">
 			<h1
-				class="font-logo text-5xl font-extrabold text-primary select-none text-shadow-lg/30 md:text-6xl md:text-8xl dark:text-shadow-white/30"
+				class="text-shadow-lg/30 dark:text-shadow-white/30 font-logo text-5xl font-extrabold text-primary select-none md:text-6xl md:text-8xl"
 			>
 				HUSKY ROBOTICS
 			</h1>
@@ -28,7 +28,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 					<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">
 						The Mission
 					</h2>
-					<p class="block text-lg text-base-content md:text-xl xl:text-2xl">
+					<p class="text-md block text-base-content md:text-xl xl:text-2xl">
 						Our mission at Husky Robotics is to provide UW students with an environment where they
 						can learn practical, hands-on engineering skills as part of a large interdisciplinary
 						team. Unfettered by the time limits of the quarter system, our members build on their
@@ -42,13 +42,13 @@ const { data: posts } = await useAsyncData("posts", () =>
 						format="webp"
 						src="/images/robots/orpheus1.jpg"
 						alt="Image of the robot orpheus."
-						class="hidden rounded-md shadow-md dark:block"
+						class="hidden aspect-5/3 w-full rounded-md object-cover object-center shadow-md dark:block"
 					/>
 					<NuxtImg
 						format="webp"
 						src="/images/robots/orpheus2.png"
 						alt="Image of the robot orpheus."
-						class="rounded-md shadow-md dark:hidden"
+						class="aspect-5/3 w-full rounded-md object-cover object-center shadow-md dark:hidden"
 					/>
 				</div>
 			</div>
