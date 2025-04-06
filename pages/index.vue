@@ -37,18 +37,20 @@ const { data: posts } = await useAsyncData("posts", () =>
 						skills, and a fuller understanding of modern engineering.
 					</p>
 				</div>
-				<NuxtImg
-					format="webp"
-					src="/images/robots/orpheus1.jpg"
-					alt="Image of the robot orpheus."
-					class="hidden rounded-md shadow-md lg:w-0 lg:flex-1 dark:block"
-				/>
-				<NuxtImg
-					format="webp"
-					src="/images/robots/orpheus2.png"
-					alt="Image of the robot orpheus."
-					class="rounded-md shadow-md lg:w-0 lg:flex-1 dark:hidden"
-				/>
+				<div class="lg:w-0 lg:flex-1">
+					<NuxtImg
+						format="webp"
+						src="/images/robots/orpheus1.jpg"
+						alt="Image of the robot orpheus."
+						class="hidden rounded-md shadow-md dark:block"
+					/>
+					<NuxtImg
+						format="webp"
+						src="/images/robots/orpheus2.png"
+						alt="Image of the robot orpheus."
+						class="rounded-md shadow-md dark:hidden"
+					/>
+				</div>
 			</div>
 		</div>
 		<section class="mx-2 space-y-8 lg:container lg:mx-auto">

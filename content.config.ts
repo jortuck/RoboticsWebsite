@@ -20,7 +20,7 @@ export default defineContentConfig({
 				years: z.string(),
 				description: z.string().optional(),
 				images: z.array(z.string()).optional(),
-				video: z.string().optional()
+				video: z.string().optional() // YouTube Video ID
 			})
 		}),
 		posts: defineCollection({
