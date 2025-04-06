@@ -19,11 +19,11 @@ const { data: posts } = await useAsyncData("posts", () =>
 		<section class="mx-2 space-y-4 lg:mx-0">
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 				<div
-					class="space-y-4 rounded-sm bg-base-100 p-4"
+					class="flex flex-col space-y-4 rounded-sm bg-base-100 p-4"
 					v-for="post in posts"
 					:key="post.id"
 				>
-					<div class="space-y-4">
+					<div class="flex-1 space-y-4">
 						<h2 class="text-3xl font-bold text-base-content">
 							{{ post.title }}
 						</h2>
@@ -32,7 +32,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 						</p>
 					</div>
 					<div
-						class="w-full overflow-hidden rounded-sm bg-center"
+						class="w-full place-self-end self-end overflow-hidden rounded-sm bg-center"
 						:style="`background-image: url(/images/posts/${post.image});`"
 					>
 						<div class="h-80 w-full backdrop-blur-xl md:h-96">

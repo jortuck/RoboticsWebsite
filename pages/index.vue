@@ -8,6 +8,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 	queryCollection("posts")
 		.order("date", "DESC")
 		.select("title", "date", "description", "image", "id")
+		.limit(3)
 		.all()
 );
 </script>
