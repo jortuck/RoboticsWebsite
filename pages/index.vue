@@ -68,7 +68,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 							<img
 								:alt="`${post.title}`"
 								:src="`/images/posts/${post.image}`"
-								class="mx-auto max-h-60 w-fit"
+								class="mx-auto max-h-60 w-fit object-contain"
 							/>
 						</div>
 					</div>
