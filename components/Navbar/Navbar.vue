@@ -44,7 +44,7 @@ const links: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 					<p
-						class="translate-y-1 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase select-none dark:text-white"
+						class="translate-y-1 border-b-primary font-logo text-lg font-extrabold text-base-content uppercase transition-colors duration-200 ease-in-out select-none hover:text-primary dark:text-white"
 					>
 						Husky Robotics
 					</p>
@@ -81,7 +81,7 @@ const links: Link[] = [
 					/>
 				</div>
 				<p
-					class="translate-y-1 font-logo text-lg font-extrabold text-base-content uppercase dark:text-white"
+					class="uppercasedark:text-white translate-y-1 font-logo text-lg font-extrabold text-base-content"
 				>
 					Husky Robotics
 				</p>
