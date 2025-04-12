@@ -21,9 +21,9 @@ const { data: posts } = await useAsyncData("posts", () =>
 				HUSKY ROBOTICS
 			</h1>
 		</header>
-		<div class="w-full bg-base-100 bg-center shadow-md">
+		<div class="flex w-full justify-center bg-base-100 bg-center shadow-md">
 			<div
-				class="container mx-auto flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
+				class="container mx-4 flex flex-col items-center justify-center space-y-6 px-2 py-14 md:px-0 md:py-20 lg:flex-row lg:space-y-0 lg:space-x-6"
 			>
 				<div class="flex-1 space-y-6 text-center lg:w-0 lg:text-left">
 					<h2 class="text-3xl font-extrabold text-base-content md:text-4xl xl:text-5xl">

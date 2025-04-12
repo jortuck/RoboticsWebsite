@@ -9,9 +9,7 @@ useSeoMeta({
 	<div class="flex min-h-screen flex-col">
 		<Navbar />
 		<div class="flex flex-1 flex-col">
-			<main>
-				<NuxtPage />
-			</main>
+			<NuxtPage />
 		</div>
 		<Footer />
 	</div>
