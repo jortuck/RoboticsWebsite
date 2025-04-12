@@ -105,7 +105,7 @@ const links: Link[] = [
 			<div
 				v-if="menuBarOpen"
 				@click.self="toggleMenu()"
-				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-base-100 bg-base-200/70 px-5 py-5 backdrop-blur-2xl lg:hidden"
+				class="absolute flex h-screen w-full flex-col items-center space-y-5 border-base-100 bg-base-200/90 px-5 py-5 backdrop-blur-2xl lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
