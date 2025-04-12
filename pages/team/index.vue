@@ -41,7 +41,6 @@
 			</section>
 			<section class="space-y-4">
 				<SectionHeader> Subsystems </SectionHeader>
-
 				<div
 					class="overflow-hidden rounded-sm bg-base-100"
 					v-for="subsystem in subsystems"
@@ -50,9 +49,13 @@
 					<h2
 						class="group p-4 text-lg text-base-content transition-colors duration-200 ease-in-out select-none hover:cursor-pointer hover:text-primary md:text-xl lg:text-xl"
 						role="button"
-						@click="setExpanded(subsystem.name)"
-						:class="{ 'text-primary': expanded == subsystem.name }"
-						:aria-expanded="expanded == subsystem.name"
+						@click="
+							(e) => {
+								setExpanded(subsystem.name);
+							}
+						"
+						:class="{ 'text-primary': expanded.includes(subsystem.name) }"
+						:aria-expanded="expanded.includes(subsystem.name)"
 						@keydown.enter="setExpanded(subsystem.name)"
 						@keydown.space.prevent="setExpanded(subsystem.name)"
 						tabindex="0"
@@ -61,49 +64,53 @@
 						<span class="float-right"
 							><i
 								class="fa-solid fa-chevron-down transition-transform duration-200 ease-in-out"
-								:class="expanded == subsystem.name ? 'rotate-0' : 'rotate-90'"
+								:class="expanded.includes(subsystem.name) ? 'rotate-0' : 'rotate-90'"
 							></i
 						></span>
 					</h2>
-					<div
-						class="space-y-4 bg-base-200 p-4 text-base-content"
-						v-if="expanded == subsystem.name"
-					>
-						<h3 class="text-xl font-bold">About</h3>
-						<p>
-							{{ subsystem.description }}
-						</p>
-						<h3 class="text-xl font-bold">Lead<span v-if="subsystem.leads.length > 1">s</span></h3>
-						<div class="flex flex-col space-y-4 space-x-5 lg:flex-row lg:space-y-0 xl:space-x-10">
-							<div
-								v-for="lead in subsystem.leads"
-								class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content lg:max-w-1/4"
-							>
-								<h3 class="text-center text-lg font-bold">{{ lead.position }}</h3>
+					<Transition>
+						<div
+							class="smooth-collapse space-y-4 bg-base-200 p-4 text-base-content"
+							v-show="expanded.includes(subsystem.name)"
+						>
+							<h3 class="text-xl font-bold">About</h3>
+							<p>
+								{{ subsystem.description }}
+							</p>
+							<h3 class="text-xl font-bold">
+								Lead<span v-if="subsystem.leads.length > 1">s</span>
+							</h3>
+							<div class="flex flex-col space-y-4 space-x-5 lg:flex-row lg:space-y-0 xl:space-x-10">
 								<div
-									class="w-full overflow-hidden bg-center"
-									:style="`background-image: url(${lead.image});`"
+									v-for="lead in subsystem.leads"
+									class="flex w-full flex-col items-center justify-center space-y-4 rounded-sm bg-base-100 py-4 text-base-content lg:max-w-1/4"
 								>
-									<div class="backdrop-blur-xl">
-										<img
-											:alt="`${lead.name} headshot`"
-											:src="lead.image"
-											class="mx-auto h-50"
-										/>
+									<h3 class="text-center text-lg font-bold">{{ lead.position }}</h3>
+									<div
+										class="w-full overflow-hidden bg-center"
+										:style="`background-image: url(${lead.image});`"
+									>
+										<div class="backdrop-blur-xl">
+											<img
+												:alt="`${lead.name} headshot`"
+												:src="lead.image"
+												class="mx-auto h-50"
+											/>
+										</div>
 									</div>
+									<h3 class="text-lg">{{ lead.name }}</h3>
 								</div>
-								<h3 class="text-lg">{{ lead.name }}</h3>
+							</div>
+							<h3 class="text-xl font-bold">Members</h3>
+							<div class="flex flex-wrap gap-2">
+								<span
+									class="block rounded-sm bg-base-100 px-2 py-1 text-sm"
+									v-for="member in subsystem.members"
+									>{{ member }}</span
+								>
 							</div>
 						</div>
-						<h3 class="text-xl font-bold">Members</h3>
-						<div class="flex flex-wrap gap-2">
-							<span
-								class="block rounded-sm bg-base-100 px-2 py-1 text-sm"
-								v-for="member in subsystem.members"
-								>{{ member }}</span
-							>
-						</div>
-					</div>
+					</Transition>
 				</div>
 			</section>
 			<section class="space-y-4">
@@ -142,18 +149,17 @@ useSeoMeta({
 });
 let route = useRoute();
 
-let expanded: Ref<string> = ref("");
-
+let expanded: Ref<string[]> = ref([]);
 let { data: subsystems } = await useAsyncData("subsystems", () => {
 	return queryCollection("subsystems").all();
 });
 
 async function setExpanded(subsystem: string) {
-	if (expanded.value === subsystem) {
-		expanded.value = "";
-		return;
+	if (expanded.value.includes(subsystem)) {
+		expanded.value = expanded.value.filter((s) => s !== subsystem);
+	} else {
+		expanded.value.push(subsystem);
 	}
-	expanded.value = subsystem;
 }
 
 type leader = {
@@ -200,3 +206,24 @@ const advisors: advisor[] = [
 	}
 ];
 </script>
+<style scoped>
+.smooth-collapse {
+	transform-origin: top;
+	transition:
+		transform 0.25s ease,
+		opacity 0.25s ease;
+	will-change: transform, opacity;
+}
+
+.v-enter-from,
+.v-leave-to {
+	transform: scaleY(0);
+	opacity: 0;
+}
+
+.v-enter-to,
+.v-leave-from {
+	transform: scaleY(1);
+	opacity: 1;
+}
+</style>
