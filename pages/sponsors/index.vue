@@ -31,7 +31,8 @@ const sponsors: Sponsor[] = [
 	{ name: "Altium", logo: "altium.png", url: "https://www.altium.com/" },
 	{ name: "Protocase", logo: "protocase.png", url: "https://www.protocase.com/" },
 	{ name: "Solidworks", logo: "solidworks.png", url: "https://www.solidworks.com/" },
-	{ name: "GMA Garnet", logo: "gma.png", url: "https://gmagarnet.com/en/americas" }
+	{ name: "GMA Garnet", logo: "gma.png", url: "https://gmagarnet.com/en/americas" },
+	{ name: "Stoi Family", logo: "stoi.png", url: "https://stoiberengineering.com/" }
 ];
 </script>
 <template>
