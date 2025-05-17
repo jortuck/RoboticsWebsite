@@ -11,6 +11,5 @@ useSeoMeta({
 		<div class="flex flex-1 flex-col">
 			<NuxtPage />
 		</div>
-		<Footer />
 	</div>
 </template>

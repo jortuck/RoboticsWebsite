@@ -18,54 +18,77 @@ type Link = {
 };
 
 const links: Link[] = [
-	{ text: "Home", url: "/" },
-	{ text: "Events", url: "/news-and-events" },
-	{ text: "Robots", url: "/robots" },
-	{ text: "Team", url: "/team" },
-	{ text: "Sponsors", url: "/sponsors" }
+	{ text: "About", url: "#" },
+	{ text: "Gallery", url: "#" },
+	{ text: "Support", url: "#" },
+	{ text: "Join Us", url: "#" }
+];
+const subLinks: Link[] = [
+	{ text: "Subteams", url: "#" },
+	{ text: "Sponsors", url: "#" },
+	{ text: "Events", url: "#" },
+	{ text: "Merch", url: "#" },
+	{ text: "Contact", url: "#" }
 ];
 </script>
 <template>
 	<Html :class="{ 'overflow-hidden lg:overflow-auto': menuBarOpen }" />
-
 	<div class="sticky top-0 z-50 will-change-transform">
 		<nav
-			class="hidden items-center justify-center py-3 lg:flex"
+			class="hidden items-center justify-center bg-primary py-3 lg:flex lg:flex-col"
 			:class="{ scrolled: scroll > 0 }"
 		>
-			<div class="container flex flex-row justify-between">
+			<div class="flex w-full flex-row px-6">
 				<NuxtLink
 					href="/"
-					class="flex flex-row items-center space-x-5"
+					class="flex flex-1 flex-row items-center space-x-5"
 				>
 					<img
-						src="~/assets/images/logo_square_sm.png"
+						src="~/assets/images/UWLogoWithGold.png"
 						class="max-h-12"
-						alt="Husky Robotics Logo"
+						alt="University of Washington Logo"
 					/>
 					<p
-						class="translate-y-1 border-b-primary text-lg font-extrabold uppercase transition-colors duration-200 ease-in-out select-none hover:text-primary dark:text-white"
+						class="font-roboto text-lg tracking-widest text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
 					>
 						Husky Robotics
 					</p>
 				</NuxtLink>
-				<div class="flex flex-row items-center space-x-4 lg:space-x-8">
+				<div class="flex-1">
+					<img
+						src="~/assets/images/logo_square_sm.png"
+						class="mx-auto max-h-12"
+						alt="Husky Robotics Logo"
+					/>
+				</div>
+				<div
+					class="flex flex-1 flex-row items-center justify-end space-x-4 text-center lg:space-x-8"
+				>
 					<NuxtLink
 						v-for="link in links"
 						:to="link.url"
-						class="desktopLink"
+						class="desktopLink text-nowrap"
 					>
 						{{ link.text }}
 					</NuxtLink>
-					<button
-						class="desktopLink hover:cursor-pointer"
-						@click="toggleDark()"
-						role="button"
-						aria-label="Toggle Dark Theme"
+				</div>
+			</div>
+		</nav>
+		<nav
+			class="hidden items-center justify-center bg-alt py-2 lg:flex lg:flex-col"
+			:class="{ scrolled: scroll > 0 }"
+		>
+			<div class="columns-5 content-center items-center justify-center">
+				<div
+					v-for="link in subLinks"
+					class=""
+				>
+					<NuxtLink
+						:to="link.url"
+						class="desktopLink block w-full text-center"
 					>
-						<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
-						<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
-					</button>
+						{{ link.text }}
+					</NuxtLink>
 				</div>
 			</div>
 		</nav>
@@ -78,7 +101,7 @@ const links: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 				</div>
-				<p class="uppercasedark:text-white translate-y-1 text-lg font-extrabold">Husky Robotics</p>
+				<p class="translate-y-1 text-lg font-extrabold uppercase dark:text-white">Husky Robotics</p>
 				<button
 					role="button"
 					@click="toggleMenu()"
@@ -99,7 +122,7 @@ const links: Link[] = [
 			<div
 				v-if="menuBarOpen"
 				@click.self="toggleMenu()"
-				class="absolute flex h-screen w-full flex-col items-center space-y-5 px-5 py-5 backdrop-blur-2xl lg:hidden"
+				class="absolute flex h-screen w-full flex-col items-center space-y-4 px-5 py-5 lg:hidden"
 			>
 				<NuxtLink
 					v-for="link in links"
@@ -109,14 +132,6 @@ const links: Link[] = [
 				>
 					{{ link.text }}
 				</NuxtLink>
-				<button
-					class="mobileLink"
-					@click="toggleDark()"
-					role="button"
-				>
-					<span v-show="isDark"><i class="fa-regular fa-lightbulb"></i></span>
-					<span v-show="!isDark"><i class="fa-regular fa-moon"></i></span>
-				</button>
 			</div>
 		</Transition>
 	</div>
@@ -128,7 +143,7 @@ const links: Link[] = [
 }
 .mobileLink,
 .desktopLink {
-	@apply rounded-sm border-2 font-bold;
+	@apply font-bold text-secondary;
 	@apply transition-colors duration-200 ease-in-out;
 }
 .mobileLink {

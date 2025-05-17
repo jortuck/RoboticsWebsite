@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');@import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 @import "@fortawesome/fontawesome-free/css/regular.css";
 @import "@fortawesome/fontawesome-free/css/solid.css";
 @import "@fortawesome/fontawesome-free/css/brands.min.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
-@font-face {
-    font-family: 'Airbus Special';
-    font-style: normal;
-    font-weight: normal;
-    src: url(aispec.woff) format('woff');
-}
+
 body {
-    font-family: Roboto, sans-serif;
-    color: var(--color-base-content);
+    font-family: 'Inter', sans-serif;
 }
 @theme {
-    --color-primary: #9c5ad0;
+    --color-primary: rgb(0, 0, 0);
+    --color-secondary: rgb(255, 255, 255);
+    --color-tertiary: #40396A;
+    --color-alt:#222222;
     --font-roboto: 'Roboto Mono';
+    --font-inter: 'Inter';
 }
 
