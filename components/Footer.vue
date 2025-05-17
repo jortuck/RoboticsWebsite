@@ -36,11 +36,11 @@ const links: SocialLink[] = [
 ];
 </script>
 <template>
-	<footer class="mt-5 border-t-2 border-t-base-100 bg-base-300 py-8 md:px-2 lg:px-0">
+	<footer class="mt-5 border-t-2 py-8 md:px-2 lg:px-0">
 		<div
 			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
 		>
-			<div class="flex-1 text-center text-base-content md:text-left">
+			<div class="flex-1 text-center md:text-left">
 				<div class="flex flex-col">
 					<h1 class="font-bold">Contact Us:</h1>
 					<NuxtLink
@@ -55,7 +55,7 @@ const links: SocialLink[] = [
 					>
 				</div>
 			</div>
-			<p class="flex-none space-x-4 text-base-content">
+			<p class="flex-none space-x-4">
 				<NuxtLink
 					v-for="link in links"
 					target="_blank"
@@ -73,8 +73,8 @@ const links: SocialLink[] = [
 						alt="Husky Robotics Logo"
 					/>
 				</p>
-				<p class="text-center text-xs text-base-content md:text-right">© 2025 Husky Robotics</p>
-				<p class="text-center text-xs text-base-content md:text-right">
+				<p class="text-center text-xs md:text-right">© 2025 Husky Robotics</p>
+				<p class="text-center text-xs md:text-right">
 					Husky Robotics is a Registered Student Organization (RSO) at the University of Washington
 				</p>
 			</div>
