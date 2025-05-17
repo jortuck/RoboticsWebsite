@@ -107,7 +107,7 @@ const subLinks: Link[] = [
 				<button
 					role="button"
 					@click="toggleMenu()"
-					class="w-10 rounded-sm border-2 py-0.5 text-lg font-extrabold transition-colors duration-100 ease-in-out"
+					class="w-10 rounded-sm py-0.5 text-2xl font-extrabold text-secondary transition-colors duration-100 ease-in-out"
 				>
 					<i
 						class="fa-solid fa-bars"
@@ -124,16 +124,27 @@ const subLinks: Link[] = [
 			<div
 				v-if="menuBarOpen"
 				@click.self="toggleMenu()"
-				class="absolute flex h-screen w-full flex-col items-center space-y-4 px-5 py-5 lg:hidden"
+				class="absolute flex h-screen max-h-screen w-full flex-col bg-black px-5 py-5 lg:hidden"
 			>
-				<NuxtLink
-					v-for="link in links"
-					:to="link.url"
-					@click="toggleMenu()"
-					class="mobileLink"
-				>
-					{{ link.text }}
-				</NuxtLink>
+				<div class="container mx-auto space-y-4">
+					<NuxtLink
+						v-for="link in links"
+						:to="link.url"
+						@click="toggleMenu()"
+						class="mobileLink"
+					>
+						{{ link.text }}
+					</NuxtLink>
+					<hr class="border-white" />
+					<NuxtLink
+						v-for="link in subLinks"
+						:to="link.url"
+						@click="toggleMenu()"
+						class="mobileLink"
+					>
+						{{ link.text }}
+					</NuxtLink>
+				</div>
 			</div>
 		</Transition>
 	</div>
@@ -149,7 +160,7 @@ const subLinks: Link[] = [
 	@apply transition-colors duration-200 ease-in-out;
 }
 .mobileLink {
-	@apply block w-full py-2 text-center;
+	@apply block py-2 text-xl md:text-3xl;
 }
 .desktopLink {
 	@apply px-2 py-0.5;
