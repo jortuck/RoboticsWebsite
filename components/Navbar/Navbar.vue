@@ -26,7 +26,7 @@ const links: Link[] = [
 const subLinks: Link[] = [
 	{ text: "Subteams", url: "#" },
 	{ text: "Sponsors", url: "#" },
-	{ text: "Events", url: "#" },
+	{ text: "Newsletter", url: "#" },
 	{ text: "Merch", url: "#" },
 	{ text: "Contact", url: "#" }
 ];
@@ -62,7 +62,7 @@ const subLinks: Link[] = [
 					/>
 				</div>
 				<div
-					class="flex flex-1 flex-row items-center justify-end space-x-4 text-center lg:space-x-8"
+					class="flex flex-1 flex-row items-center justify-end space-x-4 text-center xl:space-x-8"
 				>
 					<NuxtLink
 						v-for="link in links"
@@ -92,7 +92,9 @@ const subLinks: Link[] = [
 				</div>
 			</div>
 		</nav>
-		<nav class="relative flex items-center justify-center border-b-2 px-4 py-3 lg:hidden">
+		<nav
+			class="relative flex items-center justify-center border-b-2 bg-primary px-4 py-3 lg:hidden"
+		>
 			<div class="container flex flex-row items-center justify-between">
 				<div class="flex flex-row items-center space-x-5">
 					<img
@@ -101,7 +103,7 @@ const subLinks: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 				</div>
-				<p class="translate-y-1 text-lg font-extrabold uppercase dark:text-white">Husky Robotics</p>
+				<p class="translate-y-1 font-roboto text-lg uppercase dark:text-white">Husky Robotics</p>
 				<button
 					role="button"
 					@click="toggleMenu()"
