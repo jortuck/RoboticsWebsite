@@ -103,7 +103,7 @@ const subLinks: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 				</div>
-				<p class="translate-y-1 font-roboto text-lg uppercase dark:text-white">Husky Robotics</p>
+				<p class="font-roboto text-lg uppercase dark:text-white">Husky Robotics</p>
 				<button
 					role="button"
 					@click="toggleMenu()"
