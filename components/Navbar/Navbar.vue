@@ -34,7 +34,7 @@ const subLinks: Link[] = [
 <template>
 	<Html :class="{ 'overflow-hidden lg:overflow-auto': menuBarOpen }" />
 	<div class="top-0 z-50 will-change-transform">
-		<nav class="hidden items-center justify-center bg-primary py-3 lg:flex lg:flex-col">
+		<nav class="hidden items-center justify-center bg-primary px-4 py-5 lg:flex lg:flex-col">
 			<div class="flex w-full flex-row px-6">
 				<NuxtLink
 					href="/"

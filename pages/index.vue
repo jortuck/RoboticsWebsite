@@ -26,9 +26,9 @@ const { data: posts } = await useAsyncData("posts", () =>
 					);
 				"
 			>
-				<div class="container mx-auto space-y-8 py-30">
-					<div class="max-w-1/3 space-y-8">
-						<h1 class="text-7xl font-extrabold text-secondary">
+				<div class="mx-3 space-y-8 py-20 md:container md:mx-auto md:py-30">
+					<div class="space-y-8 md:max-w-1/3">
+						<h1 class="text-5xl font-extrabold text-secondary md:text-7xl">
 							Mars 2025:<br />Prometheus<br />Rover
 						</h1>
 						<p class="text-lg text-secondary">
