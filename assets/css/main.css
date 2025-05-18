@@ -14,6 +14,8 @@ body {
     --color-secondary: rgb(255, 255, 255);
     --color-tertiary: #40396A;
     --color-alt:#222222;
+    --color-accent:#ACACAC;
+    --color-active-green:#59D889;
     --font-roboto: 'Roboto Mono';
     --font-inter: 'Inter';
 }

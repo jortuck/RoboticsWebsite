@@ -33,11 +33,8 @@ const subLinks: Link[] = [
 </script>
 <template>
 	<Html :class="{ 'overflow-hidden lg:overflow-auto': menuBarOpen }" />
-	<div class="sticky top-0 z-50 will-change-transform">
-		<nav
-			class="hidden items-center justify-center bg-primary py-3 lg:flex lg:flex-col"
-			:class="{ scrolled: scroll > 0 }"
-		>
+	<div class="top-0 z-50 will-change-transform">
+		<nav class="hidden items-center justify-center bg-primary py-3 lg:flex lg:flex-col">
 			<div class="flex w-full flex-row px-6">
 				<NuxtLink
 					href="/"
@@ -74,10 +71,7 @@ const subLinks: Link[] = [
 				</div>
 			</div>
 		</nav>
-		<nav
-			class="hidden items-center justify-center bg-alt py-2 lg:flex lg:flex-col"
-			:class="{ scrolled: scroll > 0 }"
-		>
+		<nav class="hidden items-center justify-center bg-alt py-2 lg:flex lg:flex-col">
 			<div class="columns-5 content-center items-center justify-center">
 				<div
 					v-for="link in subLinks"
