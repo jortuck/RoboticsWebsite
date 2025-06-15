@@ -69,20 +69,20 @@ const { data: posts } = await useAsyncData("posts", () =>
 					compete at prestigious international challenges, including the University Rover Challenge
 					(URC) in Utah and the Canadian International Rover Challenge (CIRC).
 				</p>
-				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-4">
-					<div>
+				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-6">
+					<div class="xl:col-span-1">
 						<p class="font-roboto tracking-widest text-neutral-500">CLASS</p>
 						<p class="text-lg font-bold text-black">Rover</p>
 					</div>
-					<div>
+					<div class="xl:col-span-1">
 						<p class="font-roboto tracking-widest text-neutral-500">AIM</p>
 						<p class="text-lg font-bold text-black">Utah (URC)<br />Canada (CIRC)</p>
 					</div>
-					<div>
+					<div class="xl:col-span-2">
 						<p class="font-roboto tracking-widest text-neutral-500">URC / CIRC COMPETITIONS</p>
 						<p class="text-lg font-bold text-black">May 28th to 31st / August 8th to 11th</p>
 					</div>
-					<div>
+					<div class="xl:col-span-2">
 						<p class="font-roboto tracking-widest text-neutral-500">OBJECTIVE</p>
 						<p class="text-lg font-bold text-black">
 							Seek signs of life while autonomously traversing scorching, rocky, sandy, arid
