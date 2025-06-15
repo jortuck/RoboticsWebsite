@@ -92,6 +92,43 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 		</section>
-		<section></section>
+		<section class="bg-primary px-3 py-20 md:py-30">
+			<div class="container mx-auto flex flex-col items-center gap-5 lg:flex-row">
+				<div class="flex h-full flex-1 flex-col space-y-8">
+					<header class="space-y-2">
+						<p class="font-roboto tracking-widest text-zinc-400">University of Washington 2025</p>
+						<h2 class="text-4xl font-extrabold text-secondary">
+							University Rover Challenge (URC) Team Video
+						</h2>
+					</header>
+					<p class="text-secondary">
+						Husky Robotics proudly earned selection among 38 global teams for URC 2025 against 100+
+						applicants, securing an exceptional SAR video score of 91.21. Continuing our legacy from
+						recent podium finishes, including multiple 2nd-place global wins at the Canadian
+						International Rover Challenge (CIRC). This video showcases Prometheus's autonomous
+						capabilities and our team's distinguished engineering excellence.
+					</p>
+					<div class="flex items-center space-x-4 text-xl font-bold text-white">
+						<p>Support Us</p>
+						<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
+							<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
+						</span>
+					</div>
+				</div>
+				<div class="w-full flex-1">
+					<iframe
+						class="w-full overflow-hidden rounded-sm"
+						width="560"
+						height="450"
+						src="https://www.youtube.com/embed/HaLj1IdKzLA?si=2HrCr6CkfrNutXKF"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+		</section>
 	</main>
 </template>
