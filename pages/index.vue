@@ -69,20 +69,20 @@ const { data: posts } = await useAsyncData("posts", () =>
 					compete at prestigious international challenges, including the University Rover Challenge
 					(URC) in Utah and the Canadian International Rover Challenge (CIRC).
 				</p>
-				<div class="flex flex-col gap-5 md:flex-row">
-					<div class="flex-1">
+				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 2xl:grid-cols-4">
+					<div>
 						<p class="font-roboto tracking-widest text-neutral-500">CLASS</p>
 						<p class="text-lg font-bold text-black">Rover</p>
 					</div>
-					<div class="flex-1">
+					<div>
 						<p class="font-roboto tracking-widest text-neutral-500">AIM</p>
 						<p class="text-lg font-bold text-black">Utah (URC)<br />Canada (CIRC)</p>
 					</div>
-					<div class="flex-2">
+					<div>
 						<p class="font-roboto tracking-widest text-neutral-500">URC / CIRC COMPETITIONS</p>
 						<p class="text-lg font-bold text-black">May 28th to 31st / August 8th to 11th</p>
 					</div>
-					<div class="flex-2">
+					<div>
 						<p class="font-roboto tracking-widest text-neutral-500">OBJECTIVE</p>
 						<p class="text-lg font-bold text-black">
 							Seek signs of life while autonomously traversing scorching, rocky, sandy, arid
@@ -130,6 +130,19 @@ const { data: posts } = await useAsyncData("posts", () =>
 						></iframe>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="mx-3">
+			<div class="mx-auto gap-5 space-y-5 py-10 md:max-w-2/3 lg:max-w-1/2">
+				<h2 class="text-4xl font-bold">NASA Inspired Robotics: Our Team</h2>
+				<p>
+					Husky Robotics cultivates exceptional talent, preparing +100 University of Washington
+					undergraduate engineers yearly for impactful careers. Our alumni regularly advance into
+					prominent full time roles across industry-leading companies and innovative research
+					institutions. With strong partnerships and work experiences spanning Mechanical
+					Engineering, Electrical & Computer Engineering, and Chemical & Biological engineering at
+					UW. Here are just a few places where many of our team’s alumni have made their mark:
+				</p>
 			</div>
 		</section>
 	</main>
