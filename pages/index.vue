@@ -38,7 +38,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 							exploration & industry‑grade team robotics.
 						</p>
 						<p class="space-x-3 align-middle">
-							<span class="text-center font-roboto font-medium tracking-[3.60px] text-secondary"
+							<span class="font-roboto font-medium tracking-[3.60px] text-secondary"
 								>University of Washington - Seattle</span
 							>
 						</p>
@@ -61,7 +61,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 			</div>
 		</section>
 		<section class="mx-3">
-			<div class="container mx-auto space-y-8 py-10 md:max-w-4/5 xl:max-w-2/3">
+			<div class="container mx-auto space-y-8 py-20 md:max-w-4/5 xl:max-w-2/3">
 				<p class="border-b-1 border-b-accent pb-5 text-lg">
 					The University of Washington’s Husky Robotics leads the frontier of collegiate planetary
 					exploration, blending elite engineering and scientific rigor. Our 2025 rover, Prometheus,
@@ -116,17 +116,19 @@ const { data: posts } = await useAsyncData("posts", () =>
 					</div>
 				</div>
 				<div class="w-full flex-1">
-					<iframe
-						class="w-full overflow-hidden rounded-sm"
-						width="560"
-						height="450"
-						src="https://www.youtube.com/embed/HaLj1IdKzLA?si=2HrCr6CkfrNutXKF"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen
-					></iframe>
+					<div class="aspect-video w-full overflow-hidden rounded-sm">
+						<iframe
+							class="h-full w-full overflow-hidden rounded-sm"
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/HaLj1IdKzLA?si=2HrCr6CkfrNutXKF"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
 				</div>
 			</div>
 		</section>
