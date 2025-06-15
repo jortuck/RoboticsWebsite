@@ -25,10 +25,8 @@ const links: Link[] = [
 ];
 const subLinks: Link[] = [
 	{ text: "Subteams", url: "#" },
-	{ text: "Sponsors", url: "#" },
-	{ text: "Newsletter", url: "#" },
-	{ text: "Merch", url: "#" },
-	{ text: "Contact", url: "#" }
+	{ text: "Newsletter and Events", url: "#" },
+	{ text: "Sponsors", url: "#" }
 ];
 </script>
 <template>
@@ -46,7 +44,7 @@ const subLinks: Link[] = [
 						alt="University of Washington Logo"
 					/>
 					<p
-						class="font-roboto text-lg tracking-widest text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
+						class="font-roboto text-lg tracking-[4px] text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
 					>
 						Husky Robotics
 					</p>
@@ -72,7 +70,7 @@ const subLinks: Link[] = [
 			</div>
 		</nav>
 		<nav class="hidden items-center justify-center bg-alt py-2 lg:flex lg:flex-col">
-			<div class="columns-5 content-center items-center justify-center">
+			<div class="columns-3 content-center items-center justify-center">
 				<div
 					v-for="link in subLinks"
 					class=""
