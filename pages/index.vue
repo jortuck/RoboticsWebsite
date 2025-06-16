@@ -11,6 +11,36 @@ const { data: posts } = await useAsyncData("posts", () =>
 		.limit(3)
 		.all()
 );
+
+type destination = {
+	file: string;
+	alt: string;
+	link: string;
+};
+
+const destinations: destination[] = [
+	{ file: "apple.png", alt: "Apple", link: "https://apple.com" },
+	{ file: "amazon.png", alt: "Amazon", link: "https://amazon.com" },
+	{ file: "microsoft.png", alt: "Microsoft", link: "https://microsoft.com" },
+	{ file: "blueorigin.png", alt: "Blue Origin", link: "https://blueorigin.com" },
+	{ file: "nasa.png", alt: "NASA", link: "https://nasa.gov" },
+	{ file: "spacex.png", alt: "SpaceX", link: "https://spacex.com" },
+	{ file: "meta.png", alt: "Meta", link: "https://meta.com" },
+	{ file: "boeing.png", alt: "Boeing", link: "https://boeing.com" },
+	{ file: "google.png", alt: "Google", link: "https://google.com" },
+	{ file: "stoke.png", alt: "Stoke Space", link: "https://stokespace.com" },
+	{ file: "jpl.png", alt: "NASA Jet Propulsion Laboratory", link: "https://jpl.nasa.gov" },
+	{ file: "figure.png", alt: "Figure AI", link: "https://figure.ai" },
+	{ file: "nvidia.png", alt: "NVIDIA", link: "https://nvidia.com" },
+	{ file: "columbia.png", alt: "Columbia University", link: "https://columbia.edu" },
+	{ file: "cal.png", alt: "University of California Berkeley", link: "https://berkeley.edu" },
+	{ file: "uw.png", alt: "University of Washington", link: "https://washington.edu" },
+	{ file: "ucla.png", alt: "University of California Los Angeles", link: "https://ucla.edu" },
+	{ file: "stanford.png", alt: "Stanford University", link: "https://stanford.edu" },
+	{ file: "harvard.png", alt: "Harvard University", link: "https://harvard.edu" },
+	{ file: "michigan.png", alt: "University of Michigan", link: "https://umich.edu" },
+	{ file: "gt.png", alt: "Georgia Institute of Technology", link: "https://gatech.edu" }
+];
 </script>
 <template>
 	<main>
@@ -133,7 +163,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 			</div>
 		</section>
 		<section>
-			<div class="mx-auto gap-5 space-y-5 px-4 py-10 md:max-w-2/3 lg:max-w-1/2">
+			<div class="container mx-auto gap-5 space-y-5 px-4 py-10 md:max-w-2/3 lg:max-w-1/2">
 				<h2 class="text-4xl font-bold">NASA Inspired Robotics: Our Team</h2>
 				<p>
 					Husky Robotics cultivates exceptional talent, preparing +100 University of Washington
@@ -144,6 +174,30 @@ const { data: posts } = await useAsyncData("posts", () =>
 					UW. Here are just a few places where many of our team’s alumni have made their mark:
 				</p>
 			</div>
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-4 justify-items-center gap-5 lg:grid-cols-7">
+					<div
+						v-for="dest in destinations"
+						:key="dest.file"
+						class="flex h-20 w-full items-center justify-center"
+					>
+						<a
+							:href="dest.link"
+							target="_blank"
+							class="block h-full w-full"
+						>
+							<img
+								:src="`/images/destinations/${dest.file}`"
+								:alt="dest.alt"
+								class="mx-auto h-full max-h-16 w-auto object-contain transition-transform duration-200 ease-in-out hover:scale-110"
+							/>
+						</a>
+					</div>
+				</div>
+			</div>
+			<p class="justify-start text-center font-roboto text-sm font-medium text-zinc-400">
+				Source: LinkedIn Alumni Tool - University of Washington
+			</p>
 		</section>
 	</main>
 </template>
