@@ -26,7 +26,7 @@ const { data: posts } = await useAsyncData("posts", () =>
 					);
 				"
 			>
-				<div class="mx-3 space-y-8 py-20 md:container md:mx-auto md:py-30">
+				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
 						<h1
 							class="tex text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
@@ -60,8 +60,8 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 		</section>
-		<section class="mx-3">
-			<div class="container mx-auto space-y-8 py-20 md:max-w-4/5 xl:max-w-2/3">
+		<section>
+			<div class="container mx-auto space-y-8 px-4 py-20 md:max-w-4/5 xl:max-w-2/3">
 				<p class="border-b-1 border-b-accent pb-5 text-lg">
 					The University of Washington’s Husky Robotics leads the frontier of collegiate planetary
 					exploration, blending elite engineering and scientific rigor. Our 2025 rover, Prometheus,
@@ -92,8 +92,8 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 		</section>
-		<section class="bg-primary px-3 py-20 md:py-30">
-			<div class="container mx-auto flex flex-col items-center gap-5 lg:flex-row">
+		<section class="bg-primary py-20 md:py-30">
+			<div class="container mx-auto flex flex-col items-center gap-10 px-4 lg:flex-row">
 				<div class="flex h-full flex-1 flex-col space-y-8">
 					<header class="space-y-2">
 						<p class="font-roboto tracking-widest text-zinc-400">University of Washington 2025</p>
@@ -132,8 +132,8 @@ const { data: posts } = await useAsyncData("posts", () =>
 				</div>
 			</div>
 		</section>
-		<section class="mx-3">
-			<div class="mx-auto gap-5 space-y-5 py-10 md:max-w-2/3 lg:max-w-1/2">
+		<section>
+			<div class="mx-auto gap-5 space-y-5 px-4 py-10 md:max-w-2/3 lg:max-w-1/2">
 				<h2 class="text-4xl font-bold">NASA Inspired Robotics: Our Team</h2>
 				<p>
 					Husky Robotics cultivates exceptional talent, preparing +100 University of Washington
