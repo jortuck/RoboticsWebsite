@@ -174,8 +174,8 @@ const destinations: destination[] = [
 					UW. Here are just a few places where many of our team’s alumni have made their mark:
 				</p>
 			</div>
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-4 justify-items-center gap-5 lg:grid-cols-7">
+			<div class="container mx-auto px-4 py-10">
+				<div class="grid grid-cols-3 justify-items-center gap-5 lg:grid-cols-7">
 					<div
 						v-for="dest in destinations"
 						:key="dest.file"
@@ -194,10 +194,10 @@ const destinations: destination[] = [
 						</a>
 					</div>
 				</div>
+				<p class="mt-10 text-center font-roboto text-sm font-medium text-zinc-400">
+					Source: LinkedIn Alumni Tool - University of Washington
+				</p>
 			</div>
-			<p class="justify-start text-center font-roboto text-sm font-medium text-zinc-400">
-				Source: LinkedIn Alumni Tool - University of Washington
-			</p>
 		</section>
 	</main>
 </template>
