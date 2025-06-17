@@ -4,51 +4,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 let headerAnimation: gsap.core.Timeline;
-let factsAnimation: gsap.core.Timeline;
+let factsAnimation: gsap.core.Tween;
 let btnGroup = useTemplateRef("buttonGroup");
 onMounted(() => {
 	headerAnimation = gsap
 		.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
 		.from("h1", {
-			duration: 1,
-			opacity: 0,
-			delay: 0.2
+			duration: 0.8,
+			opacity: 0
 		})
 		.from("h1+p", {
-			duration: 0.8,
+			duration: 0.6,
 			opacity: 0
 		})
 		.from("h1+p+p", {
-			duration: 0.8,
+			duration: 0.6,
 			opacity: 0
 		})
 		.from(btnGroup.value, {
-			duration: 0.8,
+			duration: 0.6,
 			opacity: 0
 		});
-	factsAnimation = gsap
-		.timeline({
-			defaults: { ease: "power2.in", autoAlpha: 0 },
-			scrollTrigger: {
-				trigger: ".facts"
-			}
-		})
-		.from(".facts > :first-child", {
-			duration: 0.4,
-			opacity: 0
-		})
-		.from(".facts > :nth-child(2)", {
-			duration: 0.4,
-			opacity: 0
-		})
-		.from(".facts > :nth-child(3)", {
-			duration: 0.4,
-			opacity: 0
-		})
-		.from(".facts > :nth-child(4)", {
-			duration: 0.4,
-			opacity: 0
-		});
+	factsAnimation = gsap.from(".facts > :nth-child(-n+4)", {
+		duration: 0.4,
+		opacity: 0,
+		stagger: 0.1,
+		ease: "power2.in",
+		autoAlpha: 0,
+		scrollTrigger: ".facts"
+	});
 });
 onUnmounted(() => {
 	headerAnimation.revert();
