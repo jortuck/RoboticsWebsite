@@ -159,6 +159,7 @@ const subLinks: Link[] = [
 	@apply px-2 py-0.5;
 }
 .desktopLink.router-link-active,
+.mobileLink.router-link-active,
 .v-enter-active,
 .v-leave-active {
 	transition: opacity 0.25s ease;
