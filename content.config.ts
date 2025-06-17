@@ -18,7 +18,8 @@ export default defineContentConfig({
 			schema: z.object({
 				name: z.string(),
 				description: z.string(),
-				apply: z.string().url()
+				application: z.string().url().optional(),
+				img: z.string()
 			})
 		}),
 		robots: defineCollection({

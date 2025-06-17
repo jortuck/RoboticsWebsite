@@ -53,13 +53,7 @@ useSeoMeta({
 	description:
 		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields."
 });
-const { data: posts } = await useAsyncData("posts", () =>
-	queryCollection("posts")
-		.order("date", "DESC")
-		.select("title", "date", "description", "image", "id")
-		.limit(3)
-		.all()
-);
+const { data: teams } = await useAsyncData("teams", () => queryCollection("teams").all());
 
 type destination = {
 	file: string;
@@ -262,17 +256,20 @@ const destinations: destination[] = [
 					<h2 class="text-5xl font-black text-secondary">Meet Our Team</h2>
 					<p class="text-zinc-100">2025 Roster: <em>167 UW Engineers</em></p>
 				</header>
-				<div class="flex flex-col">
-					<div class="flex flex-col items-center gap-5 text-secondary lg:flex-row">
+				<div class="flex flex-col space-y-10">
+					<div
+						class="flex flex-col items-center gap-5 text-secondary lg:flex-row"
+						v-for="team in teams"
+					>
 						<div class="flex-1 space-y-8">
-							<h3 class="text-4xl font-bold">Mechanical</h3>
+							<h3 class="text-4xl font-bold">{{ team.name }}</h3>
 							<p class="text-lg">
-								Develop precision-engineered robotic systems, mastering CAD, inverse-kinematics,
-								fabrication, and rigorous testing. Build robust, Mars-inspired mobility platforms
-								and innovative payloads, refining critical engineering skills that distinguish you
-								in elite technical environments.
+								{{ team.description }}
 							</p>
-							<div class="flex items-center space-x-4 text-xl font-bold text-white">
+							<div
+								class="flex items-center space-x-4 text-xl font-bold text-white"
+								v-if="team.application"
+							>
 								<p>Apply Now</p>
 								<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
 									<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
@@ -281,7 +278,8 @@ const destinations: destination[] = [
 						</div>
 						<div class="flex flex-1 flex-row justify-center">
 							<img
-								src="/images/teams/mechanical.jpg"
+								:alt="`Picture of ${team.name}.`"
+								:src="`/images/teams/${team.img}`"
 								class="aspect-3/2 object-cover lg:aspect-16/9 lg:p-5"
 							/>
 						</div>
