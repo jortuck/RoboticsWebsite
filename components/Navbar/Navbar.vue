@@ -44,7 +44,7 @@ const subLinks: Link[] = [
 						alt="University of Washington Logo"
 					/>
 					<p
-						class="font-roboto text-lg tracking-[4px] text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
+						class="font-roboto text-lg tracking-robotics text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
 					>
 						Husky Robotics
 					</p>
@@ -95,7 +95,7 @@ const subLinks: Link[] = [
 						alt="Husky Robotics Logo"
 					/>
 				</div>
-				<p class="font-roboto text-lg uppercase dark:text-white">Husky Robotics</p>
+				<p class="font-roboto text-lg tracking-robotics text-secondary uppercase">Husky Robotics</p>
 				<button
 					role="button"
 					@click="toggleMenu()"

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Motion } from "motion-v";
 useSeoMeta({
 	title: "Home | Husky Robotics",
 	description:
@@ -58,17 +59,20 @@ const destinations: destination[] = [
 			>
 				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
-						<h1
-							class="tex text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
+						<Motion
+							as="h1"
+							:initial="{ opacity: 0 }"
+							:animate="{ opacity: 1 }"
+							class="text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
 						>
 							Husky<br />Robotics
-						</h1>
+						</Motion>
 						<p class="border-b-1 border-b-accent pb-5 text-lg text-secondary">
 							Rovers modeled, engineered, and field‑tested by UW students for real‑world planetary
 							exploration & industry‑grade team robotics.
 						</p>
 						<p class="space-x-3 align-middle">
-							<span class="font-roboto font-medium tracking-[3.60px] text-secondary"
+							<span class="font-roboto font-medium tracking-robotics text-secondary"
 								>University of Washington - Seattle</span
 							>
 						</p>
@@ -186,7 +190,11 @@ const destinations: destination[] = [
 							target="_blank"
 							class="block h-full w-full"
 						>
-							<img
+							<Motion
+								:initial="{ opacity: 0 }"
+								:whileInView="{ opacity: 1 }"
+								:transition="{ delay: 0.2, duration: 1 }"
+								as="img"
 								:src="`/images/destinations/${dest.file}`"
 								:alt="dest.alt"
 								class="mx-auto h-full max-h-16 w-auto object-contain transition-transform duration-200 ease-in-out hover:scale-110"
@@ -197,6 +205,46 @@ const destinations: destination[] = [
 				<p class="mt-10 text-center font-roboto text-sm font-medium text-zinc-400">
 					Source: LinkedIn Alumni Tool - University of Washington
 				</p>
+			</div>
+		</section>
+		<section class="bg-primary py-20">
+			<div class="container mx-auto space-y-20 px-4">
+				<header class="space-y-5 text-center">
+					<p class="font-roboto tracking-robotics text-zinc-400">
+						Husky Robotics
+						<img
+							class="inline-block h-6"
+							src="~/assets/images/UWLogoWithGold.png"
+						/>
+					</p>
+					<h2 class="text-5xl font-black text-secondary">Meet Our Team</h2>
+					<p class="text-zinc-100">2025 Roster: <em>167 UW Engineers</em></p>
+				</header>
+				<div class="flex flex-col">
+					<div class="flex flex-col items-center gap-5 text-secondary lg:flex-row">
+						<div class="flex-1 space-y-8">
+							<h3 class="text-4xl font-bold">Mechanical</h3>
+							<p class="text-lg">
+								Develop precision-engineered robotic systems, mastering CAD, inverse-kinematics,
+								fabrication, and rigorous testing. Build robust, Mars-inspired mobility platforms
+								and innovative payloads, refining critical engineering skills that distinguish you
+								in elite technical environments.
+							</p>
+							<div class="flex items-center space-x-4 text-xl font-bold text-white">
+								<p>Apply Now</p>
+								<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
+									<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
+								</span>
+							</div>
+						</div>
+						<div class="flex flex-1 flex-row justify-center">
+							<img
+								src="/images/teams/mechanical.jpg"
+								class="aspect-3/2 object-cover lg:aspect-16/9 lg:p-5"
+							/>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
