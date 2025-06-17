@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Motion } from "motion-v";
 useSeoMeta({
 	title: "Home | Husky Robotics",
 	description:
@@ -207,6 +206,7 @@ const destinations: destination[] = [
 								:initial="{ opacity: 0 }"
 								:whileInView="{ opacity: 1 }"
 								:transition="{ delay: 0.2, duration: 1 }"
+								:inViewOptions="{ once: true }"
 								as="img"
 								:src="`/images/destinations/${dest.file}`"
 								:alt="dest.alt"
