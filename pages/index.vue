@@ -89,7 +89,13 @@ const destinations: destination[] = [
 							>
 						</Motion>
 					</div>
-					<div class="mt-16 flex flex-col gap-8 md:flex-row">
+					<Motion
+						as="div"
+						class="mt-16 flex flex-col gap-8 md:flex-row"
+						:initial="{ opacity: 0, y: 25 }"
+						:animate="{ opacity: 1, y: 0 }"
+						:transition="{ delay: 1.8, duration: 1 }"
+					>
 						<div class="flex items-center space-x-4 text-xl font-bold text-white">
 							<p>Join Us</p>
 							<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
@@ -102,7 +108,7 @@ const destinations: destination[] = [
 								<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
 							</span>
 						</div>
-					</div>
+					</Motion>
 				</div>
 			</div>
 		</section>
