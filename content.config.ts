@@ -12,6 +12,15 @@ export default defineContentConfig({
 				leads: z.array(z.object({ name: z.string(), position: z.string(), image: z.string() }))
 			})
 		}),
+		teams: defineCollection({
+			source: "team/**.yaml",
+			type: "data",
+			schema: z.object({
+				name: z.string(),
+				description: z.string(),
+				apply: z.string().url()
+			})
+		}),
 		robots: defineCollection({
 			source: "robots/**.yaml",
 			type: "data",

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useSeoMeta({
 	title: "Husky Robotics",
-	themeColor: "#fff"
+	themeColor: "#ffffff"
 });
 </script>
 <template>
