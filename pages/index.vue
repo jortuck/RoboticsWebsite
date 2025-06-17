@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-let ctx: gsap.core.Timeline;
+gsap.registerPlugin(ScrollTrigger);
+let headerAnimation: gsap.core.Timeline;
+let factsAnimation: gsap.core.Timeline;
 let btnGroup = useTemplateRef("buttonGroup");
 onMounted(() => {
-	ctx = gsap
+	headerAnimation = gsap
 		.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
 		.from("h1", {
 			duration: 1,
@@ -23,9 +26,33 @@ onMounted(() => {
 			duration: 0.8,
 			opacity: 0
 		});
+	factsAnimation = gsap
+		.timeline({
+			defaults: { ease: "power2.in", autoAlpha: 0 },
+			scrollTrigger: {
+				trigger: ".facts"
+			}
+		})
+		.from(".facts > :first-child", {
+			duration: 0.4,
+			opacity: 0
+		})
+		.from(".facts > :nth-child(2)", {
+			duration: 0.4,
+			opacity: 0
+		})
+		.from(".facts > :nth-child(3)", {
+			duration: 0.4,
+			opacity: 0
+		})
+		.from(".facts > :nth-child(4)", {
+			duration: 0.4,
+			opacity: 0
+		});
 });
 onUnmounted(() => {
-	ctx.revert();
+	headerAnimation.revert();
+	factsAnimation.revert();
 });
 useSeoMeta({
 	title: "Home | Husky Robotics",
@@ -128,20 +155,20 @@ const destinations: destination[] = [
 					compete at prestigious international challenges, including the University Rover Challenge
 					(URC) in Utah and the Canadian International Rover Challenge (CIRC).
 				</p>
-				<div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-6">
-					<div class="xl:col-span-1">
+				<div class="facts grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-6">
+					<div class="invisible xl:col-span-1">
 						<p class="font-roboto tracking-widest text-neutral-500">CLASS</p>
 						<p class="text-lg font-bold text-black">Rover</p>
 					</div>
-					<div class="xl:col-span-1">
+					<div class="invisible xl:col-span-1">
 						<p class="font-roboto tracking-widest text-neutral-500">AIM</p>
 						<p class="text-lg font-bold text-black">Utah (URC)<br />Canada (CIRC)</p>
 					</div>
-					<div class="xl:col-span-2">
+					<div class="invisible xl:col-span-2">
 						<p class="font-roboto tracking-widest text-neutral-500">URC / CIRC COMPETITIONS</p>
 						<p class="text-lg font-bold text-black">May 28th to 31st / August 8th to 11th</p>
 					</div>
-					<div class="xl:col-span-2">
+					<div class="invisible xl:col-span-2">
 						<p class="font-roboto tracking-widest text-neutral-500">OBJECTIVE</p>
 						<p class="text-lg font-bold text-black">
 							Seek signs of life while autonomously traversing scorching, rocky, sandy, arid
