@@ -285,6 +285,17 @@ const destinations: destination[] = [
 						</div>
 					</div>
 				</div>
+				<img
+					alt="Entire Robotics Team Photo"
+					src="/images/teams/full.jpg"
+					class="mx-auto lg:max-w-3/5"
+				/>
+				<div class="flex w-full items-center justify-center space-x-4 text-xl font-bold text-white">
+					<p>About Our Team</p>
+					<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
+						<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
+					</span>
+				</div>
 			</div>
 		</section>
 	</main>
