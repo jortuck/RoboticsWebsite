@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 let menuBarOpen = ref(false);
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 let scroll = ref(0);
 onMounted(() => {
 	let { x, y } = useWindowScroll();
