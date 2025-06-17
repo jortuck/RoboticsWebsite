@@ -18,7 +18,7 @@ type Link = {
 };
 
 const links: Link[] = [
-	{ text: "About", url: "#" },
+	{ text: "About", url: "/about" },
 	{ text: "Gallery", url: "#" },
 	{ text: "Support", url: "#" },
 	{ text: "Join Us", url: "#" }

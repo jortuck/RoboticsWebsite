@@ -1,4 +1,32 @@
 <script setup lang="ts">
+import { gsap } from "gsap";
+
+let ctx: gsap.core.Timeline;
+let btnGroup = useTemplateRef("buttonGroup");
+onMounted(() => {
+	ctx = gsap
+		.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
+		.from("h1", {
+			duration: 1,
+			opacity: 0,
+			delay: 0.2
+		})
+		.from("h1+p", {
+			duration: 0.8,
+			opacity: 0
+		})
+		.from("h1+p+p", {
+			duration: 0.8,
+			opacity: 0
+		})
+		.from(btnGroup.value, {
+			duration: 0.8,
+			opacity: 0
+		});
+});
+onUnmounted(() => {
+	ctx.revert();
+});
 useSeoMeta({
 	title: "Home | Husky Robotics",
 	description:
@@ -58,43 +86,24 @@ const destinations: destination[] = [
 			>
 				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
-						<Motion
-							as="h1"
-							:initial="{ opacity: 0 }"
-							:animate="{ opacity: 1 }"
-							:transition="{ delay: 0, duration: 1.2 }"
-							class="text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
+						<h1
+							class="invisible text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
 						>
 							Husky<br />Robotics
-						</Motion>
-						<Motion
-							as="p"
-							:initial="{ opacity: 0 }"
-							:animate="{ opacity: 1 }"
-							:transition="{ delay: 0.8, duration: 1.5 }"
-							class="border-b-1 border-b-accent pb-5 text-lg text-secondary"
-						>
+						</h1>
+						<p class="invisible border-b-1 border-b-accent pb-5 text-lg text-secondary">
 							Rovers modeled, engineered, and field‑tested by UW students for real‑world planetary
 							exploration & industry‑grade team robotics.
-						</Motion>
-						<Motion
-							as="p"
-							class="space-x-3 align-middle"
-							:initial="{ opacity: 0 }"
-							:animate="{ opacity: 1 }"
-							:transition="{ delay: 1.3, duration: 1.5 }"
-						>
+						</p>
+						<p class="invisible space-x-3 align-middle">
 							<span class="font-roboto font-medium tracking-robotics text-secondary"
 								>University of Washington - Seattle</span
 							>
-						</Motion>
+						</p>
 					</div>
-					<Motion
-						as="div"
-						class="mt-16 flex flex-col gap-8 md:flex-row"
-						:initial="{ opacity: 0, y: 25 }"
-						:animate="{ opacity: 1, y: 0 }"
-						:transition="{ delay: 1.8, duration: 1 }"
+					<div
+						ref="buttonGroup"
+						class="invisible mt-16 flex flex-col gap-8 md:flex-row"
 					>
 						<div class="flex items-center space-x-4 text-xl font-bold text-white">
 							<p>Join Us</p>
@@ -108,7 +117,7 @@ const destinations: destination[] = [
 								<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
 							</span>
 						</div>
-					</Motion>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -208,12 +217,7 @@ const destinations: destination[] = [
 							target="_blank"
 							class="block h-full w-full"
 						>
-							<Motion
-								:initial="{ opacity: 0 }"
-								:whileInView="{ opacity: 1 }"
-								:transition="{ delay: 0.2, duration: 1 }"
-								:inViewOptions="{ once: true }"
-								as="img"
+							<img
 								:src="`/images/destinations/${dest.file}`"
 								:alt="dest.alt"
 								class="mx-auto h-full max-h-16 w-auto object-contain transition-transform duration-200 ease-in-out hover:scale-110"
