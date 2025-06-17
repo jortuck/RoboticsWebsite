@@ -36,49 +36,8 @@ const links: SocialLink[] = [
 ];
 </script>
 <template>
-	<footer class="py-8 md:px-2 lg:px-0">
-		<div
-			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
-		>
-			<div class="flex-1 text-center md:text-left">
-				<div class="flex flex-col">
-					<h1 class="font-bold">Contact Us:</h1>
-					<NuxtLink
-						to="mailto:uwrobots@uw.edu"
-						class="hover:underline"
-						>uwrobots@uw.edu</NuxtLink
-					><NuxtLink
-						to="https://docs.google.com/forms/d/e/1FAIpQLSdpsg_N7rIb5Dt1WBM7dTqmTAm0YiH3amG4EGvYDC5J7L0P5w/viewform?usp=dialog"
-						class="hover:underline"
-						target="_blank"
-						>Share Website Feedback</NuxtLink
-					>
-				</div>
-			</div>
-			<p class="flex-none space-x-4">
-				<NuxtLink
-					v-for="link in links"
-					target="_blank"
-					:to="link.url"
-					:aria-label="link.name"
-				>
-					<i :class="'fa-brands fa-2x ' + link.icon"></i>
-				</NuxtLink>
-			</p>
-			<div class="flex-1 space-y-2">
-				<p class="text-center text-3xl font-extrabold text-white md:text-right">
-					<img
-						src="~/assets/images/logo_square_sm.png"
-						class="inline max-h-12"
-						alt="Husky Robotics Logo"
-					/>
-				</p>
-				<p class="text-center text-xs md:text-right">© 2025 Husky Robotics</p>
-				<p class="text-center text-xs md:text-right">
-					Husky Robotics is a Registered Student Organization (RSO) at the University of Washington
-				</p>
-			</div>
-		</div>
+	<footer class="bg-primary">
+		<div class="container mx-auto space-y-8 px-4 py-20 md:py-30"></div>
 	</footer>
 	<p
 		v-if="!dev"

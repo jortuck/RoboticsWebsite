@@ -44,9 +44,9 @@ onMounted(() => {
 	});
 });
 onUnmounted(() => {
-	headerAnimation.revert();
-	factsAnimation.revert();
-	destinationsAnimation.revert();
+	// headerAnimation.revert();
+	// factsAnimation.revert();
+	// destinationsAnimation.revert();
 });
 useSeoMeta({
 	title: "Home | Husky Robotics",
@@ -54,6 +54,7 @@ useSeoMeta({
 		"Husky Robotics provides UW students the opportunity to develop skills as part of a large interdisciplinary science and engineering project. We turn our member's passion for robotics, space, science and engineering into real-world experience, offering a unique chance to have hands-on time in a variety of engineering and engineering-adjacent fields."
 });
 const { data: teams } = await useAsyncData("teams", () => queryCollection("teams").all());
+const { data: gallery } = await useAsyncData("gallery", () => queryCollection("gallery").all());
 
 type destination = {
 	file: string;
@@ -277,6 +278,39 @@ const destinations: destination[] = [
 					to="about"
 					>About Our Team</ArrowLink
 				>
+			</div>
+		</section>
+		<section>
+			<div class="container mx-auto flex flex-col px-4 py-10">
+				<div
+					class="flex flex-col gap-4 border-t-1 border-t-black py-8 lg:flex-row lg:items-center"
+					v-for="category in gallery"
+				>
+					<div
+						class="flex flex-1 flex-row-reverse items-center justify-between space-x-8 lg:flex-row lg:justify-start"
+					>
+						<img
+							alt="Electronics thumbnail"
+							class="h-20 lg:h-auto lg:w-20"
+							:src="`/images/gallery/thumbnails/${category.img}`"
+						/>
+						<h2 class="text-2xl font-bold md:text-3xl lg:text-4xl">{{ category.name }}</h2>
+					</div>
+					<div class="flex flex-1 flex-col gap-4 lg:flex-row lg:items-center">
+						<p class="flex-1">
+							{{ category.description }}
+						</p>
+						<NuxtLink
+							aria-label="Learn More"
+							:to="category.link"
+							class="flex items-center space-x-4 text-xl font-bold text-zinc-700 transition-colors duration-200 ease-in-out hover:text-primary"
+							><p class="lg:hidden">Learn More</p>
+							<span
+								class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary transition-colors duration-200 ease-in-out lg:h-8 lg:w-8 lg:hover:bg-tertiary/75"
+								><i class="fa-solid fa-arrow-right fa-xs text-white"></i></span
+						></NuxtLink>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>

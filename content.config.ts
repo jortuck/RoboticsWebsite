@@ -22,6 +22,16 @@ export default defineContentConfig({
 				img: z.string()
 			})
 		}),
+		gallery: defineCollection({
+			source: "gallery/**.yaml",
+			type: "data",
+			schema: z.object({
+				name: z.string(),
+				description: z.string(),
+				link: z.string().url(),
+				img: z.string()
+			})
+		}),
 		robots: defineCollection({
 			source: "robots/**.yaml",
 			type: "data",
