@@ -274,7 +274,7 @@ const destinations: destination[] = [
 @reference "~/assets/css/main.css";
 .bg-splash-birdseye {
 	@apply w-full overflow-hidden bg-cover bg-center bg-no-repeat md:bg-top;
-	@apply bg-[url('~/assets/images/sm_birdseye.jpg')];
+	@apply bg-[url('~/assets/images/md_birdseye.jpg')];
 	@apply md:bg-[url('~/assets/images/md_birdseye.jpg')];
 	@apply lg:bg-[url('~/assets/images/lg_birdseye.jpg')];
 	@apply xl:bg-[url('~/assets/images/xl_birdseye.jpg')];
