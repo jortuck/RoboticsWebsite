@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 let headerAnimation: gsap.core.Timeline;
 let factsAnimation: gsap.core.Tween;
+let destinationsAnimation: gsap.core.Tween;
 let btnGroup = useTemplateRef("buttonGroup");
 onMounted(() => {
 	headerAnimation = gsap
@@ -25,7 +26,7 @@ onMounted(() => {
 			duration: 0.6,
 			opacity: 0
 		});
-	factsAnimation = gsap.from(".facts > :nth-child(-n+4)", {
+	factsAnimation = gsap.from(".facts > *", {
 		duration: 0.4,
 		opacity: 0,
 		stagger: 0.1,
@@ -33,10 +34,19 @@ onMounted(() => {
 		autoAlpha: 0,
 		scrollTrigger: ".facts"
 	});
+	destinationsAnimation = gsap.from(".destinations > *", {
+		duration: 0.4,
+		opacity: 0,
+		stagger: 0.1,
+		ease: "power2.in",
+		autoAlpha: 0,
+		scrollTrigger: ".destinations"
+	});
 });
 onUnmounted(() => {
 	headerAnimation.revert();
 	factsAnimation.revert();
+	destinationsAnimation.revert();
 });
 useSeoMeta({
 	title: "Home | Husky Robotics",
@@ -215,11 +225,11 @@ const destinations: destination[] = [
 				</p>
 			</div>
 			<div class="container mx-auto px-4 py-10">
-				<div class="grid grid-cols-3 justify-items-center gap-5 lg:grid-cols-7">
+				<div class="destinations grid grid-cols-3 justify-items-center gap-5 lg:grid-cols-7">
 					<div
 						v-for="dest in destinations"
 						:key="dest.file"
-						class="flex h-20 w-full items-center justify-center"
+						class="invisible flex h-20 w-full items-center justify-center"
 					>
 						<a
 							:href="dest.link"
