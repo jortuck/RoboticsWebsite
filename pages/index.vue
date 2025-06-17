@@ -63,19 +63,32 @@ const destinations: destination[] = [
 							as="h1"
 							:initial="{ opacity: 0 }"
 							:animate="{ opacity: 1 }"
+							:transition="{ delay: 0, duration: 1.2 }"
 							class="text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
 						>
 							Husky<br />Robotics
 						</Motion>
-						<p class="border-b-1 border-b-accent pb-5 text-lg text-secondary">
+						<Motion
+							as="p"
+							:initial="{ opacity: 0 }"
+							:animate="{ opacity: 1 }"
+							:transition="{ delay: 0.8, duration: 1.5 }"
+							class="border-b-1 border-b-accent pb-5 text-lg text-secondary"
+						>
 							Rovers modeled, engineered, and field‑tested by UW students for real‑world planetary
 							exploration & industry‑grade team robotics.
-						</p>
-						<p class="space-x-3 align-middle">
+						</Motion>
+						<Motion
+							as="p"
+							class="space-x-3 align-middle"
+							:initial="{ opacity: 0 }"
+							:animate="{ opacity: 1 }"
+							:transition="{ delay: 1.3, duration: 1.5 }"
+						>
 							<span class="font-roboto font-medium tracking-robotics text-secondary"
 								>University of Washington - Seattle</span
 							>
-						</p>
+						</Motion>
 					</div>
 					<div class="mt-16 flex flex-col gap-8 md:flex-row">
 						<div class="flex items-center space-x-4 text-xl font-bold text-white">
