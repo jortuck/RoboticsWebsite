@@ -118,18 +118,8 @@ const destinations: destination[] = [
 						ref="buttonGroup"
 						class="invisible mt-16 flex flex-col gap-8 md:flex-row"
 					>
-						<div class="flex items-center space-x-4 text-xl font-bold text-white">
-							<p>Join Us</p>
-							<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
-								<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
-							</span>
-						</div>
-						<div class="flex items-center space-x-4 text-xl font-bold text-white">
-							<p>Support Us</p>
-							<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
-								<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
-							</span>
-						</div>
+						<ArrowLink to="#">Join Us</ArrowLink>
+						<ArrowLink to="#">Support Us</ArrowLink>
 					</div>
 				</div>
 			</div>
@@ -182,12 +172,7 @@ const destinations: destination[] = [
 						International Rover Challenge (CIRC). This video showcases Prometheus's autonomous
 						capabilities and our team's distinguished engineering excellence.
 					</p>
-					<div class="flex items-center space-x-4 text-xl font-bold text-white">
-						<p>Support Us</p>
-						<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
-							<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
-						</span>
-					</div>
+					<ArrowLink to="#">Support Us</ArrowLink>
 				</div>
 				<div class="w-full flex-1">
 					<div class="aspect-video w-full overflow-hidden rounded-sm">
@@ -249,6 +234,7 @@ const destinations: destination[] = [
 					<p class="font-roboto tracking-robotics text-zinc-400">
 						Husky Robotics
 						<img
+							alt="UW Logo"
 							class="inline-block h-6"
 							src="~/assets/images/UWLogoWithGold.png"
 						/>
@@ -266,15 +252,11 @@ const destinations: destination[] = [
 							<p class="text-lg">
 								{{ team.description }}
 							</p>
-							<div
-								class="flex items-center space-x-4 text-xl font-bold text-white"
+							<ArrowLink
 								v-if="team.application"
+								:to="team.application"
+								>Join Us</ArrowLink
 							>
-								<p>Apply Now</p>
-								<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
-									<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
-								</span>
-							</div>
 						</div>
 						<div class="flex flex-1 flex-row justify-center">
 							<img
@@ -290,12 +272,11 @@ const destinations: destination[] = [
 					src="/images/teams/full.jpg"
 					class="mx-auto lg:max-w-3/5"
 				/>
-				<div class="flex w-full items-center justify-center space-x-4 text-xl font-bold text-white">
-					<p>About Our Team</p>
-					<span class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary">
-						<i class="fa-solid fa-arrow-right fa-xs text-white"></i>
-					</span>
-				</div>
+				<ArrowLink
+					class="justify-center"
+					to="about"
+					>About Our Team</ArrowLink
+				>
 			</div>
 		</section>
 	</main>

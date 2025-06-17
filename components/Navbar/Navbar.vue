@@ -18,6 +18,7 @@ type Link = {
 };
 
 const links: Link[] = [
+	{ text: "Home", url: "/" },
 	{ text: "About", url: "/about" },
 	{ text: "Gallery", url: "#" },
 	{ text: "Support", url: "#" },
@@ -148,7 +149,7 @@ const subLinks: Link[] = [
 }
 .mobileLink,
 .desktopLink {
-	@apply font-bold text-secondary;
+	@apply font-bold text-zinc-300;
 	@apply transition-colors duration-200 ease-in-out;
 }
 .mobileLink {
@@ -161,6 +162,7 @@ const subLinks: Link[] = [
 .v-enter-active,
 .v-leave-active {
 	transition: opacity 0.25s ease;
+	@apply text-secondary;
 }
 
 .v-enter-from,

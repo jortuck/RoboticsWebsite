@@ -36,7 +36,7 @@ const links: SocialLink[] = [
 ];
 </script>
 <template>
-	<footer class="mt-5 border-t-2 py-8 md:px-2 lg:px-0">
+	<footer class="py-8 md:px-2 lg:px-0">
 		<div
 			class="container mx-auto flex flex-col content-center items-center justify-between space-y-6 px-3 align-middle md:flex-row md:space-y-0 xl:px-0"
 		>
