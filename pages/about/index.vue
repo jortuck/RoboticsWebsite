@@ -57,7 +57,9 @@ useSeoMeta({
 		</section>
 		<section class="bg-black">
 			<div class="container mx-auto space-y-8 px-4 py-10 lg:max-w-5xl">
-				<div class="flex flex-col flex-wrap justify-between gap-10 md:flex-row md:items-baseline">
+				<div
+					class="grid grid-cols-2 justify-between gap-10 md:flex md:flex-row md:items-baseline md:gap-0"
+				>
 					<div>
 						<p class="font-roboto font-medium tracking-[3.80px] text-zinc-400 lg:text-lg">
 							UW Engineers
