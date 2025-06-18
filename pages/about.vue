@@ -47,7 +47,7 @@ useSeoMeta({
 							class="pointer-events-none absolute inset-0 z-10"
 						></div>
 						<img
-							src="~/assets/images/about.jpg"
+							src="../assets/images/about.jpg"
 							class="h-full w-full object-cover lg:aspect-16/9"
 							alt="Our rover exploring the desert."
 						/>
@@ -138,7 +138,7 @@ useSeoMeta({
 						<img
 							alt="Husky robotics team photo."
 							class="aspect-16/9 object-cover"
-							src="~/assets/images/teamstairs.jpg"
+							src="../assets/images/teamstairs.jpg"
 						/>
 					</div>
 					<div class="flex-2/5 space-y-8">
@@ -166,21 +166,21 @@ useSeoMeta({
 				<div class="flex flex-col gap-4 md:flex-row">
 					<div class="md:flex-[2]">
 						<img
-							src="~/assets/images/about3.jpg"
+							src="../assets/images/about3.jpg"
 							alt="A group of robotics students"
 							class="h-full w-full object-cover"
 						/>
 					</div>
 					<div class="md:flex-[1.5]">
 						<img
-							src="~/assets/images/about2.jpg"
+							src="../assets/images/about2.jpg"
 							alt="Full husky robotics team photo."
 							class="h-full w-full object-cover"
 						/>
 					</div>
 					<div class="md:flex-1">
 						<img
-							src="~/assets/images/about1.jpg"
+							src="../assets/images/about1.jpg"
 							alt="Two members of husky robotics."
 							class="h-full w-full object-cover"
 						/>
@@ -217,7 +217,7 @@ useSeoMeta({
 						<img
 							alt="Husky robotics team photo."
 							class="aspect-16/9 object-cover"
-							src="~/assets/images/founders.jpg"
+							src="../assets/images/founders.jpg"
 						/>
 					</div>
 				</div>
