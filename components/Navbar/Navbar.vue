@@ -18,14 +18,14 @@ type Link = {
 const links: Link[] = [
 	{ text: "Home", url: "/" },
 	{ text: "About", url: "/about" },
-	{ text: "Gallery", url: "#" },
-	{ text: "Support", url: "#" },
-	{ text: "Join Us", url: "#" }
+	{ text: "Gallery", url: "/gallery" },
+	{ text: "Support", url: "/support" },
+	{ text: "Join Us", url: "/join" }
 ];
 const subLinks: Link[] = [
-	{ text: "Subteams", url: "#" },
-	{ text: "Newsletter and Events", url: "#" },
-	{ text: "Sponsors", url: "#" }
+	{ text: "Subteams", url: "/subteams" },
+	{ text: "Newsletter and Events", url: "/newsletter" },
+	{ text: "Sponsors", url: "/sponsors" }
 ];
 </script>
 <template>
