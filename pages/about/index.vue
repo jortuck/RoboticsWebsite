@@ -56,41 +56,39 @@ useSeoMeta({
 			</div>
 		</section>
 		<section class="bg-black">
-			<div class="container mx-auto max-w-5xl space-y-8 px-4 py-10">
-				<div
-					class="flex flex-col flex-wrap items-center justify-center gap-10 md:flex-row md:items-baseline"
-				>
-					<div class="text-center md:text-left">
-						<p class="font-roboto text-lg font-medium tracking-[3.80px] text-zinc-400">
+			<div class="container mx-auto space-y-8 px-4 py-10 lg:max-w-5xl">
+				<div class="flex flex-col flex-wrap justify-between gap-10 md:flex-row md:items-baseline">
+					<div>
+						<p class="font-roboto font-medium tracking-[3.80px] text-zinc-400 lg:text-lg">
 							UW Engineers
 						</p>
-						<p class="text-8xl font-extrabold text-secondary">
+						<p class="text-6xl font-extrabold text-secondary">
 							100<span class="text-tertiary">+</span>
 						</p>
 					</div>
-					<div class="text-center md:text-left">
+					<div>
 						<p class="font-roboto text-lg font-medium tracking-[3.80px] text-zinc-400">Fields</p>
-						<p class="text-8xl font-extrabold text-secondary">
+						<p class="text-6xl font-extrabold text-secondary">
 							22<span class="text-tertiary">+</span>
 						</p>
 					</div>
-					<div class="text-center md:text-left">
+					<div>
 						<p class="font-roboto text-lg font-medium tracking-[3.80px] text-zinc-400">Sponsors</p>
-						<p class="text-8xl font-extrabold text-secondary">
+						<p class="text-6xl font-extrabold text-secondary">
 							13<span class="text-tertiary">+</span>
 						</p>
 					</div>
-					<div class="text-center md:text-left">
+					<div>
 						<p class="font-roboto text-lg font-medium tracking-[3.80px] text-zinc-400">
 							Global Rank
 						</p>
-						<p class="text-8xl font-extrabold text-secondary">3rd</p>
+						<p class="text-6xl font-extrabold text-secondary">3rd</p>
 						<p class="font-roboto text-sm font-medium tracking-[3.80px] text-zinc-400">
 							(CIRC 2024)
 						</p>
 					</div>
 				</div>
-				<p class="text-center text-lg text-secondary md:text-left">
+				<p class="text-lg text-secondary">
 					At Husky Robotics, we believe exceptional engineers emerge from teams driven by purpose
 					and passion. Our mission is not just about building a rover:
 					<strong
@@ -98,7 +96,7 @@ useSeoMeta({
 						grow into visionary leaders.</strong
 					>
 				</p>
-				<p class="text-center text-lg text-secondary md:text-left">
+				<p class="text-lg text-secondary">
 					As a prestigious Registered Student Organization (RSO) at the University of Washington,
 					<strong>we unite over 100 driven students from more than 22 diverse fields</strong>.
 					Inspired by the rigorous standards of planetary exploration, we engineer autonomous Mars
@@ -107,7 +105,7 @@ useSeoMeta({
 					consistent podium placements at prestigious events such as the Canadian International
 					Rover Challenge and the University Rover Challenge.
 				</p>
-				<p class="text-center text-lg text-secondary md:text-left">
+				<p class="text-lg text-secondary">
 					Our flagship rover, Prometheus, symbolizes our commitment to excellence. It combines
 					cutting-edge autonomous systems, robust mechanical design, and sophisticated scientific
 					instrumentation, rigorously tested in mock Martian environments. Through hands-on
@@ -117,7 +115,7 @@ useSeoMeta({
 						autonomy, material science, biochemical research, and aerospace technology.</strong
 					>
 				</p>
-				<p class="text-center text-lg text-secondary md:text-left">
+				<p class="text-lg text-secondary">
 					Husky Robotics collaborates closely with respected industry leaders, proudly supported by
 					13 distinguished sponsors who recognize the value of investing in student innovation.
 					Hundreds of our alumni have advanced into significant roles at Fortune 500 companies,
