@@ -2,14 +2,25 @@
 import { computed, useAttrs } from "vue";
 import { NuxtLink } from "#components";
 
-const props = defineProps<{
-	to?: string;
-	class?: string;
-}>();
+const props = withDefaults(
+	defineProps<{
+		to?: string;
+		class?: string;
+		variant?: "light" | "dark";
+	}>(),
+	{
+		variant: "light"
+	}
+);
 
 const attrs = useAttrs();
 
 const Wrapper = computed(() => (props.to ? NuxtLink : "div"));
+
+let colors: string = "text-zinc-300 hover:text-white";
+if (props.variant === "dark") {
+	colors = "text-zinc-800 hover:text-zinc-600";
+}
 </script>
 
 <template>
@@ -17,8 +28,9 @@ const Wrapper = computed(() => (props.to ? NuxtLink : "div"));
 		:is="Wrapper"
 		v-bind="to ? { to, ...attrs } : {}"
 		:class="[
-			'flex items-center space-x-4 text-xl font-bold text-zinc-300 transition-colors duration-200 ease-in-out hover:text-white',
-			props.class
+			'flex items-center space-x-4 text-xl font-bold transition-colors duration-200 ease-in-out',
+			props.class,
+			colors
 		]"
 	>
 		<p><slot /></p>

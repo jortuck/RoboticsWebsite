@@ -131,6 +131,91 @@ useSeoMeta({
 				</p>
 			</div>
 		</section>
+		<section class="bg-neutral-100">
+			<div class="container mx-auto flex flex-col space-y-8 px-4 py-20">
+				<div class="flex flex-col-reverse items-center gap-12 lg:flex-row">
+					<div class="flex-3/5">
+						<img
+							alt="Husky robotics team photo."
+							class="aspect-16/9 object-cover"
+							src="~/assets/images/teamstairs.jpg"
+						/>
+					</div>
+					<div class="flex-2/5 space-y-8">
+						<h2 class="text-5xl font-bold">Our Team’s Values</h2>
+						<p>
+							At Husky Robotics, our community is built on genuine connections, mutual respect, and
+							shared purpose. Our community connects future industry leaders, highly skilled
+							collaborators, and driven startup founders.
+							<strong
+								>Students who join our team gain access to exceptional career opportunities,
+								mentorship from experienced peers, and a supportive environment designed to advance
+								personal and professional growth.</strong
+							>
+							Companies partnering with us benefit from engaging directly with some of UW’s most
+							promising engineering talent, fostering connections that drive industry innovation and
+							collaboration.
+						</p>
+						<ArrowLink
+							to="/subteams"
+							variant="dark"
+							>Team Structure</ArrowLink
+						>
+					</div>
+				</div>
+				<div class="flex flex-col gap-4 md:flex-row">
+					<div class="md:flex-[2]">
+						<img
+							src="~/assets/images/about3.jpg"
+							class="h-full w-full object-cover"
+						/>
+					</div>
+					<div class="md:flex-[1.5]">
+						<img
+							src="~/assets/images/about2.jpg"
+							class="h-full w-full object-cover"
+						/>
+					</div>
+					<div class="md:flex-1">
+						<img
+							src="~/assets/images/about1.jpg"
+							class="h-full w-full object-cover"
+						/>
+					</div>
+				</div>
+				<div class="flex flex-col items-center gap-12 lg:flex-row">
+					<div class="flex-2/5 space-y-8">
+						<h2 class="text-5xl font-bold">Our History</h2>
+						<p>
+							<strong
+								>Husky Robotics was founded in 2011, inspired by the launch of NASA’s Curiosity
+								rover and a shared passion for space exploration.</strong
+							>
+							What began as a small group of students quickly evolved into a competitive,
+							multidisciplinary engineering team. In 2012, we entered our first University Rover
+							Challenge with a treaded rover called Hydra, and have since grown into one of UW’s
+							most respected technical organizations. Today, Husky Robotics brings together
+							expertise in mechanical, electrical, mechatronic, optics, chemical, biological, and
+							business disciplines, earning top placements at international competitions year after
+							year.
+						</p>
+						<ArrowLink
+							to="/support"
+							variant="dark"
+							>Support The Team</ArrowLink
+						>
+					</div>
+
+					<div class="flex-3/5">
+						<img
+							alt="Husky robotics team photo."
+							class="aspect-16/9 object-cover"
+							src="~/assets/images/founders.jpg"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </template>
 
