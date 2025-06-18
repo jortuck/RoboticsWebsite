@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
+
 let headerAnimation: gsap.core.Timeline;
 let factsAnimation: gsap.core.Tween;
 let destinationsAnimation: gsap.core.Tween;
 let btnGroup = useTemplateRef("buttonGroup");
 onMounted(() => {
+	let split: SplitText = SplitText.create("h1", { type: "chars" });
+	gsap.set("h1", { opacity: 1 });
 	headerAnimation = gsap
 		.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
-		.from("h1", {
+		.from(split.chars, {
 			duration: 0.8,
-			opacity: 0
+			opacity: 0,
+			stagger: 0.05
 		})
 		.from("h1+p", {
 			duration: 0.6,
@@ -101,7 +106,7 @@ const destinations: destination[] = [
 				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
 						<h1
-							class="invisible text-6xl leading-18 font-extrabold text-secondary lg:text-7xl lg:leading-30 xl:text-8xl"
+							class="text-6xl leading-18 font-extrabold text-secondary opacity-0 lg:text-7xl lg:leading-30 xl:text-8xl"
 						>
 							Husky<br />Robotics
 						</h1>
