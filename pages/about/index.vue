@@ -56,9 +56,9 @@ useSeoMeta({
 			</div>
 		</section>
 		<section class="bg-black">
-			<div class="container mx-auto px-4 py-10 xl:max-w-3/5">
+			<div class="container mx-auto max-w-5xl space-y-8 px-4 py-10">
 				<div
-					class="flex flex-col flex-wrap items-center justify-center gap-8 md:flex-row md:items-baseline"
+					class="flex flex-col flex-wrap items-center justify-center gap-10 md:flex-row md:items-baseline"
 				>
 					<div class="text-center md:text-left">
 						<p class="font-roboto text-lg font-medium tracking-[3.80px] text-zinc-400">
@@ -90,6 +90,45 @@ useSeoMeta({
 						</p>
 					</div>
 				</div>
+				<p class="text-center text-lg text-secondary md:text-left">
+					At Husky Robotics, we believe exceptional engineers emerge from teams driven by purpose
+					and passion. Our mission is not just about building a rover:
+					<strong
+						>it's about creating an community where talented students collaborate, innovate, and
+						grow into visionary leaders.</strong
+					>
+				</p>
+				<p class="text-center text-lg text-secondary md:text-left">
+					As a prestigious Registered Student Organization (RSO) at the University of Washington,
+					<strong>we unite over 100 driven students from more than 22 diverse fields</strong>.
+					Inspired by the rigorous standards of planetary exploration, we engineer autonomous Mars
+					Rovers that compete internationally in the Rover Challenge Series.
+					<strong>Our achievements include 2nd & 3rd place finishes worldwide</strong> and
+					consistent podium placements at prestigious events such as the Canadian International
+					Rover Challenge and the University Rover Challenge.
+				</p>
+				<p class="text-center text-lg text-secondary md:text-left">
+					Our flagship rover, Prometheus, symbolizes our commitment to excellence. It combines
+					cutting-edge autonomous systems, robust mechanical design, and sophisticated scientific
+					instrumentation, rigorously tested in mock Martian environments. Through hands-on
+					experience with engineering challenges,
+					<strong
+						>our members gain essential skills in mechanical engineering, electronics, software
+						autonomy, material science, biochemical research, and aerospace technology.</strong
+					>
+				</p>
+				<p class="text-center text-lg text-secondary md:text-left">
+					Husky Robotics collaborates closely with respected industry leaders, proudly supported by
+					13 distinguished sponsors who recognize the value of investing in student innovation.
+					Hundreds of our alumni have advanced into significant roles at Fortune 500 companies,
+					prestigious research institutions, and groundbreaking startups, highlighting our program's
+					unparalleled impact.
+					<strong
+						>When you join or support Husky Robotics, you become part of something extraordinary.
+						You're investing in future leaders who will shape the landscape of technology,
+						exploration, and innovation.</strong
+					>
+				</p>
 			</div>
 		</section>
 	</main>
