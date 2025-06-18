@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Destinations from "~/components/Destinations.vue";
+</script>
 <template>
 	<main>
 		<section class="bg-splash-mars">
@@ -129,6 +131,7 @@
 				</div>
 			</div>
 		</section>
+		<Destinations />
 	</main>
 </template>
 <style scoped>
