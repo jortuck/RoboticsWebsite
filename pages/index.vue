@@ -211,9 +211,8 @@ const destinations: destination[] = [
 						:key="dest.file"
 						class="invisible flex h-20 w-full items-center justify-center"
 					>
-						<a
-							:href="dest.link"
-							target="_blank"
+						<NuxtLink
+							:to="dest.link"
 							class="block h-full w-full"
 						>
 							<img
@@ -221,7 +220,7 @@ const destinations: destination[] = [
 								:alt="dest.alt"
 								class="mx-auto h-full max-h-16 w-auto object-contain transition-transform duration-200 ease-in-out hover:scale-110"
 							/>
-						</a>
+						</NuxtLink>
 					</div>
 				</div>
 				<p class="mt-10 text-center font-roboto text-sm font-medium text-zinc-400">
@@ -247,6 +246,7 @@ const destinations: destination[] = [
 					<div
 						class="flex flex-col items-center gap-5 text-secondary lg:flex-row"
 						v-for="team in teams"
+						:key="team.name"
 					>
 						<div class="flex-1 space-y-8">
 							<h3 class="text-4xl font-bold">{{ team.name }}</h3>
@@ -285,6 +285,7 @@ const destinations: destination[] = [
 				<div
 					class="flex flex-col gap-4 border-t-1 border-t-black py-8 lg:flex-row lg:items-center"
 					v-for="category in gallery"
+					:key="category.name"
 				>
 					<div
 						class="flex flex-1 flex-row-reverse items-center justify-between space-x-8 lg:flex-row lg:justify-start"
