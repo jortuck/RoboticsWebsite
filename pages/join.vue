@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import Destinations from "~/components/Destinations.vue";
+import { gsap } from "gsap";
+
+function scrollTo(id: string) {
+	gsap.to(window, {
+		duration: 0.5,
+		scrollTo: { y: `#${id}` },
+		ease: "power2"
+	});
+}
 </script>
 <template>
 	<main>
@@ -65,22 +74,54 @@ import Destinations from "~/components/Destinations.vue";
 					<div class="flex flex-1 items-center justify-end text-white">
 						<ul class="linklist w-full space-y-2 lg:w-2/3">
 							<li>
-								Excerpts From Current Members
-								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								<a
+									href="#"
+									role="button"
+									@click.prevent="scrollTo('excerpts')"
+								>
+									Excerpts From Current Members
+									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								</a>
 							</li>
 							<li>
-								Application Cycle
-								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								<a
+									href="#"
+									role="button"
+									@click.prevent="scrollTo('applications')"
+								>
+									Application Cycle
+									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								</a>
 							</li>
 							<li>
-								FAQ <span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								<a
+									href="#"
+									role="button"
+									@click.prevent="scrollTo('destinations')"
+								>
+									Where do our members go?
+									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									role="button"
+									@click.prevent="scrollTo('faq')"
+								>
+									FAQ
+									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+								</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="bg-secondary">
+		<section
+			class="bg-secondary"
+			id="excerpts"
+		>
 			<div class="container mx-auto px-4 py-20">
 				<div class="flex flex-col space-y-8">
 					<div class="flex flex-col items-center gap-10 lg:flex-row">

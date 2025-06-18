@@ -47,7 +47,7 @@ const destinations: destination[] = [
 ];
 </script>
 <template>
-	<section>
+	<section id="destinations">
 		<div class="container mx-auto gap-5 space-y-5 px-4 py-10 md:max-w-2/3 lg:max-w-1/2">
 			<h2 class="text-4xl font-bold">NASA Inspired Robotics: Our Team</h2>
 			<p>
