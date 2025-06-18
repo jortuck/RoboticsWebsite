@@ -167,22 +167,29 @@ useSeoMeta({
 					<div class="md:flex-[2]">
 						<img
 							src="~/assets/images/about3.jpg"
+							alt="A group of robotics students"
 							class="h-full w-full object-cover"
 						/>
 					</div>
 					<div class="md:flex-[1.5]">
 						<img
 							src="~/assets/images/about2.jpg"
+							alt="Full husky robotics team photo."
 							class="h-full w-full object-cover"
 						/>
 					</div>
 					<div class="md:flex-1">
 						<img
 							src="~/assets/images/about1.jpg"
+							alt="Two members of husky robotics."
 							class="h-full w-full object-cover"
 						/>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container mx-auto px-4 py-10">
 				<div class="flex flex-col items-center gap-12 lg:flex-row">
 					<div class="flex-2/5 space-y-8">
 						<h2 class="text-5xl font-bold">Our History</h2>
