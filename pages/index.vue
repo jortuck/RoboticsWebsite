@@ -60,7 +60,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 					);
 				"
 			>
-				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
+				<RoboticsConntainer class="space-y-8 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
 						<h1
 							class="text-6xl leading-18 font-extrabold text-secondary opacity-0 lg:text-7xl lg:leading-30 xl:text-8xl"
@@ -84,7 +84,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						<ArrowLink to="#">Join Us</ArrowLink>
 						<ArrowLink to="#">Support Us</ArrowLink>
 					</div>
-				</div>
+				</RoboticsConntainer>
 			</div>
 		</section>
 		<section>
