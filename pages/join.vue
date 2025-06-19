@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import Destinations from "~/components/Destinations.vue";
 import { gsap } from "gsap";
-
+useSeoMeta({
+	title: "Join Us | Husky Robotics",
+	description:
+		"Husky Robotics welcomes passionate students eager to build real systems, solve complex problems, and collaborate across disciplines in pursuit of exploration and innovation."
+});
 let expanded: Ref<String | null> = ref(null);
 
 const { data: faqs } = await useAsyncData("faqs", () => queryCollection("faqs").all());
@@ -92,7 +96,7 @@ function closeFAQ(element: Element, done: () => void) {
 							Husky Robotics welcomes passionate students eager to build real systems, solve complex
 							problems, and collaborate across disciplines in pursuit of exploration and innovation.
 							We combine high-impact engineering with a strong, collaborative community built to
-							meet the standards of pacific northwest industry
+							meet the standards of pacific northwest industry.
 						</p>
 						<p class="text-xl font-bold italic">
 							Applications are currently closed. Join the interest list.

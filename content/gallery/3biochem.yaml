@@ -2,3 +2,19 @@ name: Biochemistry & Optics
 description: Advanced biochemistry and optics instruments enabling detailed environmental analysis and imaging, crucial for detecting signs of past life.
 img: biochem.png
 link: 'https://google.com'
+items:
+  - name: Laser Excitation Setup
+    description: "A 532 nm fiber-coupled laser is used for Raman excitation, targeting vibrational modes in soil-bound compounds like phenylalanine and olivine."
+    img: "biochem/laser.png"
+  - name: Raman Spectral Output
+    description: "Spectral data is captured using a 15 s CCD integration, filtered and processed with a custom Savitzky-Golay and wavelet pipeline for biosignature ID."
+    img: "biochem/raman.png"
+  - name: Absorbance Analysis
+    description: "Our team conducted Absorbance vs. wavelength curves visualize sample filtering efficacy, allowing comparisons of spectral clarity across test conditions."
+    img: "biochem/absorbance.png"
+  - name: Optical Mount
+    description: " A vibration-isolated optics rig aligns the laser path, collection lens, and filter window within a sealed enclosure for in-situ spectral stability."
+    img: "biochem/optical.png"
+  - name: Soil Biosignature Drill
+    description: "A four-bar linkage drill collects and delivers subsurface soil to onboard sensors measuring methane, CO₂, and moisture for signs of microbial life."
+    img: "biochem/soil.png"

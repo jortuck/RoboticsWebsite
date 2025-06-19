@@ -2,3 +2,22 @@ name: Mechanical
 description: Expertly crafted mechanical systems providing exceptional mobility and precision manipulation, designed for rigorous planetary exploration and scientific discovery.
 img: mechanical.png
 link: 'https://google.com'
+items:
+  - name: Rocker-Bogie Suspension
+    description: "Our teams’ future mobility system uses a 6-wheel Rocker-Bogie suspension and cast polyurethane wheels for adaptive, all-terrain traversal."
+    img: "mechanical/rocker.png"
+  - name: Differential Wrist & Gripper
+    description: "A dual-motor differential wrist powers a custom gripper to flip switches, rotate knobs, and lift irregular objects with precision."
+    img: "mechanical/wrist.png"
+  - name: Arm Shoulder Assembly
+    description: "Two harmonic drives enable backlash-free base rotation and primary linkage actuation, delivering smooth, accurate arm motion."
+    img: "mechanical/arm.png"
+  - name: Drone Frame & Gripper
+    description: "A carbon-fiber drone with an adaptive gripper supports autonomous delivery, visual mapping, and extended communication reach."
+    img: "mechanical/drone.png"
+  - name: Science Payload Systems
+    description: "Prometheus’ mechanical payload integrates sample handling, fluidics, and reagent mixing to automate field-based chemical analysis."
+    img: "mechanical/science.png"
+  - name: Chassis & Modular Frame
+    description: "Prometheus features treaded mobility with an aluminum chassis with modular mounts for arm and science payloads, designed for field adaptability."
+    img: "mechanical/chassis.png"

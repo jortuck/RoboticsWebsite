@@ -2,3 +2,19 @@ name: Analysis
 description: Rigorous scientific data analysis tools converting environmental samples into actionable insights, significantly advancing our understanding of Mars-like terrains.
 img: analysis.png
 link: 'https://google.com'
+items:
+  - name: Structural Interface Testing
+    description: "A mechanical attachment module is stress-tested for bolt shear, contact stability, and dynamic load cases across terrain-induced forces."
+    img: "analysis/structural.png"
+  - name: Rover Frame FEA
+    description: "The chassis undergoes static and modal analysis in SolidWorks FEA, validating frame strength, mounting integrity, and vibration modes under stress."
+    img: "analysis/rover.png"
+  - name: Abaqus FEA Workshop
+    description: "Advanced meshing, boundary conditions, and nonlinear contact simulations taught under Dr. Meza prepare members for aerospace-grade analysis."
+    img: "analysis/abaqus.png"
+  - name: Drone Piece Simulation (SW)
+    description: "Drone components undergo SolidWorks FEA to test moment loads and flexural fatigue during rapid descent and mechanical grip conditions."
+    img: "analysis/drone.png"
+  - name: Drone Frame ANSYS Model
+    description: "High-fidelity mesh and simulation in ANSYS assess the drone frame’s stress contours, impact resistance, and factor of safety during airborne loading."
+    img: "analysis/ansys.png"

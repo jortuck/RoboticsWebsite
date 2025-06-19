@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const { data: gallery } = await useAsyncData("gallery", () => queryCollection("gallery").all());
+useSeoMeta({
+	title: "Gallery | Husky Robotics",
+	description:
+		"Husky Robotics designs, builds, and validates advanced systems across mechanical, electrical, software, optical, and biochemical domains. This gallery showcases the engineering behind our rover—real work from students shaping the future of exploration."
+});
 </script>
 <template>
 	<main>
@@ -26,38 +31,40 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 			</RoboticsConntainer>
 		</section>
 		<section class="bg-primary">
-			<RoboticsConntainer class="space-y-20 py-20">
+			<RoboticsConntainer class="space-y-20 py-20 lg:space-y-50 xl:w-3/4">
 				<div
 					v-for="collection in gallery"
 					class="space-y-8"
 				>
 					<h2
-						class="border-b-1 border-b-neutral-400/70 pb-4 text-4xl font-bold text-white"
+						class="border-b-1 border-b-neutral-400/70 pb-4 text-3xl font-bold text-white lg:text-4xl"
 						:id="collection.name.split(' ')[0]"
 					>
 						{{ collection.name }}
 					</h2>
-					<div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+					<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-20">
 						<div
-							class="rounded-xl bg-zinc-900 p-6"
+							class="flex flex-col justify-between rounded-xl bg-zinc-900 px-6 py-10"
 							v-if="collection.items"
 							v-for="item in collection.items"
 							:key="item.name"
 						>
-							<div class="h-64 object-contain px-5 py-8">
+							<div class="flex-1 py-8">
 								<img
 									alt="Electronics bed"
 									class="mx-auto h-full object-contain"
 									:src="`/images/gallery/${item.img}`"
 								/>
 							</div>
-							<p class="mb-1 text-xs tracking-robotics text-zinc-400">
-								Husky Robotics | 2025 | {{ collection.name }}
-							</p>
-							<h3 class="pb-4 text-xl font-bold text-neutral-100">{{ item.name }}</h3>
-							<p class="text-neutral-100">
-								{{ item.description }}
-							</p>
+							<div>
+								<p class="mb-1 text-xs tracking-robotics text-zinc-400">
+									2025 | {{ collection.name }}
+								</p>
+								<h3 class="pb-4 text-xl font-bold text-neutral-100">{{ item.name }}</h3>
+								<p class="text-neutral-100">
+									{{ item.description }}
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

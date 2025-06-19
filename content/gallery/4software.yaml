@@ -2,3 +2,19 @@ name: Software & AI
 description: Sophisticated software and AI solutions delivering autonomous navigation, sensor fusion, and intelligent decision-making capabilities essential for mission success.
 img: software.png
 link: 'https://google.com'
+items:
+  - name: Autonomous ARUCO Navigation
+    description: "Using OpenCV and AprilTag detection, the rover localizes against fixed tags and dynamically replans paths to waypoints, enabling GPS-free navigation."
+    img: "software/autonomous.png"
+  - name: Vision-Based Typing
+    description: "A computer vision pipeline uses contour detection and OCR to identify keys, with inverse kinematics mapping vision to autonomous arm actuation."
+    img: "software/vision.png"
+  - name: Mars Mission Simulator
+    description: "A Unity-based simulation mimics mission conditions, including terrain, arm movement, and sensor noise, enabling software debugging pre-deployment."
+    img: "software/mars.png"
+  - name: 5kg Payload Pickup
+    description: " Mast camera imagery and depth estimation drive closed-loop visual servoing to autonomously detect, grasp, and lift weighted targets up to 5kg."
+    img: "software/5kg.png"
+  - name: Long-Range Antenna Comm
+    description: "A software-controlled 2.4 GHz directional antenna tracks and maintains a wireless link up to 2 km, enabling low-latency bidirectional command."
+    img: "software/antenna.png"
