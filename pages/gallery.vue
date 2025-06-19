@@ -1,9 +1,21 @@
 <script setup lang="ts">
 const { data: gallery } = await useAsyncData("gallery", () => queryCollection("gallery").all());
+import { gsap } from "gsap";
+const route = useRoute();
+
 useSeoMeta({
 	title: "Gallery | Husky Robotics",
 	description:
 		"Husky Robotics designs, builds, and validates advanced systems across mechanical, electrical, software, optical, and biochemical domains. This gallery showcases the engineering behind our rover—real work from students shaping the future of exploration."
+});
+onMounted(() => {
+	if (route.query.section) {
+		gsap.to(window, {
+			scrollTo: `#${route.query.section}`,
+			ease: "power2.inOut",
+			duration: 0.5
+		});
+	}
 });
 </script>
 <template>

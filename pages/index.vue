@@ -230,7 +230,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						</p>
 						<NuxtLink
 							aria-label="Learn More"
-							:to="category.link"
+							:to="{ path: '/gallery', query: { section: category.name.split(' ')[0] } }"
 							class="flex items-center space-x-4 text-xl font-bold text-zinc-700 transition-colors duration-200 ease-in-out hover:text-primary"
 							><p class="lg:hidden">Learn More</p>
 							<span
