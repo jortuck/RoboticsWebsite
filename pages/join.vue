@@ -215,6 +215,7 @@ function closeFAQ(element: Element, done: () => void) {
 					<div
 						v-for="faq in faqs"
 						class="py-5"
+						:key="faq.title"
 					>
 						<h3
 							class="text-xl font-semibold select-none hover:cursor-pointer md:text-2xl"
@@ -257,7 +258,7 @@ function closeFAQ(element: Element, done: () => void) {
 <style scoped>
 @reference "~/assets/css/main.css";
 .linklist > button {
-	@apply border-b-1 border-b-neutral-300 py-2 text-left text-lg text-neutral-300;
+	@apply cursor-pointer border-b-1 border-b-neutral-300 py-2 text-left text-lg text-neutral-300;
 	@apply transition-all duration-300 ease-in-out;
 	@apply hover:border-b-secondary hover:text-secondary;
 }
