@@ -2,3 +2,22 @@ name: Electronics
 description: Precision-engineered electronics systems enabling robust power distribution and reliable sensor integration, driving innovative autonomous rover capabilities.
 img: electronics.png
 link: 'https://google.com'
+items:
+  - name: Electronics Bed
+    description: "Distributes 24V, 12V, 5V, and 3.3V power across nine motor boards and an NVIDIA Jetson, supporting full-system compute and actuation."
+    img: "electronics/bed.png"
+  - name: STM32 BLDC Board
+    description: "A compact STM32 motor controller enabling high-frequency, closed-loop BLDC actuation, designed in partnership with STMicroelectronics."
+    img: "electronics/stm32.png"
+  - name: PSOC Chassis Power Distribution
+    description: "Built with a Cypress PSoC, this board delivers four voltage rails with 12 external ports, balancing system power with compact routing."
+    img: "electronics/psoc.png"
+  - name: STM32 CAN Board
+    description: "Our first 3.3V CAN-focused STM32 board, used for testing and validating CAN protocols across rover subsystems."
+    img: "electronics/stm32can.png"
+  - name: PSOC Science Sensor Board
+    description: "Controls science instrumentation, powering lasers, pumps, gas sensors, and cooling modules for automated field analysis."
+    img: "electronics/psocScience.png"
+  - name: System Diagram
+    description: "A visual layout of rover power, compute, and data flow, created to onboard members and brief sponsors on system architecture."
+    img: "electronics/diagram.png"

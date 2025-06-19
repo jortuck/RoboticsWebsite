@@ -19,7 +19,14 @@ export default defineContentConfig({
 				name: z.string(),
 				description: z.string(),
 				link: z.string().url(),
-				img: z.string()
+				img: z.string(),
+				items: z.array(
+					z.object({
+						name: z.string(),
+						description: z.string(),
+						img: z.string()
+					})
+				)
 			})
 		}),
 		faqs: defineCollection({
