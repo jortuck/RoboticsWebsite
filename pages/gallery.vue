@@ -33,7 +33,7 @@ onMounted(() => {
 						</p>
 					</div>
 					<div class="flex-1">
-						<NuxtImg
+						<img
 							src="~/assets/images/gallery.jpg"
 							alt="electronic chip"
 							class="rounded-sm"
