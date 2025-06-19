@@ -222,14 +222,14 @@ function closeFAQ(element: Element, done: () => void) {
 							@click="setExpanded(faq.title)"
 						>
 							{{ faq.title }}
-							<span class="float-right"
-								><i
+							<span class="float-right">
+								<i
 									class="fa-solid fa-plus"
 									v-if="expanded !== faq.title"
-								></i
-								><i
+								></i>
+								<i
 									class="fa-solid fa-minus"
-									v-if="expanded === faq.title"
+									v-else
 								></i
 							></span>
 						</h3>
