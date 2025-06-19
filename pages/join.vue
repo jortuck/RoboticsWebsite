@@ -2,10 +2,38 @@
 import Destinations from "~/components/Destinations.vue";
 import { gsap } from "gsap";
 
+let expanded: Ref<String | null> = ref(null);
+
+const { data: faqs } = await useAsyncData("faqs", () => queryCollection("faqs").all());
+
 function scrollTo(id: string) {
 	gsap.to(window, {
-		duration: 0.5,
+		duration: 0.8,
 		scrollTo: { y: `#${id}` },
+		ease: "power2"
+	});
+}
+
+function setExpanded(faq: string) {
+	if (expanded.value === faq) {
+		expanded.value = null;
+	} else {
+		expanded.value = faq;
+	}
+}
+
+function openFAQ(element: Element) {
+	gsap.set(element, { height: 0 });
+	gsap.to(element, {
+		duration: 0.5,
+		height: "auto",
+		ease: "power2"
+	});
+}
+function closeFAQ(element: Element, done: () => void) {
+	gsap.to(element, {
+		duration: 0.5,
+		height: 0,
 		ease: "power2"
 	});
 }
@@ -72,48 +100,34 @@ function scrollTo(id: string) {
 						<ArrowLink to="https://google.com">Interest Form</ArrowLink>
 					</div>
 					<div class="flex flex-1 items-center justify-end text-white">
-						<ul class="linklist w-full space-y-2 lg:w-2/3">
-							<li>
-								<a
-									href="#"
-									role="button"
-									@click.prevent="scrollTo('excerpts')"
-								>
-									Excerpts From Current Members
-									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									role="button"
-									@click.prevent="scrollTo('applications')"
-								>
-									Application Cycle
-									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									role="button"
-									@click.prevent="scrollTo('destinations')"
-								>
-									Where do our members go?
-									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
-								</a>
-							</li>
-							<li>
-								<a
-									href="#"
-									role="button"
-									@click.prevent="scrollTo('faq')"
-								>
-									FAQ
-									<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
-								</a>
-							</li>
-						</ul>
+						<div class="linklist">
+							<button @click.prevent="scrollTo('excerpts')">
+								Excerpts From Current Members
+								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+							</button>
+
+							<button
+								role="button"
+								@click.prevent="scrollTo('applications')"
+							>
+								Application Cycle
+								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+							</button>
+							<button
+								role="button"
+								@click.prevent="scrollTo('destinations')"
+							>
+								Where do our members go?
+								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+							</button>
+							<button
+								role="button"
+								@click.prevent="scrollTo('faq')"
+							>
+								FAQ
+								<span class="float-right"><i class="fa-solid fa-arrow-down"></i></span>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -172,16 +186,82 @@ function scrollTo(id: string) {
 				</div>
 			</div>
 		</section>
+		<section
+			id="applications"
+			class="bg-black"
+		>
+			<div class="container mx-auto space-y-8 px-4 py-20 xl:w-1/2">
+				<h2 class="text-5xl font-bold text-secondary">Application Cycle: 2025-2026</h2>
+				<p class="text-lg text-zinc-100">
+					Our main admissions take place during Autumn and Winter quarter, when we welcome new
+					members to join our mission. Decisions are released by the third week of each cycle, and
+					we encourage applicants from all disciplines who are excited to contribute to real
+					engineering projects and exploration.
+				</p>
+				<ArrowLink to="https://google.com">Interest Form</ArrowLink>
+			</div>
+		</section>
 		<Destinations />
+		<section
+			id="faq"
+			class="bg-neutral-100"
+		>
+			<div class="container mx-auto px-4 py-20 lg:w-3/4">
+				<p class="font-roboto tracking-robotics">Husky Robotics</p>
+				<h2 class="text-6xl font-bold">FAQs</h2>
+				<div
+					class="my-8 flex flex-col divide-y-1 divide-neutral-400 border-y-1 border-y-neutral-400"
+				>
+					<div
+						v-for="faq in faqs"
+						class="py-5"
+					>
+						<h3
+							class="text-xl font-semibold select-none hover:cursor-pointer md:text-2xl"
+							role="tab"
+							@click="setExpanded(faq.title)"
+						>
+							{{ faq.title }}
+							<span class="float-right"
+								><i
+									class="fa-solid fa-plus"
+									v-if="expanded !== faq.title"
+								></i
+								><i
+									class="fa-solid fa-minus"
+									v-if="expanded === faq.title"
+								></i
+							></span>
+						</h3>
+						<Transition
+							@enter="openFAQ"
+							@leave="closeFAQ"
+						>
+							<div
+								v-if="expanded === faq.title"
+								class="overflow-hidden"
+							>
+								<p class="mt-4 lg:text-lg">
+									{{ faq.description }}
+								</p>
+							</div>
+						</Transition>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </template>
 <style scoped>
-.linklist > li {
-	@apply border-b-1 border-b-neutral-300 py-2 text-lg text-neutral-300;
+@reference "~/assets/css/main.css";
+.linklist > button {
+	@apply border-b-1 border-b-neutral-300 py-2 text-left text-lg text-neutral-300;
 	@apply transition-all duration-300 ease-in-out;
 	@apply hover:border-b-secondary hover:text-secondary;
 }
-@reference "~/assets/css/main.css";
+.linklist {
+	@apply flex w-full flex-col space-y-3 lg:w-2/3;
+}
 .bg-splash-mars {
 	@apply w-full overflow-hidden bg-cover bg-center bg-no-repeat md:bg-top;
 	@apply bg-[url('~/assets/images/md_mars.jpg')];

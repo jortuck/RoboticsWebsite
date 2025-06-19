@@ -21,6 +21,14 @@ export default defineContentConfig({
 				link: z.string().url(),
 				img: z.string()
 			})
+		}),
+		faqs: defineCollection({
+			source: "faqs/**.yaml",
+			type: "data",
+			schema: z.object({
+				title: z.string(),
+				description: z.string()
+			})
 		})
 	}
 });
