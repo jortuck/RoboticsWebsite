@@ -33,7 +33,7 @@ onMounted(() => {
 						</p>
 					</div>
 					<div class="flex-1">
-						<img
+						<NuxtImg
 							src="~/assets/images/gallery.jpg"
 							alt="electronic chip"
 							class="rounded-sm"
@@ -62,7 +62,7 @@ onMounted(() => {
 							:key="item.name"
 						>
 							<div class="flex-1 py-8">
-								<img
+								<NuxtPicture
 									alt="Electronics bed"
 									class="mx-auto h-full object-contain"
 									:src="`/images/gallery/${item.img}`"
