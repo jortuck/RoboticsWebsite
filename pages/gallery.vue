@@ -62,7 +62,8 @@ onMounted(() => {
 							:key="item.name"
 						>
 							<div class="flex-1 py-8">
-								<NuxtPicture
+								<NuxtImg
+									format="webp"
 									alt="Electronics bed"
 									class="mx-auto h-full object-contain"
 									:src="`/images/gallery/${item.img}`"
