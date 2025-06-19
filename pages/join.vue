@@ -219,6 +219,8 @@ function closeFAQ(element: Element, done: () => void) {
 						<h3
 							class="text-xl font-semibold select-none hover:cursor-pointer md:text-2xl"
 							role="tab"
+							tabindex="0"
+							@keydown.enter="setExpanded(faq.title)"
 							@click="setExpanded(faq.title)"
 						>
 							{{ faq.title }}
