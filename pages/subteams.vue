@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 const { data: teams } = await useAsyncData("teams", () =>
 	queryCollection("teams").where("subteams", "IS NOT NULL").all()
 );
-let teamsRef = useTemplateRef("teamsHolder");
 let currentTeam: Ref<Collections["teams"] | null> = ref(null);
 let route = useRoute();
 useSeoMeta({
@@ -94,10 +93,7 @@ function headerTransitionEnter(el: Element) {
 						</NuxtLink>
 					</template>
 				</div>
-				<div
-					class="flex flex-col space-y-16"
-					ref="teamsHolder"
-				>
+				<div class="flex flex-col space-y-16">
 					<TransitionGroup @enter="headerTransitionEnter">
 						<div
 							class="flex flex-col gap-8 xl:flex-row xl:items-center"

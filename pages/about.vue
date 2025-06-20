@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { gsap } from "gsap";
 useSeoMeta({
 	title: "About | Husky Robotics"
 });
@@ -225,13 +224,3 @@ useSeoMeta({
 		</section>
 	</main>
 </template>
-
-<style scoped>
-.outline-text-white {
-	text-shadow:
-		-1px -1px 0 white,
-		1px -1px 0 white,
-		-1px 1px 0 white,
-		1px 1px 0 white;
-}
-</style>
