@@ -8,6 +8,10 @@ const { data: teams } = await useAsyncData("teams", () =>
 let teamsRef = useTemplateRef("teamsHolder");
 let currentTeam: Ref<Collections["teams"] | null> = ref(null);
 let route = useRoute();
+useSeoMeta({
+	title: "Subteams | Husky Robotics"
+});
+
 onMounted(() => {
 	setTeamFromQuery();
 });
@@ -44,11 +48,13 @@ function headerTransitionEnter(el: Element) {
 	<main>
 		<section>
 			<NuxtImg
+				format="webp"
 				alt="Husky Robotics Team Photo"
 				src="/images/teams/about2.jpg"
 				class="aspect-16/8 w-full object-cover object-bottom lg:hidden"
 			/>
 			<NuxtImg
+				format="webp"
 				alt="Husky Robotics Team Photo"
 				src="/images/teams/subteams.jpg"
 				class="hidden w-full lg:block"
@@ -94,12 +100,12 @@ function headerTransitionEnter(el: Element) {
 				>
 					<TransitionGroup @enter="headerTransitionEnter">
 						<div
-							class="flex flex-col items-center gap-8 lg:flex-row"
+							class="flex flex-col gap-8 xl:flex-row xl:items-center"
 							v-for="subteam in currentTeam?.subteams"
 							:key="subteam.title"
 						>
-							<div class="lg:w-1/2 xl:w-1/3">
-								<NuxtImg
+							<div class="xl:w-1/2 2xl:w-2/5">
+								<img
 									:src="`/images/teams/${subteam.img}`"
 									class="aspect-5/3 w-full object-cover"
 								/>
