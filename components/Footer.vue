@@ -89,11 +89,6 @@ const links: SocialLink[] = [
 				>
 				<NuxtLink
 					class="bottomLink"
-					to="#"
-					>Guide</NuxtLink
-				>
-				<NuxtLink
-					class="bottomLink"
 					to="https://washington.edu"
 					>University of Washington Seattle</NuxtLink
 				>
