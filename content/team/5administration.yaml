@@ -2,3 +2,40 @@ name: Administration
 description: "Lead operations, communications, design, and strategic partnerships, mastering essential leadership skills. Coordinate complex technical milestones, amplify Husky Robotics' prestigious reputation, manage robust finances, and secure sponsorships, positioning you prominently in future management and leadership roles."
 application: '/join'
 img: "admin.jpg"
+subteams:
+  - title: "Operation Management"
+    name: "Business"
+    description: >
+      Coordinate comprehensive project timelines, oversee technical reviews, and strategically manage critical milestones, ensuring smooth operation of complex technical projects.
+      Apply exceptional organizational skills, leveraging engineering insights to maintain team effectiveness and efficiency.
+      Develop leadership experience essential for managing large-scale technical programs, positioning yourself prominently for future roles in engineering and technical project management.
+    img: "admin/planning.jpg"
+  - title: "Outreach & Public Relations"
+    name: "Business"
+    description: >
+      Plan and execute high-impact campus events, demonstrations, and social media campaigns showcasing Husky Robotics’ innovations.
+      Develop strong storytelling strategies, craft engaging press materials, and foster public and sponsor relationships.
+      Your role is vital in amplifying our reputation, connecting technical excellence with broader communities, positioning you as an influential communicator within the robotics and aerospace industry.
+    img: "admin/outreach.jpg"
+  - title: "Branding & Design"
+    name: "Business"
+    description: >
+      Shape Husky Robotics’ visual identity by crafting graphics, web materials, and branded merchandise reflecting engineering excellence.
+      Collaborate across subteams, distilling complex technical achievements into clear, impactful visuals.
+      Your work ensures professional recognition and market presence, making you an expert in conveying precision engineering narratives visually, highly valued by top design and tech firms.
+    img: "admin/branding.png"
+  - title: "Sponsorship"
+    name: "Business"
+    description: >
+      Build and maintain strategic industry partnerships, securing essential resources for team missions.
+      Develop compelling sponsorship pitches, manage high-value relationships, and negotiate beneficial in-kind and financial support.
+      Demonstrate exceptional ability to bridge engineering and business domains, showcasing critical skills sought after by leading technology companies, research institutions, and entrepreneurial ventures in the aerospace sector.
+    img: "admin/sponsor.jpg"
+
+  - title: "Finance"
+    name: "Business"
+    description: >
+      Oversee financial operations, manage budgeting processes, optimize procurement strategies, and maintain meticulous financial documentation and forecasting.
+      Ensure rigorous fiscal discipline within mission-focused technical environments, positioning you as a specialist in financial stewardship.
+      Experience gained here differentiates you significantly to academic departments, industry sponsors, and future technical leadership roles requiring robust financial oversight.
+    img: "admin/finance.jpg"

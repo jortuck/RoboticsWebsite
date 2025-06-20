@@ -2,3 +2,29 @@ name: Science
 description: Perform advanced research and development at the intersection of biology, chemistry, optics, and instrumentation. Calibrate sophisticated imaging systems, design environmental sensors, and automate biochemical assays, gaining specialized skills essential to scientific discovery and prestigious exploration missions.
 application: '/join'
 img: "science.jpg"
+subteams:
+  - title: "Biochemical Astrobiology"
+    name: "Instrumentation"
+    description: >
+      Develop automated assays for extreme environments, adapting precision chemical tests for pH, nitrates, and organic compounds detection.
+      Calibrate sensor systems and integrate biochemical protocols into automated sampling platforms.
+      Conduct interdisciplinary research bridging biology, chemistry, and robotics, contributing essential knowledge and expertise to planetary exploration missions, particularly focused on the search for extraterrestrial life.
+    img: "science/marsmap.png"
+
+  - title: "Optics & Instrumentation"
+    name: "Instrumentation"
+    description: >
+      Calibrate high-resolution imaging systems and scientific instrumentation for rover operations.
+      Design precision optics setups, mount mast cameras, calibrate Raman spectroscopy systems, and process critical imaging data.
+      Integrate robust mechanical stabilization and alignment techniques, ensuring optimal performance for scientific data collection.
+      Selection to this subteam highlights your capabilities in optics calibration and instrumentation engineering, valuable in advanced research environments.
+    img: "science/optics.png"
+
+  - title: "R&D & Sensor Systems"
+    name: "Instrumentation"
+    description: >
+      Engineer environmental sensing technologies essential for planetary missions, including conductivity, temperature, humidity, methane, and CO₂ sensors.
+      Develop ruggedized sensor housings, validate lab-grade calibrations, and ensure accurate real-time data collection.
+      Write specialized microcontroller drivers for robust communication between sensors and rover control systems.
+      Joining this team establishes you as a specialist in environmental instrumentation engineering for high-stakes scientific missions.
+    img: "science/sensors.png"

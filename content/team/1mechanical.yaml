@@ -2,3 +2,40 @@ name: Mechanical
 description: Develop precision-engineered robotic systems, mastering CAD, inverse-kinematics, fabrication, and rigorous testing. Build robust, Mars-inspired mobility platforms and innovative payloads, refining critical engineering skills that distinguish you in elite technical environments.
 application: '/join'
 img: "mechanical.jpg"
+subteams:
+  - title: "Robotic & Mechatronic Arm Engineering"
+    name: "Arm"
+    description: >
+      Push the boundaries of robotic precision by engineering our elite five-degree-of-freedom arm—trusted by the most ambitious planetary exploration missions.
+      Master high-torque BLDC-driven joint designs in SolidWorks, fine-tune motor controllers for flawless mission execution, and validate industry-leading ±2 mm accuracy in rigorous field trials.
+      Collaborate closely with firmware teams to bring sophisticated inverse-kinematics to life, watching your creations effortlessly type, manipulate delicate samples, and operate equipment under high-stakes competition conditions.
+    img: "mechanical/robotarm.jpg"
+  - title: "Chassis & Movement Engineering"
+    name: "Mobility"
+    description: >
+      Forge the rugged foundation of our rover, designed to conquer Mars-inspired terrains.
+      You’ll employ advanced CAD tools for continuous-tread drive designs, conduct precision FEA on aerospace-grade aluminum frames, and optimize suspension systems to endure simulated Martian landscapes.
+      Prototype and fabricate in UW’s state-of-the-art machine shop, integrate innovative science bays, and refine traction algorithms with software specialists.
+      This exclusive team offers unparalleled hands-on experience, building the mobility system at the core of our mission’s success.
+    img: "mechanical/chassis.png"
+  - title: "Rover Science Payload Mechanics"
+    name: "Instrumentation"
+    description: >
+      Craft deployable payload platforms with precision and ingenuity worthy of space missions seeking life beyond Earth.
+      You’ll engineer thermally-isolated housings, advanced four-bar drill linkages, and contamination-proof sampling mechanisms using sophisticated CAD techniques.
+      Bridging mechanical design and astrobiology, you’ll become part of an elite group building the instruments poised to make groundbreaking scientific discoveries, a hallmark of Husky Robotics’ prestigious legacy.
+    img: "mechanical/payload.png"
+  - title: "Manufacturing & Fabrication"
+    description: >
+      Convert visionary designs into reality under expert machinist mentorship.
+      Gain certification on UW’s precision machining equipment—mills, lathes, CNCs—to produce aerospace-quality components, perform meticulous inspections, and assemble advanced test setups.
+      This rigorous subteam is where meticulous craftsmanship meets cutting-edge engineering, marking its members as distinguished experts in aerospace fabrication and precision manufacturing.
+    img: "mechanical/machining.jpg"
+  - title: "Aerial Mechanics"
+    name: "Drone"
+    description: >
+      Elevate our exploration capabilities by designing an aerospace-inspired drone system.
+      Size carbon-fiber components, optimize landing systems for uncertain terrain, and engineer servo-driven payload grippers.
+      Conduct wind-tunnel validation and ensure compliance with FCC safety standards.
+      Admission to this elite subteam marks you as an innovator capable of delivering drone systems recognized at international competitions.
+    img: "mechanical/drone.png"

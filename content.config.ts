@@ -9,7 +9,15 @@ export default defineContentConfig({
 				name: z.string(),
 				description: z.string(),
 				application: z.string().url().optional(),
-				img: z.string()
+				img: z.string(),
+				subteams: z.array(
+					z.object({
+						title: z.string(),
+						name: z.string(),
+						description: z.string(),
+						img: z.string()
+					})
+				)
 			})
 		}),
 		gallery: defineCollection({
