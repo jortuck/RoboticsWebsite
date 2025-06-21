@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
 		message: formatResult(result.data),
 		email: result.data.email
 	};
-	const response = await $fetch(config.emailEndPoint, {
+	const response = await $fetch.raw(config.emailEndPoint, {
 		method: "POST",
 		headers: {
 			"X-Access-Token": config.emailSecret,
@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
 		},
 		body: payload
 	});
-	if (!response.success) {
+	if (!response.ok) {
 		setResponseStatus(event, 500);
 		return {
 			success: false,

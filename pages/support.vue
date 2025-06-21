@@ -298,7 +298,7 @@ function transitionAlert(e: Element) {
 								name="Email Address"
 								v-model="formData.email"
 								v-model:error="errors.email"
-								placeholder="example@uw.edu"
+								placeholder="example@example.com"
 								:schema="schema.shape.email"
 								:maxlength="50"
 							/>
