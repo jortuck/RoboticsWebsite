@@ -1,4 +1,3 @@
-import { z } from "zod";
 import { schema } from "~/shared/OutreachFormSchema";
 import { $fetch } from "ofetch";
 export default defineEventHandler(async (event) => {
@@ -9,18 +8,16 @@ export default defineEventHandler(async (event) => {
 				(data) => data.sponsor || data.donate || data.recruit || data.outreach || data.other,
 				{
 					message: "Please select at least one reason for contact.",
-					path: ["checkboxes"] // This can be any field name for grouping
+					path: ["checkboxes"]
 				}
 			)
 			.safeParse(body)
 	);
-
 	if (!result.success) {
 		setResponseStatus(event, 400);
 		console.log(result.error.issues);
 		return result.error.issues;
 	}
-
 	let captcha = await $fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
 		method: "POST",
 		body: {
@@ -36,8 +33,8 @@ export default defineEventHandler(async (event) => {
 		};
 	}
 	const payload = {
-		message: "Test",
-		email: "sender@example.com"
+		message: formatResult(result.data),
+		email: result.data.email
 	};
 	const response = await $fetch(config.emailEndPoint, {
 		method: "POST",
@@ -47,15 +44,40 @@ export default defineEventHandler(async (event) => {
 		},
 		body: payload
 	});
-	console.log(response);
-	// if (!discord.ok) {
-	// 	setResponseStatus(event, 503);
-	// 	return {
-	// 		success: false,
-	// 		message:
-	// 			"Unfortunately there is an internal error on my end. Please reach out via LinkedIn or try again later."
-	// 	};
-	// }
-
+	if (!response.success) {
+		setResponseStatus(event, 500);
+		return {
+			success: false,
+			message:
+				"Unfortunately there was an internal error on our end. Please reach out via uwrobots@uw.edu or try again later."
+		};
+	}
 	return { success: true, message: "Your message has been sent!" };
 });
+
+function formatResult(result: {
+	name: string;
+	email: string;
+	company: string;
+	notes: string;
+	sponsor: boolean;
+	donate: boolean;
+	recruit: boolean;
+	outreach: boolean;
+	other: boolean;
+}) {
+	return [
+		`New Outreach Form Submission From The Husky Robotics Website\n`,
+		`Name: ${result.name}`,
+		`Email: ${result.email}`,
+		`Company: ${result.company}`,
+		`Notes: ${result.notes}`,
+		"",
+		`${result.sponsor ? "[X]" : "[ ]"} Monetary Sponsorship  (Tax Deductible)`,
+		`${result.donate ? "[X]" : "[ ]"} Donate Equipment / Software`,
+		`${result.recruit ? "[X]" : "[ ]"} Recruit Top University of Washington Talent`,
+		`${result.outreach ? "[X]" : "[ ]"} Visibility & Public Outreach Opportunities`,
+		`${result.other ? "[X]" : "[ ]"} Other or N/A  (Fill out Additional Notes)`,
+		`\nThis is an automated message.`
+	].join("\n");
+}
