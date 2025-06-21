@@ -36,7 +36,7 @@ function setTeamFromQuery() {
 }
 function headerTransitionEnter(el: Element) {
 	gsap.set(el, { opacity: 0 });
-	gsap.timeline().to(el, {
+	gsap.to(el, {
 		opacity: 1,
 		ease: "power1.out",
 		duration: 0.8
