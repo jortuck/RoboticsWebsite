@@ -286,7 +286,7 @@ function transitionAlert(e: Element) {
 								name="Additional Notes?"
 								v-model="formData.notes"
 								v-model:error="errors.notes"
-								placeholder="Husky Robotics"
+								placeholder="Thank you for working with us!"
 								:schema="schema.shape.notes"
 								:maxlength="200"
 							/>
