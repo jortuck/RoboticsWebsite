@@ -77,6 +77,9 @@ function validate() {
 .text-input > input:focus {
 	@apply border-tertiary outline-none;
 }
+.text-input > input:disabled {
+	@apply cursor-not-allowed bg-zinc-300;
+}
 .text-input > input:invalid {
 	@apply border-red-400 outline-none;
 }

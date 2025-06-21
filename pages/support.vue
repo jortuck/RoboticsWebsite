@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FetchError } from "ofetch";
-
+import { gsap } from "gsap";
 let turnstileId = ref("");
 let formError = ref("");
 let formSuccess = ref(false);
@@ -49,7 +49,8 @@ const canSubmit = computed(() => {
 		!errors.value.company &&
 		!errors.value.notes &&
 		!errors.value.cftoken &&
-		!errors.value.checkboxes
+		!errors.value.checkboxes &&
+		!loading.value
 	);
 });
 
@@ -86,8 +87,10 @@ onMounted(() => {
 	});
 });
 type OutreachResponse = { success: true; message: string } | { success: false; message: string };
-async function handleSubmit() {
+async function handleSubmit(e: Event) {
 	loading.value = true;
+	formError.value = "";
+	formSuccess.value = false;
 	let response = await $fetch<OutreachResponse>("/api/outreach", {
 		method: "POST",
 		body: formData.value,
@@ -103,7 +106,7 @@ async function handleSubmit() {
 			errors.value["cftoken" as keyof Error] = error.data.message;
 		} else {
 			formError.value =
-				"An internal error occurred on my end. Please reach out using LinkedIn or try again later.";
+				"An internal error occurred on our end. Please reach out to uwrobots@uw.edu or try again later.";
 			// @ts-ignore
 			window.turnstile.reset(turnstileId);
 		}
@@ -112,10 +115,26 @@ async function handleSubmit() {
 		if (response.success) {
 			formSuccess.value = true;
 			formError.value = "";
+			formData.value = {
+				name: "",
+				email: "",
+				company: "",
+				notes: "",
+				cftoken: "",
+				sponsor: false,
+				donate: false,
+				recruit: false,
+				outreach: false,
+				other: false
+			};
 			// @ts-ignore
 			window.turnstile.reset(turnstileId);
 		}
 	}
+}
+function transitionAlert(e: Element) {
+	gsap.set(e, { height: 0 });
+	gsap.to(e, { height: "auto", duration: 0.5 });
 }
 </script>
 <template>
@@ -208,7 +227,33 @@ async function handleSubmit() {
 		</section>
 		<section>
 			<RoboticsConntainer class="space-y-8 py-20">
-				<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
+				<div>
+					<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
+				</div>
+				<Transition @enter="transitionAlert">
+					<div
+						v-if="formSuccess"
+						class="h-0 overflow-hidden"
+					>
+						<p
+							class="border border-green-400 bg-green-50 px-4 py-2 font-medium text-green-800 lg:text-lg"
+						>
+							✅ Your message has been sent successfully. Thank you for reaching out!
+						</p>
+					</div>
+				</Transition>
+				<Transition @enter="transitionAlert">
+					<div
+						v-if="formError"
+						class="h-0 overflow-hidden"
+					>
+						<p
+							class="border border-red-400 bg-red-50 px-4 py-2 font-medium text-red-800 lg:text-lg"
+						>
+							❌ {{ formError }}
+						</p>
+					</div>
+				</Transition>
 				<form
 					@submit.prevent="handleSubmit"
 					class="flex flex-col space-y-4 md:space-y-8"
@@ -216,6 +261,7 @@ async function handleSubmit() {
 					<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
 						<div class="flex flex-1 flex-col justify-between space-y-4">
 							<FormTextInput
+								:disabled="loading"
 								required
 								name="Full Name"
 								v-model="formData.name"
@@ -225,6 +271,7 @@ async function handleSubmit() {
 								:maxlength="50"
 							/>
 							<FormTextInput
+								:disabled="loading"
 								required
 								name="Company"
 								v-model="formData.company"
@@ -234,6 +281,7 @@ async function handleSubmit() {
 								:maxlength="50"
 							/>
 							<FormTextInput
+								:disabled="loading"
 								required
 								name="Additional Notes?"
 								v-model="formData.notes"
@@ -245,6 +293,7 @@ async function handleSubmit() {
 						</div>
 						<div class="flex flex-1 flex-col justify-between space-y-4">
 							<FormTextInput
+								:disabled="loading"
 								required
 								name="Email Address"
 								v-model="formData.email"
@@ -261,6 +310,7 @@ async function handleSubmit() {
 								>
 									<label
 										><input
+											:disabled="loading"
 											type="checkbox"
 											v-model="formData.sponsor"
 											@change="validateCheckboxes"
@@ -269,6 +319,7 @@ async function handleSubmit() {
 									>
 									<label
 										><input
+											:disabled="loading"
 											type="checkbox"
 											v-model="formData.donate"
 											@change="validateCheckboxes"
@@ -278,6 +329,7 @@ async function handleSubmit() {
 									<label
 										><input
 											type="checkbox"
+											:disabled="loading"
 											v-model="formData.recruit"
 											@change="validateCheckboxes"
 										/>
@@ -286,6 +338,7 @@ async function handleSubmit() {
 									<label
 										><input
 											type="checkbox"
+											:disabled="loading"
 											v-model="formData.outreach"
 											@change="validateCheckboxes"
 										/>
@@ -294,6 +347,7 @@ async function handleSubmit() {
 									<label
 										><input
 											type="checkbox"
+											:disabled="loading"
 											v-model="formData.other"
 											@change="validateCheckboxes"
 										/>
@@ -343,16 +397,6 @@ async function handleSubmit() {
 	@apply lg:bg-[url('~/assets/images/lg_birdseye.jpg')];
 	@apply xl:bg-[url('~/assets/images/xl_birdseye.jpg')];
 }
-.text-input > input {
-	@apply w-full border-2 border-zinc-300 bg-neutral-100 p-4;
-	@apply transition-colors duration-200 ease-in-out;
-}
-.text-input > input:focus {
-	@apply border-tertiary outline-none;
-}
-.text-input > input:invalid {
-	@apply border-red-400 outline-none;
-}
 .text-input > label,
 .label {
 	@apply block pb-1 text-lg font-bold;
@@ -368,7 +412,7 @@ async function handleSubmit() {
 	@apply transition-colors duration-200 ease-in-out;
 	@apply checked:bg-black;
 }
-.checkboxes > label > input:invalid {
-	@apply border-red-400;
+.checkboxes > label > input:disabled {
+	@apply cursor-not-allowed border-zinc-300 bg-zinc-300;
 }
 </style>
