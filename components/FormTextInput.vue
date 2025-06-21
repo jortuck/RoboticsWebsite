@@ -17,7 +17,6 @@ const input = useTemplateRef("input");
 defineOptions({ inheritAttrs: false });
 
 watch(error, () => {
-	console.log("error changed");
 	input.value?.setCustomValidity(error.value || "");
 });
 onMounted(() => {

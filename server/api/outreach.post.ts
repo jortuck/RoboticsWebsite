@@ -1,0 +1,61 @@
+import { z } from "zod";
+import { schema } from "~/shared/OutreachFormSchema";
+import { $fetch } from "ofetch";
+export default defineEventHandler(async (event) => {
+	let config = useRuntimeConfig(event);
+	let result = await readValidatedBody(event, (body) =>
+		schema
+			.refine(
+				(data) => data.sponsor || data.donate || data.recruit || data.outreach || data.other,
+				{
+					message: "Please select at least one reason for contact.",
+					path: ["checkboxes"] // This can be any field name for grouping
+				}
+			)
+			.safeParse(body)
+	);
+
+	if (!result.success) {
+		setResponseStatus(event, 400);
+		console.log(result.error.issues);
+		return result.error.issues;
+	}
+
+	let captcha = await $fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+		method: "POST",
+		body: {
+			secret: config.turnstileSecret,
+			response: result.data.cftoken
+		}
+	});
+	if (!captcha.success) {
+		setResponseStatus(event, 403);
+		return {
+			message:
+				"Unfortunately our system has detected you as a bot. Please refresh your page or reach out via email."
+		};
+	}
+	const payload = {
+		message: "Test",
+		email: "sender@example.com"
+	};
+	const response = await $fetch(config.emailEndPoint, {
+		method: "POST",
+		headers: {
+			"X-Access-Token": config.emailSecret,
+			"Content-Type": "application/json"
+		},
+		body: payload
+	});
+	console.log(response);
+	// if (!discord.ok) {
+	// 	setResponseStatus(event, 503);
+	// 	return {
+	// 		success: false,
+	// 		message:
+	// 			"Unfortunately there is an internal error on my end. Please reach out via LinkedIn or try again later."
+	// 	};
+	// }
+
+	return { success: true, message: "Your message has been sent!" };
+});

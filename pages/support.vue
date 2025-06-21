@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import { FetchError } from "ofetch";
+
 let turnstileId = ref("");
 let formError = ref("");
 let formSuccess = ref(false);
 let loading = ref(false);
 const config = useRuntimeConfig();
 import { schema } from "~/shared/OutreachFormSchema";
+import type { ZodIssue } from "zod";
 useSeoMeta({
 	title: "Suuport Us | Husky Robotics",
 	description:
@@ -22,14 +25,21 @@ const formData = ref({
 	outreach: false,
 	other: false
 });
-
-const errors = ref({
+type Error = {
+	name: string;
+	email: string;
+	company: string;
+	notes: string;
+	cftoken: string;
+	checkboxes: string;
+};
+const errors: Ref<Error> = ref({
 	name: "",
 	email: "",
 	company: "",
 	notes: "",
 	cftoken: "",
-	checkbox: ""
+	checkboxes: ""
 });
 
 const canSubmit = computed(() => {
@@ -39,7 +49,7 @@ const canSubmit = computed(() => {
 		!errors.value.company &&
 		!errors.value.notes &&
 		!errors.value.cftoken &&
-		!errors.value.checkbox
+		!errors.value.checkboxes
 	);
 });
 
@@ -53,9 +63,9 @@ function validateCheckboxes() {
 			formData.value.other
 		)
 	) {
-		errors.value.checkbox = "Please select at least one option.";
+		errors.value.checkboxes = "Please select at least one option.";
 	} else {
-		errors.value.checkbox = "";
+		errors.value.checkboxes = "";
 	}
 }
 onMounted(() => {
@@ -75,6 +85,38 @@ onMounted(() => {
 		});
 	});
 });
+type OutreachResponse = { success: true; message: string } | { success: false; message: string };
+async function handleSubmit() {
+	loading.value = true;
+	let response = await $fetch<OutreachResponse>("/api/outreach", {
+		method: "POST",
+		body: formData.value,
+		onResponse: () => {
+			loading.value = false;
+		}
+	}).catch((error: FetchError) => {
+		if (error.status == 400) {
+			error.data.forEach((element: ZodIssue) => {
+				errors.value[element.path[0] as keyof Error] = element.message;
+			});
+		} else if (error.status == 403) {
+			errors.value["cftoken" as keyof Error] = error.data.message;
+		} else {
+			formError.value =
+				"An internal error occurred on my end. Please reach out using LinkedIn or try again later.";
+			// @ts-ignore
+			window.turnstile.reset(turnstileId);
+		}
+	});
+	if (response) {
+		if (response.success) {
+			formSuccess.value = true;
+			formError.value = "";
+			// @ts-ignore
+			window.turnstile.reset(turnstileId);
+		}
+	}
+}
 </script>
 <template>
 	<main>
@@ -170,7 +212,10 @@ onMounted(() => {
 				<br />
 				{{ errors }}
 				<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
-				<form class="flex flex-col space-y-4 md:space-y-8">
+				<form
+					@submit.prevent="handleSubmit"
+					class="flex flex-col space-y-4 md:space-y-8"
+				>
 					<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
 						<div class="flex flex-1 flex-col justify-between space-y-4">
 							<FormTextInput
@@ -215,7 +260,7 @@ onMounted(() => {
 								<p class="label">Reason For Reach-out<sup class="text-red-500">*</sup></p>
 								<div
 									class="checkboxes flex flex-1 flex-col justify-between border-2 border-zinc-300 bg-neutral-100 px-2 py-4"
-									:class="{ '!border-red-400': errors.checkbox }"
+									:class="{ '!border-red-400': errors.checkboxes }"
 								>
 									<label
 										><input
@@ -259,7 +304,9 @@ onMounted(() => {
 									>
 								</div>
 								<p class="pt-1 text-sm text-neutral-700">
-									<span class="font-semibold text-red-500">{{ errors.checkbox || "\u00A0" }}</span>
+									<span class="font-semibold text-red-500">{{
+										errors.checkboxes || "\u00A0"
+									}}</span>
 								</p>
 							</div>
 						</div>

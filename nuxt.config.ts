@@ -25,6 +25,9 @@ export default defineNuxtConfig({
 		public: {
 			turnstileKey: ""
 		},
-		turnstileSecret: ""
+		turnstileSecret: "",
+		discordWebhook: "",
+		emailEndPoint: "",
+		emailSecret: ""
 	}
 });
