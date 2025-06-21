@@ -2,43 +2,43 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
-let headerAnimation: gsap.core.Timeline;
-let factsAnimation: gsap.core.Tween;
 let btnGroup = useTemplateRef("buttonGroup");
+let gsapContext: gsap.Context;
 onMounted(() => {
-	let split: SplitText = SplitText.create("h1", { type: "chars" });
-	gsap.set("h1", { opacity: 1 });
-	headerAnimation = gsap
-		.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
-		.from(split.chars, {
-			duration: 0.8,
+	gsapContext = gsap.context(() => {
+		let split: SplitText = SplitText.create("h1", { type: "chars" });
+		gsap.set("h1", { opacity: 1 });
+		gsap
+			.timeline({ defaults: { ease: "power2.inOut", autoAlpha: 0 } })
+			.from(split.chars, {
+				duration: 0.8,
+				opacity: 0,
+				stagger: 0.05
+			})
+			.from("h1+p", {
+				duration: 0.6,
+				opacity: 0
+			})
+			.from("h1+p+p", {
+				duration: 0.6,
+				opacity: 0
+			})
+			.from(btnGroup.value, {
+				duration: 0.6,
+				opacity: 0
+			});
+		gsap.from(".facts > *", {
+			duration: 0.4,
 			opacity: 0,
-			stagger: 0.05
-		})
-		.from("h1+p", {
-			duration: 0.6,
-			opacity: 0
-		})
-		.from("h1+p+p", {
-			duration: 0.6,
-			opacity: 0
-		})
-		.from(btnGroup.value, {
-			duration: 0.6,
-			opacity: 0
+			stagger: 0.1,
+			ease: "power2.in",
+			autoAlpha: 0,
+			scrollTrigger: ".facts"
 		});
-	factsAnimation = gsap.from(".facts > *", {
-		duration: 0.4,
-		opacity: 0,
-		stagger: 0.1,
-		ease: "power2.in",
-		autoAlpha: 0,
-		scrollTrigger: ".facts"
 	});
 });
 onUnmounted(() => {
-	// headerAnimation.revert();
-	// factsAnimation.revert();
+	gsapContext.revert();
 });
 useSeoMeta({
 	title: "Home | Husky Robotics",
