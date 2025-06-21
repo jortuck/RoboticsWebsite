@@ -29,5 +29,8 @@ export default defineNuxtConfig({
 		discordWebhook: "",
 		emailEndPoint: "",
 		emailSecret: ""
+	},
+	routeRules: {
+		"/": { prerender: true }
 	}
 });
