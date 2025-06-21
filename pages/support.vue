@@ -208,9 +208,6 @@ async function handleSubmit() {
 		</section>
 		<section>
 			<RoboticsConntainer class="space-y-8 py-20">
-				{{ formData }}
-				<br />
-				{{ errors }}
 				<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
 				<form
 					@submit.prevent="handleSubmit"
