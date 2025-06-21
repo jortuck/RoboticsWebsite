@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 
 let destinationsAnimation: gsap.core.Tween;
-let destinationsElements = useTemplateRef("destinations");
+let destinationsElements = useTemplateRef("destinationsRef");
 onMounted(() => {
 	destinationsAnimation = gsap.from(destinationsElements.value!.children, {
 		duration: 0.4,
@@ -61,7 +61,7 @@ const destinations: destination[] = [
 		</div>
 		<div class="container mx-auto px-4 py-10">
 			<div
-				ref="destinations"
+				ref="destinationsRef"
 				class="grid grid-cols-3 justify-items-center gap-5 lg:grid-cols-7"
 			>
 				<div
