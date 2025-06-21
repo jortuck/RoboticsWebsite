@@ -2,7 +2,7 @@
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
 	compatibilityDate: "2024-11-01",
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxt/content", "motion-v/nuxt"],
 	vite: {
 		plugins: [tailwindcss()]
@@ -10,7 +10,8 @@ export default defineNuxtConfig({
 	css: ["~/assets/css/main.css"],
 	app: {
 		head: {
-			link: [{ rel: "icon", href: "./favicon.ico", type: "image/ico" }]
+			link: [{ rel: "icon", href: "./favicon.ico", type: "image/ico" }],
+			script: [{ src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" }]
 		}
 	},
 	ssr: true,
@@ -19,5 +20,11 @@ export default defineNuxtConfig({
 			crawlLinks: true,
 			failOnError: false
 		}
+	},
+	runtimeConfig: {
+		public: {
+			turnstileKey: ""
+		},
+		turnstileSecret: ""
 	}
 });

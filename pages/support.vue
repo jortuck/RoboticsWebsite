@@ -1,4 +1,81 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+let turnstileId = ref("");
+let formError = ref("");
+let formSuccess = ref(false);
+let loading = ref(false);
+const config = useRuntimeConfig();
+import { schema } from "~/shared/OutreachFormSchema";
+useSeoMeta({
+	title: "Suuport Us | Husky Robotics",
+	description:
+		"When you support Husky Robotics, you invest in people. You help students build meaningful connections, access critical resources, and become the engineering leaders of tomorrow."
+});
+const formData = ref({
+	name: "",
+	email: "",
+	company: "",
+	notes: "",
+	cftoken: "",
+	sponsor: false,
+	donate: false,
+	recruit: false,
+	outreach: false,
+	other: false
+});
+
+const errors = ref({
+	name: "",
+	email: "",
+	company: "",
+	notes: "",
+	cftoken: "",
+	checkbox: ""
+});
+
+const canSubmit = computed(() => {
+	return (
+		!errors.value.name &&
+		!errors.value.email &&
+		!errors.value.company &&
+		!errors.value.notes &&
+		!errors.value.cftoken &&
+		!errors.value.checkbox
+	);
+});
+
+function validateCheckboxes() {
+	if (
+		!(
+			formData.value.sponsor ||
+			formData.value.donate ||
+			formData.value.recruit ||
+			formData.value.outreach ||
+			formData.value.other
+		)
+	) {
+		errors.value.checkbox = "Please select at least one option.";
+	} else {
+		errors.value.checkbox = "";
+	}
+}
+onMounted(() => {
+	//@ts-ignore
+	window.turnstile.ready(function () {
+		// @ts-ignore
+		turnstileId = window.turnstile.render(".cf-turnstile", {
+			sitekey: config.public.turnstileKey,
+			callback: function (token: string) {
+				console.log(`Challenge Success ${token}`);
+				formData.value.cftoken = token;
+			},
+			"error-callback": function () {
+				errors.value.cftoken =
+					"Unfortunately, it looks like you have been detected as a bot. Please refresh the page.";
+			}
+		});
+	});
+});
+</script>
 <template>
 	<main>
 		<section class="bg-splash-birdseye">
@@ -89,52 +166,125 @@
 		</section>
 		<section>
 			<RoboticsConntainer class="space-y-8 py-20">
+				{{ formData }}
+				<br />
+				{{ errors }}
 				<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
-				<form class="flex flex-col gap-4 md:gap-8 lg:flex-row">
-					<div class="flex flex-1 flex-col justify-between space-y-4 md:space-y-8">
-						<div class="text-input">
-							<label>Full Name<sup class="text-red-500">*</sup></label>
-							<input placeholder="Harry The Husky" />
+				<form class="flex flex-col space-y-4 md:space-y-8">
+					<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
+						<div class="flex flex-1 flex-col justify-between space-y-4">
+							<FormTextInput
+								required
+								name="Full Name"
+								v-model="formData.name"
+								v-model:error="errors.name"
+								placeholder="Harry The Husky"
+								:schema="schema.shape.name"
+								:maxlength="50"
+							/>
+							<FormTextInput
+								required
+								name="Company"
+								v-model="formData.company"
+								v-model:error="errors.company"
+								placeholder="Husky Robotics"
+								:schema="schema.shape.company"
+								:maxlength="50"
+							/>
+							<FormTextInput
+								required
+								name="Additional Notes?"
+								v-model="formData.notes"
+								v-model:error="errors.notes"
+								placeholder="Husky Robotics"
+								:schema="schema.shape.notes"
+								:maxlength="200"
+							/>
 						</div>
-						<div class="text-input">
-							<label>Company<sup class="text-red-500">*</sup></label>
-							<input placeholder="Husky Robotics" />
-						</div>
-						<div class="text-input">
-							<label>Additional Notes?</label>
-							<input placeholder="Thank You For Working With Us!" />
-						</div>
-					</div>
-					<div class="flex flex-1 flex-col justify-between space-y-4 md:space-y-8">
-						<div class="text-input">
-							<label>Email Address<sup class="text-red-500">*</sup></label>
-							<input placeholder="email@eample.com" />
-						</div>
-						<div class="flex flex-1 flex-col">
-							<p class="label">Reason For Reach-out<sup class="text-red-500">*</sup></p>
-							<div
-								class="checkboxes flex flex-1 flex-col justify-between border-2 border-zinc-300 bg-neutral-100 px-2 py-4"
-							>
-								<label
-									><input type="checkbox" />
-									<span>Monetary Sponsorship (Tax Deductible)</span></label
+						<div class="flex flex-1 flex-col justify-between space-y-4">
+							<FormTextInput
+								required
+								name="Email Address"
+								v-model="formData.email"
+								v-model:error="errors.email"
+								placeholder="example@uw.edu"
+								:schema="schema.shape.email"
+								:maxlength="50"
+							/>
+							<div class="flex flex-1 flex-col">
+								<p class="label">Reason For Reach-out<sup class="text-red-500">*</sup></p>
+								<div
+									class="checkboxes flex flex-1 flex-col justify-between border-2 border-zinc-300 bg-neutral-100 px-2 py-4"
+									:class="{ '!border-red-400': errors.checkbox }"
 								>
-								<label><input type="checkbox" /> <span>Donate Equipment / Software</span></label>
-								<label
-									><input type="checkbox" />
-									<span>Recruit Top University of Washington Talent</span></label
-								>
-								<label
-									><input type="checkbox" />
-									<span>Visibility & Public Outreach Opportunities</span></label
-								>
-								<label
-									><input type="checkbox" />
-									<span>Other or N/A (Fill out Additional Notes)</span></label
-								>
+									<label
+										><input
+											type="checkbox"
+											v-model="formData.sponsor"
+											@change="validateCheckboxes"
+										/>
+										<span>Monetary Sponsorship (Tax Deductible)</span></label
+									>
+									<label
+										><input
+											type="checkbox"
+											v-model="formData.donate"
+											@change="validateCheckboxes"
+										/>
+										<span>Donate Equipment / Software</span></label
+									>
+									<label
+										><input
+											type="checkbox"
+											v-model="formData.recruit"
+											@change="validateCheckboxes"
+										/>
+										<span>Recruit Top University of Washington Talent</span></label
+									>
+									<label
+										><input
+											type="checkbox"
+											v-model="formData.outreach"
+											@change="validateCheckboxes"
+										/>
+										<span>Visibility & Public Outreach Opportunities</span></label
+									>
+									<label
+										><input
+											type="checkbox"
+											v-model="formData.other"
+											@change="validateCheckboxes"
+										/>
+										<span>Other or N/A (Fill out Additional Notes)</span></label
+									>
+								</div>
+								<p class="pt-1 text-sm text-neutral-700">
+									<span class="font-semibold text-red-500">{{ errors.checkbox || "\u00A0" }}</span>
+								</p>
 							</div>
 						</div>
 					</div>
+					<div>
+						<div
+							class="cf-turnstile lg:w-[300px]"
+							data-size="flexible"
+							data-theme="light"
+						></div>
+						<p
+							class="pt-1 text-sm text-neutral-700"
+							v-if="errors.cftoken"
+						>
+							<span class="font-semibold text-red-500">{{ errors.cftoken }}</span>
+						</p>
+					</div>
+
+					<button
+						type="submit"
+						:disabled="!canSubmit"
+						class="w-full cursor-pointer rounded-md bg-tertiary px-10 py-3 font-bold text-secondary transition-colors duration-200 ease-in-out hover:bg-tertiary/90 disabled:cursor-not-allowed disabled:bg-zinc-300 lg:w-fit"
+					>
+						Submit
+					</button>
 				</form>
 			</RoboticsConntainer>
 		</section>
@@ -156,6 +306,9 @@
 .text-input > input:focus {
 	@apply border-tertiary outline-none;
 }
+.text-input > input:invalid {
+	@apply border-red-400 outline-none;
+}
 .text-input > label,
 .label {
 	@apply block pb-1 text-lg font-bold;
@@ -170,5 +323,8 @@
 	@apply h-4 w-4 cursor-pointer appearance-none rounded-xs border-2 border-black;
 	@apply transition-colors duration-200 ease-in-out;
 	@apply checked:bg-black;
+}
+.checkboxes > label > input:invalid {
+	@apply border-red-400;
 }
 </style>
