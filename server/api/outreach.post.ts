@@ -32,26 +32,26 @@ export default defineEventHandler(async (event) => {
 				"Unfortunately our system has detected you as a bot. Please refresh your page or reach out via email."
 		};
 	}
-	// const payload = {
-	// 	message: formatResult(result.data),
-	// 	email: result.data.email
-	// };
-	// const response = await $fetch(config.emailEndPoint, {
-	// 	method: "POST",
-	// 	headers: {
-	// 		"X-Access-Token": config.emailSecret + "afafa",
-	// 		"Content-Type": "application/json"
-	// 	},
-	// 	body: payload
-	// });
-	// if (!response.success) {
-	// 	setResponseStatus(event, 500);
-	// 	return {
-	// 		success: false,
-	// 		message:
-	// 			"Unfortunately there was an internal error on our end. Please reach out via uwrobots@uw.edu or try again later."
-	// 	};
-	// }
+	const payload = {
+		message: formatResult(result.data),
+		email: result.data.email
+	};
+	const response = await $fetch(config.emailEndPoint, {
+		method: "POST",
+		headers: {
+			"X-Access-Token": config.emailSecret,
+			"Content-Type": "application/json"
+		},
+		body: payload
+	});
+	if (!response.success) {
+		setResponseStatus(event, 500);
+		return {
+			success: false,
+			message:
+				"Unfortunately there was an internal error on our end. Please reach out via uwrobots@uw.edu or try again later."
+		};
+	}
 	return { success: true, message: "Your message has been sent!" };
 });
 
