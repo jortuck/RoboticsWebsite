@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<div :class="['mx-auto w-full max-w-screen-2xl px-4 sm:px-8 lg:px-16', props.class]">
+	<div :class="['mx-auto w-full max-w-screen-2xl px-4 sm:px-8 md:px-16 lg:px-24', props.class]">
 		<slot />
 	</div>
 </template>
