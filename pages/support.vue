@@ -305,7 +305,7 @@ function transitionAlert(e: Element) {
 							<div class="flex flex-1 flex-col">
 								<p class="label">Reason For Reach-out<sup class="text-red-500">*</sup></p>
 								<div
-									class="checkboxes flex flex-1 flex-col justify-between border-2 border-zinc-300 bg-neutral-100 px-2 py-4"
+									class="checkboxes flex flex-1 flex-col justify-between border-2 border-zinc-300 bg-neutral-100 p-2"
 									:class="{ '!border-red-400': errors.checkboxes }"
 								>
 									<label
