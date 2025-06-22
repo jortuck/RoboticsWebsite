@@ -405,7 +405,7 @@ function transitionAlert(e: Element) {
 	@apply font-medium tracking-wide;
 }
 .checkboxes > label {
-	@apply flex flex-row items-center space-x-4;
+	@apply flex flex-row items-center space-x-4 text-sm md:text-base;
 }
 .checkboxes > label > input {
 	@apply h-4 w-4 cursor-pointer appearance-none rounded-xs border-2 border-black;
