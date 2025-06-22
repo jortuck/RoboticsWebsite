@@ -42,11 +42,11 @@ const subLinks: Link[] = [
 				>
 					<img
 						src="~/assets/images/UWLogoWithGold.png"
-						class="max-h-12"
+						class="h-10"
 						alt="University of Washington Logo"
 					/>
 					<p
-						class="font-roboto text-lg tracking-robotics text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
+						class="font-roboto tracking-robotics text-secondary uppercase transition-colors duration-200 ease-in-out select-none"
 					>
 						Husky Robotics
 					</p>
@@ -54,7 +54,7 @@ const subLinks: Link[] = [
 				<div class="flex-1">
 					<img
 						src="~/assets/images/logo_square_sm.png"
-						class="mx-auto max-h-12"
+						class="mx-auto h-10"
 						alt="Husky Robotics Logo"
 					/>
 				</div>
