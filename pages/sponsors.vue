@@ -47,7 +47,7 @@ const sponsors: Sponsor[] = [
 <template>
 	<main>
 		<section>
-			<RoboticsConntainer class="py-20">
+			<RoboticsContainer class="py-20">
 				<div class="container mx-auto py-10">
 					<div class="sponsors flex flex-row flex-wrap justify-center gap-8">
 						<div
@@ -77,7 +77,7 @@ const sponsors: Sponsor[] = [
 						<p class="font-roboto tracking-robotics text-neutral-500">Husky Robotics Team (2025)</p>
 					</div>
 				</div>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 	</main>
 </template>

@@ -149,7 +149,7 @@ function transitionAlert(e: Element) {
 					);
 				"
 			>
-				<RoboticsConntainer class="space-y-8 py-20 md:py-30">
+				<RoboticsContainer class="space-y-8 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2">
 						<h1 class="text-6xl leading-18 font-bold text-secondary lg:text-7xl lg:leading-25">
 							Support<br />Husky Robotics
@@ -161,11 +161,11 @@ function transitionAlert(e: Element) {
 							>
 						</p>
 					</div>
-				</RoboticsConntainer>
+				</RoboticsContainer>
 			</div>
 		</section>
 		<section class="bg-primary">
-			<RoboticsConntainer class="py-20">
+			<RoboticsContainer class="py-20">
 				<div class="flex flex-col-reverse items-center gap-8 lg:flex-row">
 					<div class="flex-1 space-y-4 text-lg text-neutral-200">
 						<p>
@@ -223,10 +223,10 @@ function transitionAlert(e: Element) {
 						/>
 					</div>
 				</div>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 		<section>
-			<RoboticsConntainer class="space-y-8 py-20">
+			<RoboticsContainer class="space-y-8 py-20">
 				<div>
 					<h2 class="text-4xl font-bold">Corporate Engagement? Let Us Know.</h2>
 				</div>
@@ -384,7 +384,7 @@ function transitionAlert(e: Element) {
 						Submit
 					</button>
 				</form>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 	</main>
 </template>

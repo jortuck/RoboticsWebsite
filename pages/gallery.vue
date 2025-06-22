@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
 	<main>
 		<section>
-			<RoboticsConntainer class="py-20">
+			<RoboticsContainer class="py-20">
 				<div class="flex flex-col items-center gap-8 lg:flex-row">
 					<div class="flex-1 space-y-8">
 						<h1 class="text-6xl font-bold">Design Gallery</h1>
@@ -40,10 +40,10 @@ onMounted(() => {
 						/>
 					</div>
 				</div>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 		<section class="bg-primary">
-			<RoboticsConntainer class="space-y-20 py-20 lg:space-y-50 xl:w-3/4">
+			<RoboticsContainer class="space-y-20 py-20 lg:space-y-50 xl:w-3/4">
 				<div
 					v-for="collection in gallery"
 					class="space-y-8"
@@ -81,7 +81,7 @@ onMounted(() => {
 						</div>
 					</div>
 				</div>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 	</main>
 </template>

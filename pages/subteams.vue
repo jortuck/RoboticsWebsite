@@ -60,7 +60,7 @@ function headerTransitionEnter(el: Element) {
 			/>
 		</section>
 		<section>
-			<RoboticsConntainer class="py-10 lg:py-20">
+			<RoboticsContainer class="py-10 lg:py-20">
 				<div class="mx-auto w-3/4 space-y-4 text-center">
 					<p class="text-lg">
 						Husky Robotics is an elite, student-led planetary exploration initiative. Each year, we
@@ -74,8 +74,8 @@ function headerTransitionEnter(el: Element) {
 						Husky Robotics Team (2025)
 					</p>
 				</div>
-			</RoboticsConntainer>
-			<RoboticsConntainer class="space-y-16 py-10 lg:space-y-32 xl:w-3/4">
+			</RoboticsContainer>
+			<RoboticsContainer class="space-y-16 py-10 lg:space-y-32 xl:w-3/4">
 				<div
 					class="flex flex-col flex-wrap items-center justify-between space-y-4 lg:flex-row lg:items-start lg:space-y-0"
 				>
@@ -121,7 +121,7 @@ function headerTransitionEnter(el: Element) {
 						</div>
 					</TransitionGroup>
 				</div>
-			</RoboticsConntainer>
+			</RoboticsContainer>
 		</section>
 	</main>
 </template>
