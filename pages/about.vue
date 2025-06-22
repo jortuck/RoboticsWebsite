@@ -6,7 +6,7 @@ useSeoMeta({
 <template>
 	<main>
 		<section class="bg-black">
-			<div class="container mx-auto flex flex-col items-center space-y-8 px-4 py-20 lg:flex-row">
+			<RoboticsConntainer class="flex flex-col items-center space-y-8 py-20 lg:flex-row">
 				<div class="flex-1 space-y-8 text-secondary">
 					<h1 class="text-5xl font-bold text-secondary xl:text-7xl">
 						Our Mission at Husky Robotics
@@ -52,10 +52,10 @@ useSeoMeta({
 						/>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section class="bg-black">
-			<div class="container mx-auto space-y-8 px-4 py-10 lg:max-w-5xl">
+			<RoboticsConntainer class="space-y-8 py-10 lg:max-w-5xl">
 				<div
 					class="grid grid-cols-2 justify-between gap-10 md:flex md:flex-row md:items-baseline md:gap-0"
 				>
@@ -128,10 +128,10 @@ useSeoMeta({
 						exploration, and innovation.</strong
 					>
 				</p>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section class="bg-neutral-100">
-			<div class="container mx-auto flex flex-col space-y-8 px-4 py-20">
+			<RoboticsConntainer class="flex flex-col space-y-8 py-20">
 				<div class="flex flex-col-reverse items-center gap-12 lg:flex-row">
 					<div class="flex-3/5">
 						<img
@@ -185,10 +185,10 @@ useSeoMeta({
 						/>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section>
-			<div class="container mx-auto px-4 py-10">
+			<RoboticsConntainer class="py-10">
 				<div class="flex flex-col items-center gap-12 lg:flex-row">
 					<div class="flex-2/5 space-y-8">
 						<h2 class="text-5xl font-bold">Our History</h2>
@@ -220,7 +220,7 @@ useSeoMeta({
 						/>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 	</main>
 </template>

@@ -88,7 +88,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 			</div>
 		</section>
 		<section>
-			<div class="container mx-auto space-y-8 px-4 py-20 md:max-w-4/5 xl:max-w-2/3">
+			<RoboticsConntainer class="space-y-8 py-20 md:max-w-4/5 xl:max-w-2/3">
 				<p class="border-b-1 border-b-accent pb-5 text-lg">
 					The University of Washington’s Husky Robotics leads the frontier of collegiate planetary
 					exploration, blending elite engineering and scientific rigor. Our 2025 rover, Prometheus,
@@ -117,10 +117,10 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						</p>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section class="bg-primary py-20 md:py-30">
-			<div class="container mx-auto flex flex-col items-center gap-10 px-4 lg:flex-row">
+			<RoboticsConntainer class="flex flex-col items-center gap-10 lg:flex-row">
 				<div class="flex h-full flex-1 flex-col space-y-8">
 					<header class="space-y-2">
 						<p class="font-roboto tracking-widest text-zinc-400">University of Washington 2025</p>
@@ -151,11 +151,11 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						></iframe>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<Destinations />
 		<section class="bg-primary py-20">
-			<div class="container mx-auto space-y-20 px-4">
+			<RoboticsConntainer class="space-y-20">
 				<header class="space-y-5 text-center">
 					<p class="font-roboto tracking-robotics text-zinc-400">
 						Husky Robotics
@@ -206,10 +206,10 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 					to="about"
 					>About Our Team</ArrowLink
 				>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section>
-			<div class="container mx-auto flex flex-col px-4 py-10">
+			<RoboticsConntainer class="flex flex-col py-10">
 				<div
 					class="flex flex-col gap-4 border-t-1 border-t-black py-8 lg:flex-row lg:items-center"
 					v-for="category in gallery"
@@ -241,7 +241,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						></NuxtLink>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 	</main>
 </template>

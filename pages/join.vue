@@ -54,7 +54,7 @@ function closeFAQ(element: Element, done: () => void) {
 					);
 				"
 			>
-				<div class="container mx-auto space-y-8 px-4 py-20 md:py-30">
+				<RoboticsConntainer class="space-y-8 py-20 md:py-30">
 					<div class="space-y-8 md:max-w-1/2">
 						<h1 class="text-6xl leading-18 font-extrabold text-secondary lg:text-7xl">
 							Get Involved With<br />Husky Robotics
@@ -69,7 +69,7 @@ function closeFAQ(element: Element, done: () => void) {
 							>
 						</p>
 					</div>
-				</div>
+				</RoboticsConntainer>
 				<p class="container mx-auto px-4 py-8 text-xs text-zinc-400">
 					<NuxtLink
 						class="underline"
@@ -88,7 +88,7 @@ function closeFAQ(element: Element, done: () => void) {
 			</div>
 		</section>
 		<section class="bg-primary">
-			<div class="container mx-auto px-4 py-20">
+			<RoboticsConntainer class="py-20">
 				<div class="flex flex-col gap-10 lg:flex-row">
 					<div class="flex-1 space-y-8 text-white">
 						<h2 class="text-2xl font-bold">Join Us</h2>
@@ -134,13 +134,13 @@ function closeFAQ(element: Element, done: () => void) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section
 			class="bg-secondary"
 			id="excerpts"
 		>
-			<div class="container mx-auto px-4 py-20">
+			<RoboticsConntainer class="py-20">
 				<div class="flex flex-col space-y-8">
 					<div class="flex flex-col items-center gap-10 lg:flex-row">
 						<p
@@ -188,13 +188,13 @@ function closeFAQ(element: Element, done: () => void) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<section
 			id="applications"
 			class="bg-black"
 		>
-			<div class="container mx-auto space-y-8 px-4 py-20 xl:w-1/2">
+			<RoboticsConntainer class="space-y-8 py-20 xl:w-1/2">
 				<h2 class="text-5xl font-bold text-secondary">Application Cycle: 2025-2026</h2>
 				<p class="text-lg text-zinc-100">
 					Our main admissions take place during Autumn and Winter quarter, when we welcome new
@@ -203,14 +203,14 @@ function closeFAQ(element: Element, done: () => void) {
 					engineering projects and exploration.
 				</p>
 				<ArrowLink to="https://google.com">Interest Form</ArrowLink>
-			</div>
+			</RoboticsConntainer>
 		</section>
 		<Destinations />
 		<section
 			id="faq"
 			class="bg-neutral-100"
 		>
-			<div class="container mx-auto px-4 py-20 lg:w-3/4">
+			<RoboticsConntainer class="py-20 lg:w-3/4">
 				<p class="font-roboto tracking-robotics">Husky Robotics</p>
 				<h2 class="text-6xl font-bold">FAQs</h2>
 				<div
@@ -255,7 +255,7 @@ function closeFAQ(element: Element, done: () => void) {
 						</Transition>
 					</div>
 				</div>
-			</div>
+			</RoboticsConntainer>
 		</section>
 	</main>
 </template>
