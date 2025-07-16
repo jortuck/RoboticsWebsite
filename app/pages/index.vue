@@ -60,19 +60,19 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 					);
 				"
 			>
-				<RoboticsContainer class="space-y-8 py-20 md:py-30">
-					<div class="space-y-8 md:max-w-1/2 xl:max-w-1/3">
+				<RoboticsContainer class="md:py-30 space-y-8 py-20">
+					<div class="md:max-w-1/2 xl:max-w-1/3 space-y-8">
 						<h1
-							class="text-6xl leading-18 font-extrabold text-secondary opacity-0 lg:text-7xl lg:leading-30 xl:text-8xl"
+							class="leading-18 text-secondary lg:leading-30 text-6xl font-extrabold opacity-0 lg:text-7xl xl:text-8xl"
 						>
 							Husky<br />Robotics
 						</h1>
-						<p class="invisible border-b-1 border-b-accent pb-5 text-lg text-secondary">
+						<p class="border-b-1 border-b-accent text-secondary invisible pb-5 text-lg">
 							Rovers modeled, engineered, and field‑tested by UW students for real‑world planetary
 							exploration & industry‑grade team robotics.
 						</p>
 						<p class="invisible space-x-3 align-middle">
-							<span class="font-roboto font-medium tracking-robotics text-secondary"
+							<span class="font-roboto tracking-robotics text-secondary font-medium"
 								>University of Washington - Seattle</span
 							>
 						</p>
@@ -88,7 +88,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 			</div>
 		</section>
 		<section>
-			<RoboticsContainer class="space-y-8 py-20 md:max-w-4/5 xl:max-w-2/3">
+			<RoboticsContainer class="md:max-w-4/5 xl:max-w-2/3 space-y-8 py-20">
 				<p class="border-b-1 border-b-accent pb-5 text-lg">
 					The University of Washington’s Husky Robotics leads the frontier of collegiate planetary
 					exploration, blending elite engineering and scientific rigor. Our 2025 rover, Prometheus,
@@ -119,12 +119,12 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 				</div>
 			</RoboticsContainer>
 		</section>
-		<section class="bg-primary py-20 md:py-30">
+		<section class="bg-primary md:py-30 py-20">
 			<RoboticsContainer class="flex flex-col items-center gap-10 lg:flex-row">
 				<div class="flex h-full flex-1 flex-col space-y-8">
 					<header class="space-y-2">
 						<p class="font-roboto tracking-widest text-zinc-400">University of Washington 2025</p>
-						<h2 class="text-4xl font-extrabold text-secondary">
+						<h2 class="text-secondary text-4xl font-extrabold">
 							University Rover Challenge (URC) Team Video
 						</h2>
 					</header>
@@ -157,20 +157,13 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 		<section class="bg-primary py-20">
 			<RoboticsContainer class="space-y-20">
 				<header class="space-y-5 text-center">
-					<p class="font-roboto tracking-robotics text-zinc-400">
-						Husky Robotics
-						<img
-							alt="UW Logo"
-							class="inline-block h-6"
-							src="~/assets/images/UWLogoWithGold.png"
-						/>
-					</p>
-					<h2 class="text-5xl font-black text-secondary">Meet Our Team</h2>
+					<p class="font-roboto tracking-robotics text-zinc-400">Husky Robotics</p>
+					<h2 class="text-secondary text-5xl font-black">Meet Our Team</h2>
 					<p class="text-zinc-100">2025 Roster: <em>167 UW Engineers</em></p>
 				</header>
 				<div class="flex flex-col space-y-10">
 					<div
-						class="flex flex-col items-center gap-5 text-secondary lg:flex-row"
+						class="text-secondary flex flex-col items-center gap-5 lg:flex-row"
 						v-for="team in teams"
 						:key="team.name"
 					>
@@ -190,7 +183,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 								format="webp"
 								:alt="`Picture of ${team.name}.`"
 								:src="`/images/teams/${team.img}`"
-								class="aspect-3/2 object-cover lg:aspect-16/9 lg:p-5"
+								class="aspect-3/2 lg:aspect-16/9 object-cover lg:p-5"
 							/>
 						</div>
 					</div>
@@ -199,7 +192,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 					format="webp"
 					alt="Entire Robotics Team Photo"
 					src="/images/teams/full.jpg"
-					class="mx-auto lg:max-w-3/5"
+					class="lg:max-w-3/5 mx-auto"
 				/>
 				<ArrowLink
 					class="justify-center"
@@ -211,7 +204,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 		<section>
 			<RoboticsContainer class="flex flex-col py-10">
 				<div
-					class="flex flex-col gap-4 border-t-1 border-t-black py-8 lg:flex-row lg:items-center"
+					class="border-t-1 flex flex-col gap-4 border-t-black py-8 lg:flex-row lg:items-center"
 					v-for="category in gallery"
 					:key="category.name"
 				>
@@ -233,10 +226,10 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						<NuxtLink
 							aria-label="Learn More"
 							:to="{ path: '/gallery', query: { section: category.name.split(' ')[0] } }"
-							class="flex items-center space-x-4 text-xl font-bold text-zinc-700 transition-colors duration-200 ease-in-out hover:text-primary"
+							class="hover:text-primary flex items-center space-x-4 text-xl font-bold text-zinc-700 transition-colors duration-200 ease-in-out"
 							><p class="lg:hidden">Learn More</p>
 							<span
-								class="flex h-6 w-6 items-center justify-center rounded-full bg-tertiary transition-colors duration-200 ease-in-out lg:h-8 lg:w-8 lg:hover:bg-tertiary/75"
+								class="bg-tertiary lg:hover:bg-tertiary/75 flex h-6 w-6 items-center justify-center rounded-full transition-colors duration-200 ease-in-out lg:h-8 lg:w-8"
 								><i class="fa-solid fa-arrow-right fa-xs text-white"></i></span
 						></NuxtLink>
 					</div>
