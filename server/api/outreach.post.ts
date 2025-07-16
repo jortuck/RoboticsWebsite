@@ -1,17 +1,15 @@
-import { schema } from "~/shared/OutreachFormSchema";
 import { $fetch } from "ofetch";
+import { OutreachFormSchema } from "#shared/OutreachFormSchema";
 export default defineEventHandler(async (event) => {
 	let config = useRuntimeConfig(event);
 	let result = await readValidatedBody(event, (body) =>
-		schema
-			.refine(
-				(data) => data.sponsor || data.donate || data.recruit || data.outreach || data.other,
-				{
-					message: "Please select at least one reason for contact.",
-					path: ["checkboxes"]
-				}
-			)
-			.safeParse(body)
+		OutreachFormSchema.refine(
+			(data) => data.sponsor || data.donate || data.recruit || data.outreach || data.other,
+			{
+				message: "Please select at least one reason for contact.",
+				path: ["checkboxes"]
+			}
+		).safeParse(body)
 	);
 	if (!result.success) {
 		setResponseStatus(event, 400);

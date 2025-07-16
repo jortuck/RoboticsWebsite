@@ -6,8 +6,8 @@ let formError = ref("");
 let formSuccess = ref(false);
 let loading = ref(false);
 const config = useRuntimeConfig();
-import { schema } from "~/shared/OutreachFormSchema";
 import type { ZodIssue } from "zod";
+import OutreachFormSchema from "#shared/OutreachFormSchema";
 useSeoMeta({
 	title: "Suuport Us | Husky Robotics",
 	description:
@@ -149,14 +149,14 @@ function transitionAlert(e: Element) {
 					);
 				"
 			>
-				<RoboticsContainer class="space-y-8 py-20 md:py-30">
-					<div class="space-y-8 md:max-w-1/2">
-						<h1 class="text-6xl leading-18 font-bold text-secondary lg:text-7xl lg:leading-25">
+				<RoboticsContainer class="md:py-30 space-y-8 py-20">
+					<div class="md:max-w-1/2 space-y-8">
+						<h1 class="leading-18 text-secondary lg:leading-25 text-6xl font-bold lg:text-7xl">
 							Support<br />Husky Robotics
 						</h1>
 						<p class="space-x-3 align-middle">
 							<i class="fa-solid fa-circle text-active-green"></i>
-							<span class="text-center font-roboto tracking-robotics text-secondary uppercase"
+							<span class="font-roboto tracking-robotics text-secondary text-center uppercase"
 								>Active Mission</span
 							>
 						</p>
@@ -267,7 +267,7 @@ function transitionAlert(e: Element) {
 								v-model="formData.name"
 								v-model:error="errors.name"
 								placeholder="Harry The Husky"
-								:schema="schema.shape.name"
+								:schema="OutreachFormSchema.shape.name"
 								:maxlength="50"
 							/>
 							<FormTextInput
@@ -277,7 +277,7 @@ function transitionAlert(e: Element) {
 								v-model="formData.company"
 								v-model:error="errors.company"
 								placeholder="Husky Robotics"
-								:schema="schema.shape.company"
+								:schema="OutreachFormSchema.shape.company"
 								:maxlength="50"
 							/>
 							<FormTextInput
@@ -287,7 +287,7 @@ function transitionAlert(e: Element) {
 								v-model="formData.notes"
 								v-model:error="errors.notes"
 								placeholder="Thank you for working with us!"
-								:schema="schema.shape.notes"
+								:schema="OutreachFormSchema.shape.notes"
 								:maxlength="200"
 							/>
 						</div>
@@ -299,7 +299,7 @@ function transitionAlert(e: Element) {
 								v-model="formData.email"
 								v-model:error="errors.email"
 								placeholder="example@example.com"
-								:schema="schema.shape.email"
+								:schema="OutreachFormSchema.shape.email"
 								:maxlength="50"
 							/>
 							<div class="flex flex-1 flex-col">
@@ -379,7 +379,7 @@ function transitionAlert(e: Element) {
 					<button
 						type="submit"
 						:disabled="!canSubmit"
-						class="w-full cursor-pointer rounded-md bg-tertiary px-10 py-3 font-bold text-secondary transition-colors duration-200 ease-in-out hover:bg-tertiary/90 disabled:cursor-not-allowed disabled:bg-zinc-300 lg:w-fit"
+						class="bg-tertiary text-secondary hover:bg-tertiary/90 w-full cursor-pointer rounded-md px-10 py-3 font-bold transition-colors duration-200 ease-in-out disabled:cursor-not-allowed disabled:bg-zinc-300 lg:w-fit"
 					>
 						Submit
 					</button>
@@ -408,7 +408,7 @@ function transitionAlert(e: Element) {
 	@apply flex flex-row items-center space-x-4 text-sm md:text-base;
 }
 .checkboxes > label > input {
-	@apply h-4 w-4 cursor-pointer appearance-none rounded-xs border-2 border-black;
+	@apply rounded-xs h-4 w-4 cursor-pointer appearance-none border-2 border-black;
 	@apply transition-colors duration-200 ease-in-out;
 	@apply checked:bg-black;
 }

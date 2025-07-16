@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const schema = z.object({
+export const OutreachFormSchema = z.object({
 	name: z.string().nonempty("Name must contain at least 1 character.").max(50),
 	email: z.string().email().nonempty().max(50),
 	company: z.string().nonempty("Company must contain at least 1 character.").max(50),
