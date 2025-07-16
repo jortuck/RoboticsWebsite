@@ -7,7 +7,7 @@ let formSuccess = ref(false);
 let loading = ref(false);
 const config = useRuntimeConfig();
 import type { ZodIssue } from "zod";
-import OutreachFormSchema from "#shared/OutreachFormSchema";
+import { OutreachFormSchema } from "#shared/OutreachFormSchema";
 useSeoMeta({
 	title: "Suuport Us | Husky Robotics",
 	description:
