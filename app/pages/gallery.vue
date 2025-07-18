@@ -6,7 +6,7 @@ const route = useRoute();
 useSeoMeta({
 	title: "Gallery | Husky Robotics",
 	description:
-		"Husky Robotics designs, builds, and validates advanced systems across mechanical, electrical, software, optical, and biochemical domains. This gallery showcases the engineering behind our rover—real work from students shaping the future of exploration."
+		"Husky Robotics designs, builds, and validates advanced systems across mechanical, electrical, software, optical, and biochemical domains. This gallery showcases the engineering behind our rover; real work from students shaping the future of exploration."
 });
 onMounted(() => {
 	if (route.query.section) {
@@ -28,7 +28,7 @@ onMounted(() => {
 						<p class="text-lg">
 							Husky Robotics designs, builds, and validates advanced systems across mechanical,
 							electrical, software, optical, and biochemical domains. This gallery showcases the
-							engineering behind our rover—real work from students shaping the future of
+							engineering behind our rover; real work from students shaping the future of
 							exploration.
 						</p>
 					</div>
@@ -43,7 +43,7 @@ onMounted(() => {
 			</RoboticsContainer>
 		</section>
 		<section class="bg-primary">
-			<RoboticsContainer class="space-y-20 py-20 lg:space-y-50 xl:w-3/4">
+			<RoboticsContainer class="lg:space-y-50 space-y-20 py-20 xl:w-3/4">
 				<div
 					v-for="collection in gallery"
 					class="space-y-8"
@@ -70,7 +70,7 @@ onMounted(() => {
 								/>
 							</div>
 							<div>
-								<p class="mb-1 text-xs tracking-robotics text-zinc-400">
+								<p class="tracking-robotics mb-1 text-xs text-zinc-400">
 									2025 | {{ collection.name }}
 								</p>
 								<h3 class="pb-4 text-xl font-bold text-neutral-100">{{ item.name }}</h3>

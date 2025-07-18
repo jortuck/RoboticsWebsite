@@ -6,7 +6,7 @@ subteams:
   - title: "Robotic & Mechatronic Arm Engineering"
     name: "Arm"
     description: >
-      Push the boundaries of robotic precision by engineering our elite five-degree-of-freedom arm—trusted by the most ambitious planetary exploration missions.
+      Push the boundaries of robotic precision by engineering our elite seven-degree-of-freedom arm, trusted by the most ambitious planetary exploration missions.
       Master high-torque BLDC-driven joint designs in SolidWorks, fine-tune motor controllers for flawless mission execution, and validate industry-leading ±2 mm accuracy in rigorous field trials.
       Collaborate closely with firmware teams to bring sophisticated inverse-kinematics to life, watching your creations effortlessly type, manipulate delicate samples, and operate equipment under high-stakes competition conditions.
     img: "mechanical/robotarm.jpg"
@@ -28,7 +28,7 @@ subteams:
   - title: "Manufacturing & Fabrication"
     description: >
       Convert visionary designs into reality under expert machinist mentorship.
-      Gain certification on UW’s precision machining equipment—mills, lathes, CNCs—to produce aerospace-quality components, perform meticulous inspections, and assemble advanced test setups.
+      Gain certification on UW’s precision machining equipment, mills, lathes, CNCs, to produce aerospace-quality components, perform meticulous inspections, and assemble advanced test setups.
       This rigorous subteam is where meticulous craftsmanship meets cutting-edge engineering, marking its members as distinguished experts in aerospace fabrication and precision manufacturing.
     img: "mechanical/machining.jpg"
   - title: "Aerial Mechanics"
