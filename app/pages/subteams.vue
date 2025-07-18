@@ -84,7 +84,7 @@ function headerTransitionEnter(el: Element) {
 						:key="team.id"
 					>
 						<NuxtLink
-							v-if="currentTeam"
+							v-if="currentTeam && team.subteams.length > 1"
 							class="hover:text-primary cursor-pointer select-none border-b-2 text-3xl font-bold leading-10 tracking-wide transition-colors duration-200 ease-in-out"
 							:class="currentTeam.name === team.name ? 'text-black' : 'text-neutral-400'"
 							:to="{ path: '/subteams', query: { tab: team.name } }"
