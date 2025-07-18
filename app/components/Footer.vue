@@ -44,7 +44,7 @@ const links: SocialLink[] = [
 				src="~/assets/images/logo_square_sm.png"
 			/>
 			<div
-				class="grid grid-cols-12 space-y-8 border-b-1 border-b-neutral-400 py-8 text-secondary md:gap-8 md:space-y-0 lg:gap-8"
+				class="border-b-1 text-secondary grid grid-cols-12 space-y-8 border-b-neutral-400 py-8 md:gap-8 md:space-y-0 lg:gap-8"
 			>
 				<div class="col-span-12 flex flex-col space-y-4 lg:col-span-6 xl:lg:col-span-4">
 					<h2 class="text-2xl font-bold">Husky Robotics at the University of Washington Seattle</h2>
@@ -115,7 +115,7 @@ const links: SocialLink[] = [
 		</div>
 	</footer>
 	<p
-		v-if="!dev"
+		v-if="dev"
 		class="w-full bg-amber-300 p-2 text-center text-black"
 	>
 		Website under construction. Expect missing content & bugs!
