@@ -56,22 +56,23 @@ function closeFAQ(element: Element, done: () => void) {
 			>
 				<RoboticsContainer class="md:py-30 space-y-8 py-20">
 					<div class="md:max-w-1/2 space-y-8">
-						<h1 class="leading-18 text-secondary text-6xl font-extrabold lg:text-7xl">
+						<h1 class="leading-18 text-secondary text-6xl font-bold lg:text-7xl">
 							Get Involved With<br />Husky Robotics
 						</h1>
 						<p class="text-secondary md:max-w-1/2 pb-5 text-lg">
 							Join our team of 100+ talented UW engineers: gain industry experience, collaborate in
 							a very strong team culture, build the skills to launch into the world after college
 						</p>
-						<p class="invisible space-x-3 align-middle">
-							<span class="font-roboto tracking-robotics text-secondary font-medium"
-								>University of Washington - Seattle</span
-							>
-						</p>
+						<NuxtLink
+							to="https://docs.google.com/forms/d/e/1FAIpQLScQ7zmbBv6ft_I_yrrAHKHFAjqPW0LmGrMLeFfggS4s5C1FgA/viewform?usp=dialog"
+							target="_blank"
+							class="text-secondary text-2xl font-bold hover:underline"
+							>APPLICATIONS ARE OPEN</NuxtLink
+						>
 					</div>
 				</RoboticsContainer>
 				<RoboticsContainer>
-					<p class="container mx-auto px-4 py-8 text-xs text-zinc-400">
+					<p class="container py-8 text-xs text-zinc-400">
 						<NuxtLink
 							class="underline"
 							to="https://photojournal.jpl.nasa.gov/catalog/PIA26556"
@@ -100,10 +101,12 @@ function closeFAQ(element: Element, done: () => void) {
 							We combine high-impact engineering with a strong, collaborative community built to
 							meet the standards of pacific northwest industry.
 						</p>
-						<p class="text-xl font-bold italic">
-							Applications are currently closed. Join the interest list.
-						</p>
-						<ArrowLink to="https://google.com">Interest Form</ArrowLink>
+						<p class="text-xl font-bold italic">APPLY NOW</p>
+						<ArrowLink
+							to="https://docs.google.com/forms/d/e/1FAIpQLScQ7zmbBv6ft_I_yrrAHKHFAjqPW0LmGrMLeFfggS4s5C1FgA/viewform?usp=dialog"
+							target="_blank"
+							>Application Form</ArrowLink
+						>
 					</div>
 					<div class="flex flex-1 items-center justify-end text-white">
 						<div class="linklist">
@@ -204,7 +207,11 @@ function closeFAQ(element: Element, done: () => void) {
 					we encourage applicants from all disciplines who are excited to contribute to real
 					engineering projects and exploration.
 				</p>
-				<ArrowLink to="https://google.com">Interest Form</ArrowLink>
+				<ArrowLink
+					to="https://docs.google.com/forms/d/e/1FAIpQLScQ7zmbBv6ft_I_yrrAHKHFAjqPW0LmGrMLeFfggS4s5C1FgA/viewform?usp=dialog"
+					target="_blank"
+					>Application Form</ArrowLink
+				>
 			</RoboticsContainer>
 		</section>
 		<Destinations />

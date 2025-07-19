@@ -16,15 +16,19 @@ onMounted(() => {
 				stagger: 0.05
 			})
 			.from("h1+p", {
-				duration: 0.6,
+				duration: 0.5,
 				opacity: 0
 			})
 			.from("h1+p+p", {
-				duration: 0.6,
+				duration: 0.5,
+				opacity: 0
+			})
+			.from("h1+p+p+p", {
+				duration: 0.5,
 				opacity: 0
 			})
 			.from(btnGroup.value, {
-				duration: 0.6,
+				duration: 0.5,
 				opacity: 0
 			});
 		gsap.from(".facts > *", {
@@ -60,7 +64,7 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 					);
 				"
 			>
-				<RoboticsContainer class="md:py-30 space-y-8 py-20">
+				<RoboticsContainer class="md:py-30 space-y-6 py-20">
 					<div class="md:max-w-1/2 xl:max-w-1/3 space-y-6">
 						<h1
 							class="leading-18 text-secondary lg:leading-30 text-6xl font-bold opacity-0 lg:text-7xl xl:text-8xl"
@@ -76,12 +80,23 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 								>University of Washington - Seattle</span
 							>
 						</p>
+						<p class="invisible">
+							<NuxtLink
+								to="/join"
+								class="text-secondary text-2xl font-bold hover:underline"
+								>APPLICATIONS ARE OPEN</NuxtLink
+							>
+						</p>
 					</div>
 					<div
 						ref="buttonGroup"
-						class="invisible mt-16 flex flex-col gap-8 md:flex-row"
+						class="invisible mt-8 flex flex-col gap-8 md:flex-row"
 					>
-						<ArrowLink to="/join">Join Us</ArrowLink>
+						<ArrowLink
+							to="/join"
+							class="animate-pulse"
+							>Join Us</ArrowLink
+						>
 						<ArrowLink to="/support">Support Us</ArrowLink>
 					</div>
 				</RoboticsContainer>
