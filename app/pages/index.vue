@@ -61,9 +61,9 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 				"
 			>
 				<RoboticsContainer class="md:py-30 space-y-8 py-20">
-					<div class="md:max-w-1/2 xl:max-w-1/3 space-y-8">
+					<div class="md:max-w-1/2 xl:max-w-1/3 space-y-6">
 						<h1
-							class="leading-18 text-secondary lg:leading-30 text-6xl font-extrabold opacity-0 lg:text-7xl xl:text-8xl"
+							class="leading-18 text-secondary lg:leading-30 text-6xl font-bold opacity-0 lg:text-7xl xl:text-8xl"
 						>
 							Husky<br />Robotics
 						</h1>
@@ -81,8 +81,8 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						ref="buttonGroup"
 						class="invisible mt-16 flex flex-col gap-8 md:flex-row"
 					>
-						<ArrowLink to="#">Join Us</ArrowLink>
-						<ArrowLink to="#">Support Us</ArrowLink>
+						<ArrowLink to="/join">Join Us</ArrowLink>
+						<ArrowLink to="/support">Support Us</ArrowLink>
 					</div>
 				</RoboticsContainer>
 			</div>

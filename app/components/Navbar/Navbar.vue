@@ -41,7 +41,7 @@ const subLinks: Link[] = [
 					class="flex flex-1 flex-row items-center space-x-5"
 				>
 					<p
-						class="font-roboto tracking-robotics text-secondary select-none text-xs uppercase transition-colors duration-200 ease-in-out"
+						class="font-roboto tracking-robotics text-secondary select-none text-[0.8rem] uppercase transition-colors duration-200 ease-in-out"
 					>
 						Husky Robotics - UW Seattle
 					</p>
