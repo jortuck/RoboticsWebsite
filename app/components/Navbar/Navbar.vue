@@ -47,11 +47,13 @@ const subLinks: Link[] = [
 					</p>
 				</NuxtLink>
 				<div class="flex-1">
-					<img
-						src="~/assets/images/logo_square_sm.png"
-						class="mx-auto h-10"
-						alt="Husky Robotics Logo"
-					/>
+					<NuxtLink to="/">
+						<img
+							src="~/assets/images/logo_square_sm.png"
+							class="mx-auto h-10"
+							alt="Husky Robotics Logo"
+						/>
+					</NuxtLink>
 				</div>
 				<div
 					class="flex flex-1 flex-row items-center justify-end space-x-4 text-center xl:space-x-8"
