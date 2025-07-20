@@ -1,27 +1,27 @@
 name: Systems
-description: Engineer essential electronics and software for autonomous exploration. Develop mission-critical PCBs, firmware, ROS-compatible software, and autonomous systems on cutting-edge hardware platforms. Gain highly valued experience in troubleshooting, sensor fusion, and sophisticated autonomy validated through rigorous testing.
+description: Engineer essential electronics and software for autonomous exploration. Develop mission-critical PCBs, C firmware, C++ system software, and autonomous processes on cutting-edge hardware platforms. Gain highly valued experience in troubleshooting, sensor fusion, and sophisticated autonomy validated through unpredictable real-world testing.
 application: '/join'
 img: "systems.jpg"
 subteams:
-  - title: "Embedded Hardware & Firmware"
+  - title: "Electronics Hardware & Firmware"
     name: "Electronics"
     description: >
-      Engineer the vital electronics at the heart of our Mars-inspired rover.
-      Design robust PCBs using Altium or KiCad, and program mission-critical embedded firmware in C/C++ on STM32 MCUs.
-      Master real-time CAN-bus communications, fault diagnostics, and emergency protocols.
-      Participation here identifies you as an innovative embedded systems engineer, highly valued for mission-grade electronic design and firmware engineering skills.
+      Engineer the vital electronics at the heart of our Mars-inspired rover. Design robust PCBs using Altium, and program mission-critical 
+      embedded firmware in C/C++ on STM32 MCUs. Master motor control, power distribution, CAN-bus communications, and fault diagnostics. 
+      Husky Robotics electrical engineers are innovative, and highly valued for mission-grade electronic design and firmware engineering skills.
     img: "systems/pcb.jpg"
   - title: "Robotic Software Systems"
     name: "Software"
     description: >
-      Engineer rover autonomy software on Nvidia Jetson platforms, utilizing ROS-compatible C++ modules, Python telemetry tools, and React-based GUIs.
-      Master Nvidia robotics training tools for advanced sensor fusion, path planning, PID tuning, and autonomous control validated by rigorous field tests.
-      Acceptance into this subteam certifies your expertise in developing sophisticated autonomous robotics systems, widely recognized by leading industry and academic institutions.
+      Engineer rover control and autonomy software on Nvidia Jetson platforms, utilizing C++ control modules, Python telemetry tools, 
+      and React-based GUIs. Master Nvidia robotics training tools for advanced sensor fusion, path planning, PID tuning, and autonomous control 
+      validated by rigorous field tests. Join to develop software with an independent team, applied to real-world hardware and problems.
     img: "systems/coding.png"
-  - title: "Aerial Systems"
+  - title: "Drone Systems"
     name: "Drone"
     description: >
-      Implement sophisticated flight-control firmware and autonomy systems using Betaflight or PX4 on advanced hardware platforms.
-      Integrate telemetry and GPS-based waypoint navigation, develop visual-servo landing capabilities, and validate robust RF communication links for beyond-line-of-sight drone missions.
+      Implement flight-control firmware systems using Betaflight or PX4 on advanced hardware platforms. 
+      Integrate telemetry and GPS-based waypoint navigation, develop visual-servo landing capabilities, and 
+      validate robust RF communication links for beyond-line-of-sight drone missions. 
       Membership in this elite team marks you as a leading engineer in drone electronics and autonomous flight systems development.
     img: "systems/drone.jpg"
