@@ -82,7 +82,8 @@ const { data: gallery } = await useAsyncData("gallery", () => queryCollection("g
 						</p>
 						<p class="invisible">
 							<NuxtLink
-								to="/join"
+								to="https://docs.google.com/forms/d/e/1FAIpQLScQ7zmbBv6ft_I_yrrAHKHFAjqPW0LmGrMLeFfggS4s5C1FgA/viewform?usp=dialog"
+								target="_blank"
 								class="text-secondary text-2xl font-bold hover:underline"
 								>APPLICATIONS ARE OPEN</NuxtLink
 							>

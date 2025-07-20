@@ -90,15 +90,15 @@ useSeoMeta({
 					</div>
 				</div>
 				<p class="text-secondary text-lg">
-					At Husky Robotics, we believe exceptional engineers emerge from teams driven by purpose
-					and passion. Our mission is not just about building a rover:
+					We believe exceptional engineers emerge from teams driven by purpose and passion. Our
+					mission is not just about building a rover:
 					<strong
 						>it's about creating an community where talented students collaborate, innovate, and
 						grow into visionary leaders.</strong
 					>
 				</p>
 				<p class="text-secondary text-lg">
-					As a prestigious Registered Student Organization (RSO) at the University of Washington,
+					As a Registered Student Organization (RSO) at the University of Washington,
 					<strong>we unite over 100 driven students from more than 22 diverse fields</strong>.
 					Inspired by the rigorous standards of planetary exploration, we engineer autonomous Mars
 					Rovers that compete internationally in the Rover Challenge Series.
