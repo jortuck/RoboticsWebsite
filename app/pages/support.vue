@@ -9,7 +9,7 @@ const config = useRuntimeConfig();
 import type { ZodIssue } from "zod";
 import { OutreachFormSchema } from "#shared/OutreachFormSchema";
 useSeoMeta({
-	title: "Suuport Us | Husky Robotics",
+	title: "Suport Us | Husky Robotics",
 	description:
 		"When you support Husky Robotics, you invest in people. You help students build meaningful connections, access critical resources, and become the engineering leaders of tomorrow."
 });
