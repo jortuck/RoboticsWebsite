@@ -199,7 +199,7 @@ function closeFAQ(element: Element, done: () => void) {
 			id="applications"
 			class="bg-black"
 		>
-			<RoboticsContainer class="space-y-8 py-20 xl:w-1/2">
+			<RoboticsContainer class="space-y-8 py-20 xl:w-2/3">
 				<h2 class="text-secondary text-5xl font-bold">Application Cycle: 2025-2026</h2>
 				<p class="text-lg text-zinc-100">
 					Our main admissions take place during Autumn and Winter quarter, when we welcome new
@@ -212,6 +212,7 @@ function closeFAQ(element: Element, done: () => void) {
 					target="_blank"
 					>Application Form</ArrowLink
 				>
+				<img src="~/assets/images/join_us.png" />
 			</RoboticsContainer>
 		</section>
 		<Destinations />

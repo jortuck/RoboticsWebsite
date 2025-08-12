@@ -55,7 +55,7 @@ useSeoMeta({
 			</RoboticsContainer>
 		</section>
 		<section class="bg-black">
-			<RoboticsContainer class="space-y-8 py-10 lg:max-w-5xl">
+			<RoboticsContainer class="space-y-8 py-10 lg:max-w-6xl">
 				<div
 					class="grid grid-cols-2 justify-between gap-10 md:flex md:flex-row md:items-baseline md:gap-0"
 				>
@@ -127,6 +127,26 @@ useSeoMeta({
 						You're investing in future leaders who will shape the landscape of technology,
 						exploration, and innovation.</strong
 					>
+				</p>
+				<img src="~/assets/images/about_mars.jpg" />
+				<p
+					data-v-dd2e0a66=""
+					class="container py-8 text-xs text-zinc-400"
+				>
+					<a
+						data-v-dd2e0a66=""
+						href="https://photojournal.jpl.nasa.gov/catalog/PIA26556"
+						rel="noopener noreferrer"
+						target="_blank"
+						class="underline"
+						>PIA26556 – Mars Panorama from Perseverance</a
+					>
+					(courtesy of NASA/JPL-Caltech)
+					<br />
+					These images are used for educational and academic purposes only, without any commercial
+					intent, and in full compliance with NASA’s Media Usage Guidelines. NASA does not endorse
+					this website or its contents. We gratefully acknowledge the work of the mission teams and
+					image processors whose contributions make these resources publicly available.
 				</p>
 			</RoboticsContainer>
 		</section>
