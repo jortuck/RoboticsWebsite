@@ -79,6 +79,10 @@ const links: SocialLink[] = [
 							><i :class="`fa-brands ${link.icon} text-white`"></i
 						></NuxtLink>
 					</div>
+					<p class="text-neutral-400">
+						<a href="mailto:uwrobots@uw.edu">uwrobots@uw.edu</a>
+					</p>
+					<p class="text-neutral-400">3900 E Stevens Way NE, Seattle, WA 98195</p>
 				</div>
 			</div>
 			<p class="flex flex-row flex-wrap gap-5 text-neutral-400">
