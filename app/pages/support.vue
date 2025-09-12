@@ -210,7 +210,7 @@ function transitionAlert(e: Element) {
 							>
 						</p>
 						<ArrowLink
-							to="https://venmo.com/huskyrobotics"
+							to="https://www.paypal.com/ncp/payment/F9GXYDWRJBUHJ"
 							class="mt-4"
 							>Donate Now</ArrowLink
 						>
