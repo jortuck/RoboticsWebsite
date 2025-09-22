@@ -211,8 +211,8 @@ function transitionAlert(e: Element) {
 						</p>
 						<ArrowLink
 							to="https://www.paypal.com/ncp/payment/F9GXYDWRJBUHJ"
-							class="mt-4"
-							>Donate Now</ArrowLink
+							class="text-secondary mt-4 animate-pulse text-2xl font-bold"
+							>CROWDFUNDING DONATION LINK</ArrowLink
 						>
 					</div>
 					<div class="flex-1">
